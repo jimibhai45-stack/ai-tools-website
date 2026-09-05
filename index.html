@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>AI Tools Hub - Best AI Tools</title>
+  <title>AI Tools Hub | Discover the Best AI Tools</title>
 
   <meta
     name="description"
-    content="Discover the best AI tools for writing, images, video, coding, productivity and business."
+    content="Discover the best AI tools for writing, coding, image generation, video, research, productivity and business."
   >
 
   <style>
@@ -18,222 +18,459 @@
       box-sizing: border-box;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #111827;
+    html {
+      scroll-behavior: smooth;
     }
 
-    /* HEADER */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f7fb;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
-      background: #111827;
-      color: white;
-      padding: 20px 7%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+
+      padding: 18px 7%;
+
+      background: #111827;
+      color: white;
     }
 
-    header h1 {
+    .logo {
+      color: white;
       font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 25px;
+      color: #ffffff;
       font-size: 15px;
     }
 
     nav a:hover {
-      color: #60a5fa;
+      color: #93c5fd;
     }
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
-      text-align: center;
       padding: 90px 20px;
+      text-align: center;
       background: white;
     }
 
-    .hero h2 {
-      font-size: 48px;
+    .hero-badge {
+      display: inline-block;
+
+      padding: 7px 14px;
       margin-bottom: 20px;
+
+      border-radius: 30px;
+
+      background: #eef2ff;
+      color: #4338ca;
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      max-width: 850px;
+      margin: auto;
+
+      font-size: 52px;
+      line-height: 1.15;
+    }
+
+    .hero h1 span {
+      color: #4f46e5;
     }
 
     .hero p {
-      font-size: 18px;
+      max-width: 700px;
+      margin: 22px auto 30px;
+
       color: #6b7280;
-      max-width: 650px;
-      margin: auto;
-      margin-bottom: 30px;
-      line-height: 1.6;
+      font-size: 18px;
     }
 
-    .search {
+    .search-box {
       width: 90%;
-      max-width: 650px;
+      max-width: 680px;
+
       padding: 17px 20px;
+
       border: 1px solid #d1d5db;
       border-radius: 12px;
+
       font-size: 16px;
       outline: none;
     }
 
-    .search:focus {
-      border-color: #2563eb;
+    .search-box:focus {
+      border-color: #4f46e5;
     }
 
-    /* CATEGORIES */
+    /* =========================
+       STATS
+    ========================= */
 
-    .categories {
-      padding: 40px 7%;
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+
+      padding: 30px 20px;
+
+      background: #f9fafb;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .stat {
       text-align: center;
     }
 
-    .categories h2 {
+    .stat strong {
+      display: block;
+      font-size: 26px;
+    }
+
+    .stat span {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    /* =========================
+       CATEGORIES
+    ========================= */
+
+    .categories {
+      padding: 55px 7% 30px;
+      text-align: center;
+    }
+
+    .section-title {
       margin-bottom: 25px;
+      font-size: 32px;
     }
 
     .category-buttons {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
     }
 
-    .category {
-      border: none;
-      background: white;
-      padding: 12px 20px;
+    .category-btn {
+      padding: 10px 17px;
+
+      border: 1px solid #e5e7eb;
       border-radius: 30px;
+
+      background: white;
+      color: #374151;
+
       cursor: pointer;
       font-size: 14px;
-      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
     }
 
-    .category:hover {
+    .category-btn:hover,
+    .category-btn.active {
       background: #111827;
       color: white;
     }
 
-    /* TOOLS */
+    /* =========================
+       TOOLS
+    ========================= */
 
     .tools {
-      padding: 40px 7% 70px;
+      padding: 30px 7% 80px;
     }
 
-    .tools h2 {
-      text-align: center;
-      margin-bottom: 35px;
-      font-size: 32px;
+    .tools-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 25px;
+    }
+
+    .tools-header h2 {
+      font-size: 30px;
+    }
+
+    #resultCount {
+      color: #6b7280;
+      font-size: 14px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
       gap: 22px;
     }
 
     .card {
+      display: flex;
+      flex-direction: column;
+
+      padding: 25px;
+
       background: white;
-      padding: 28px;
+      border: 1px solid #e5e7eb;
       border-radius: 16px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-      transition: transform 0.2s;
+
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+      transition: 0.2s;
     }
 
     .card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
     }
 
     .icon {
-      font-size: 38px;
-      margin-bottom: 15px;
+      width: 55px;
+      height: 55px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-bottom: 17px;
+
+      border-radius: 14px;
+
+      background: #f3f4f6;
+
+      font-size: 29px;
     }
 
     .card h3 {
-      font-size: 21px;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #6b7280;
-      line-height: 1.6;
-      margin-bottom: 20px;
+      margin-bottom: 7px;
+      font-size: 20px;
     }
 
     .tag {
       display: inline-block;
-      font-size: 12px;
-      background: #eef2ff;
-      padding: 6px 10px;
+      width: fit-content;
+
+      margin-bottom: 14px;
+      padding: 5px 10px;
+
       border-radius: 20px;
-      margin-bottom: 18px;
+
+      background: #eef2ff;
       color: #4338ca;
+
+      font-size: 12px;
+      font-weight: 600;
     }
 
-    .button {
-      display: inline-block;
-      background: #111827;
-      color: white;
-      padding: 11px 18px;
-      border-radius: 8px;
-      text-decoration: none;
+    .card p {
+      flex: 1;
+
+      margin-bottom: 20px;
+
+      color: #6b7280;
       font-size: 14px;
     }
 
-    .button:hover {
-      background: #2563eb;
-    }
+    .visit-btn {
+      display: block;
 
-    /* FOOTER */
+      padding: 11px 15px;
 
-    footer {
-      text-align: center;
-      padding: 35px 20px;
+      border-radius: 8px;
+
       background: #111827;
       color: white;
+
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .visit-btn:hover {
+      background: #4f46e5;
+    }
+
+    /* =========================
+       NO RESULTS
+    ========================= */
+
+    #noResults {
+      display: none;
+
+      padding: 50px 20px;
+
+      text-align: center;
+      color: #6b7280;
+    }
+
+    /* =========================
+       ADD TOOL SECTION
+    ========================= */
+
+    .submit-section {
+      margin: 20px 7% 70px;
+      padding: 55px 25px;
+
+      border-radius: 20px;
+
+      background: #111827;
+      color: white;
+
+      text-align: center;
+    }
+
+    .submit-section h2 {
+      margin-bottom: 12px;
+      font-size: 30px;
+    }
+
+    .submit-section p {
+      max-width: 600px;
+      margin: 0 auto 25px;
+
+      color: #d1d5db;
+    }
+
+    .submit-btn {
+      display: inline-block;
+
+      padding: 12px 22px;
+
+      border-radius: 9px;
+
+      background: white;
+      color: #111827;
+
+      font-weight: 600;
+    }
+
+    .submit-btn:hover {
+      background: #e5e7eb;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 45px 20px;
+
+      background: #0b1120;
+      color: white;
+
+      text-align: center;
+    }
+
+    footer h3 {
+      margin-bottom: 8px;
     }
 
     footer p {
-      color: #d1d5db;
-      margin-top: 8px;
+      color: #9ca3af;
       font-size: 14px;
     }
 
-    /* MOBILE */
+    .footer-links {
+      margin: 18px 0;
+    }
 
-    @media (max-width: 600px) {
+    .footer-links a {
+      margin: 0 10px;
+
+      color: #d1d5db;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
 
       header {
         flex-direction: column;
         gap: 15px;
       }
 
-      nav a {
-        margin: 0 8px;
+      nav {
+        gap: 15px;
       }
 
       .hero {
-        padding: 60px 20px;
+        padding: 65px 20px;
       }
 
-      .hero h2 {
-        font-size: 34px;
+      .hero h1 {
+        font-size: 36px;
       }
 
       .hero p {
         font-size: 16px;
       }
 
-      .tools h2 {
-        font-size: 27px;
+      .stats {
+        gap: 25px;
+      }
+
+      .tools-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 450px) {
+
+      .hero h1 {
+        font-size: 31px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .stats {
+        justify-content: space-around;
+      }
+
+      .stat strong {
+        font-size: 21px;
       }
     }
   </style>
@@ -241,72 +478,143 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header>
 
-    <h1>🤖 AI Tools Hub</h1>
+    <a href="#" class="logo">
+      🤖 AI Tools Hub
+    </a>
 
     <nav>
       <a href="#">Home</a>
       <a href="#categories">Categories</a>
       <a href="#tools">AI Tools</a>
+      <a href="#submit">Add Tool</a>
     </nav>
 
   </header>
 
 
-  <!-- HERO -->
+  <!-- =========================
+       HERO
+  ========================= -->
 
   <section class="hero">
 
-    <h2>Discover the Best AI Tools</h2>
+    <div class="hero-badge">
+      🚀 Discover AI. Work Smarter.
+    </div>
+
+    <h1>
+      Find the <span>Best AI Tools</span>
+      in One Place
+    </h1>
 
     <p>
-      Find powerful AI tools for writing, images, videos,
-      coding, productivity, business and more.
+      Explore powerful AI tools for writing, coding, images,
+      video, research, productivity, business and more.
     </p>
 
     <input
-      id="searchInput"
-      class="search"
       type="text"
+      id="searchInput"
+      class="search-box"
       placeholder="🔎 Search AI tools..."
+      autocomplete="off"
     >
 
   </section>
 
 
-  <!-- CATEGORIES -->
+  <!-- =========================
+       STATS
+  ========================= -->
+
+  <section class="stats">
+
+    <div class="stat">
+      <strong>20+</strong>
+      <span>AI Tools</span>
+    </div>
+
+    <div class="stat">
+      <strong>10+</strong>
+      <span>Categories</span>
+    </div>
+
+    <div class="stat">
+      <strong>100%</strong>
+      <span>Free Directory</span>
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CATEGORIES
+  ========================= -->
 
   <section class="categories" id="categories">
 
-    <h2>Explore Categories</h2>
+    <h2 class="section-title">
+      Explore Categories
+    </h2>
 
     <div class="category-buttons">
 
-      <button class="category" onclick="filterCategory('all')">
+      <button class="category-btn active" data-category="all">
         All
       </button>
 
-      <button class="category" onclick="filterCategory('writing')">
+      <button class="category-btn" data-category="chatbot">
+        🤖 Chatbots
+      </button>
+
+      <button class="category-btn" data-category="writing">
         ✍️ Writing
       </button>
 
-      <button class="category" onclick="filterCategory('image')">
+      <button class="category-btn" data-category="image">
         🎨 Image
       </button>
 
-      <button class="category" onclick="filterCategory('video')">
+      <button class="category-btn" data-category="video">
         🎬 Video
       </button>
 
-      <button class="category" onclick="filterCategory('coding')">
+      <button class="category-btn" data-category="coding">
         💻 Coding
       </button>
 
-      <button class="category" onclick="filterCategory('business')">
-        💼 Business
+      <button class="category-btn" data-category="research">
+        🔎 Research
+      </button>
+
+      <button class="category-btn" data-category="voice">
+        🎙️ Voice
+      </button>
+
+      <button class="category-btn" data-category="music">
+        🎵 Music
+      </button>
+
+      <button class="category-btn" data-category="design">
+        🎯 Design
+      </button>
+
+      <button class="category-btn" data-category="productivity">
+        📚 Productivity
+      </button>
+
+      <button class="category-btn" data-category="presentation">
+        📊 Presentation
+      </button>
+
+      <button class="category-btn" data-category="automation">
+        ⚡ Automation
       </button>
 
     </div>
@@ -314,34 +622,46 @@
   </section>
 
 
-  <!-- AI TOOLS -->
+  <!-- =========================
+       AI TOOLS
+  ========================= -->
 
   <section class="tools" id="tools">
 
-    <h2>Popular AI Tools</h2>
+    <div class="tools-header">
 
-    <div class="grid">
+      <h2>🔥 Popular AI Tools</h2>
+
+      <span id="resultCount">
+        20 tools found
+      </span>
+
+    </div>
 
 
-      <!-- TOOL 1 -->
+    <div class="grid" id="toolsGrid">
 
-      <div class="card" data-category="writing">
+
+      <!-- 1 -->
+
+      <div class="card" data-category="chatbot">
 
         <div class="icon">🤖</div>
 
         <h3>ChatGPT</h3>
 
-        <span class="tag">Writing</span>
+        <span class="tag">Chatbot</span>
 
         <p>
-          AI assistant for writing, learning, brainstorming,
-          coding and everyday tasks.
+          AI assistant for writing, learning, coding,
+          brainstorming and everyday tasks.
         </p>
 
         <a
-          class="button"
+          class="visit-btn"
           href="https://chatgpt.com/"
           target="_blank"
+          rel="noopener"
         >
           Visit Tool →
         </a>
@@ -349,110 +669,513 @@
       </div>
 
 
-      <!-- TOOL 2 -->
+      <!-- 2 -->
+
+      <div class="card" data-category="chatbot">
+
+        <div class="icon">🧠</div>
+
+        <h3>Claude</h3>
+
+        <span class="tag">Chatbot</span>
+
+        <p>
+          AI assistant for analysis, writing,
+          coding and complex tasks.
+        </p>
+
+        <a
+          class="visit-btn"
+          href="https://claude.ai/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <!-- 3 -->
+
+      <div class="card" data-category="chatbot">
+
+        <div class="icon">✨</div>
+
+        <h3>Gemini</h3>
+
+        <span class="tag">Chatbot</span>
+
+        <p>
+          Google's AI assistant for questions,
+          writing and creative work.
+        </p>
+
+        <a
+          class="visit-btn"
+          href="https://gemini.google.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <!-- 4 -->
+
+      <div class="card" data-category="research">
+
+        <div class="icon">🔎</div>
+
+        <h3>Perplexity</h3>
+
+        <span class="tag">Research</span>
+
+        <p>
+          AI-powered search and research assistant
+          for finding useful information.
+        </p>
+
+        <a
+          class="visit-btn"
+          href="https://www.perplexity.ai/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <!-- 5 -->
 
       <div class="card" data-category="image">
 
         <div class="icon">🎨</div>
 
-        <h3>AI Image Generator</h3>
+        <h3>Midjourney</h3>
 
         <span class="tag">Image</span>
 
         <p>
-          Create beautiful images and creative artwork
-          using artificial intelligence.
+          Create artistic and highly detailed images
+          using AI.
         </p>
 
-        <a class="button" href="#" target="_blank">
+        <a
+          class="visit-btn"
+          href="https://www.midjourney.com/"
+          target="_blank"
+          rel="noopener"
+        >
           Visit Tool →
         </a>
 
       </div>
 
 
-      <!-- TOOL 3 -->
+      <!-- 6 -->
 
-      <div class="card" data-category="writing">
+      <div class="card" data-category="image">
 
-        <div class="icon">✍️</div>
+        <div class="icon">🖼️</div>
 
-        <h3>AI Writer</h3>
+        <h3>Adobe Firefly</h3>
 
-        <span class="tag">Writing</span>
+        <span class="tag">Image</span>
 
         <p>
-          Create articles, blog posts, emails and other
-          content faster with AI.
+          Generate and edit creative content with
+          Adobe's generative AI.
         </p>
 
-        <a class="button" href="#" target="_blank">
+        <a
+          class="visit-btn"
+          href="https://firefly.adobe.com/"
+          target="_blank"
+          rel="noopener"
+        >
           Visit Tool →
         </a>
 
       </div>
 
 
-      <!-- TOOL 4 -->
+      <!-- 7 -->
+
+      <div class="card" data-category="image">
+
+        <div class="icon">🌈</div>
+
+        <h3>Leonardo AI</h3>
+
+        <span class="tag">Image</span>
+
+        <p>
+          Generate images, artwork and creative
+          visual assets with AI.
+        </p>
+
+        <a
+          class="visit-btn"
+          href="https://leonardo.ai/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <!-- 8 -->
+
+      <div class="card" data-category="design">
+
+        <div class="icon">🎯</div>
+
+        <h3>Canva</h3>
+
+        <span class="tag">Design</span>
+
+        <p>
+          Create designs, presentations and visual
+          content with AI-powered features.
+        </p>
+
+        <a
+          class="visit-btn"
+          href="https://www.canva.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <!-- 9 -->
 
       <div class="card" data-category="video">
 
         <div class="icon">🎬</div>
 
-        <h3>AI Video Maker</h3>
+        <h3>Runway</h3>
 
         <span class="tag">Video</span>
 
         <p>
-          Create engaging videos using AI-powered
-          video generation and editing tools.
+          Create and edit videos using powerful
+          generative AI tools.
         </p>
 
-        <a class="button" href="#" target="_blank">
+        <a
+          class="visit-btn"
+          href="https://runwayml.com/"
+          target="_blank"
+          rel="noopener"
+        >
           Visit Tool →
         </a>
 
       </div>
 
 
-      <!-- TOOL 5 -->
+      <!-- 10 -->
+
+      <div class="card" data-category="video">
+
+        <div class="icon">🎥</div>
+
+        <h3>Synthesia</h3>
+
+        <span class="tag">Video</span>
+
+        <p>
+          Create AI avatar videos and professional
+          business presentations.
+        </p>
+
+        <a
+          class="visit-btn"
+          href="https://www.synthesia.io/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <!-- 11 -->
+
+      <div class="card" data-category="voice">
+
+        <div class="icon">🎙️</div>
+
+        <h3>ElevenLabs</h3>
+
+        <span class="tag">Voice</span>
+
+        <p>
+          Generate realistic AI voices and
+          speech content.
+        </p>
+
+        <a
+          class="visit-btn"
+          href="https://elevenlabs.io/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <!-- 12 -->
+
+      <div class="card" data-category="music">
+
+        <div class="icon">🎵</div>
+
+        <h3>Suno</h3>
+
+        <span class="tag">Music</span>
+
+        <p>
+          Create songs and music using
+          artificial intelligence.
+        </p>
+
+        <a
+          class="visit-btn"
+          href="https://suno.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <!-- 13 -->
 
       <div class="card" data-category="coding">
 
         <div class="icon">💻</div>
 
-        <h3>AI Coding Assistant</h3>
+        <h3>GitHub Copilot</h3>
 
         <span class="tag">Coding</span>
 
         <p>
-          Get help with programming, debugging and
-          writing code using artificial intelligence.
+          AI coding assistant that helps developers
+          write and understand code.
         </p>
 
-        <a class="button" href="#" target="_blank">
+        <a
+          class="visit-btn"
+          href="https://github.com/features/copilot"
+          target="_blank"
+          rel="noopener"
+        >
           Visit Tool →
         </a>
 
       </div>
 
 
-      <!-- TOOL 6 -->
+      <!-- 14 -->
 
-      <div class="card" data-category="business">
+      <div class="card" data-category="coding">
 
-        <div class="icon">💼</div>
+        <div class="icon">⌨️</div>
 
-        <h3>AI Business Assistant</h3>
+        <h3>Cursor</h3>
 
-        <span class="tag">Business</span>
+        <span class="tag">Coding</span>
 
         <p>
-          Use AI to improve productivity, marketing,
-          business research and daily workflows.
+          AI-powered code editor designed to help
+          developers build software faster.
         </p>
 
-        <a class="button" href="#" target="_blank">
+        <a
+          class="visit-btn"
+          href="https://cursor.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <!-- 15 -->
+
+      <div class="card" data-category="writing">
+
+        <div class="icon">✍️</div>
+
+        <h3>Grammarly</h3>
+
+        <span class="tag">Writing</span>
+
+        <p>
+          Improve writing, grammar, clarity and
+          tone with AI assistance.
+        </p>
+
+        <a
+          class="visit-btn"
+          href="https://www.grammarly.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <!-- 16 -->
+
+      <div class="card" data-category="writing">
+
+        <div class="icon">📝</div>
+
+        <h3>Jasper</h3>
+
+        <span class="tag">Writing</span>
+
+        <p>
+          AI platform for marketing content
+          and business writing.
+        </p>
+
+        <a
+          class="visit-btn"
+          href="https://www.jasper.ai/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <!-- 17 -->
+
+      <div class="card" data-category="productivity">
+
+        <div class="icon">📚</div>
+
+        <h3>Notion AI</h3>
+
+        <span class="tag">Productivity</span>
+
+        <p>
+          AI features for writing, notes,
+          summaries and organization.
+        </p>
+
+        <a
+          class="visit-btn"
+          href="https://www.notion.com/product/ai"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <!-- 18 -->
+
+      <div class="card" data-category="presentation">
+
+        <div class="icon">📊</div>
+
+        <h3>Gamma</h3>
+
+        <span class="tag">Presentation</span>
+
+        <p>
+          Create presentations, documents and
+          visual content with AI.
+        </p>
+
+        <a
+          class="visit-btn"
+          href="https://gamma.app/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <!-- 19 -->
+
+      <div class="card" data-category="video">
+
+        <div class="icon">🎞️</div>
+
+        <h3>Descript</h3>
+
+        <span class="tag">Video</span>
+
+        <p>
+          Edit audio and video using a
+          text-based editing workflow.
+        </p>
+
+        <a
+          class="visit-btn"
+          href="https://www.descript.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <!-- 20 -->
+
+      <div class="card" data-category="automation">
+
+        <div class="icon">⚡</div>
+
+        <h3>Zapier</h3>
+
+        <span class="tag">Automation</span>
+
+        <p>
+          Automate workflows and connect apps
+          with powerful automation.
+        </p>
+
+        <a
+          class="visit-btn"
+          href="https://zapier.com/"
+          target="_blank"
+          rel="noopener"
+        >
           Visit Tool →
         </a>
 
@@ -461,10 +1184,38 @@
 
     </div>
 
+
+    <div id="noResults">
+      <h3>😕 No tools found</h3>
+      <p>Try another search or choose a different category.</p>
+    </div>
+
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       SUBMIT TOOL
+  ========================= -->
+
+  <section class="submit-section" id="submit">
+
+    <h2>🚀 Have an AI Tool?</h2>
+
+    <p>
+      Have an AI product or tool that you want to feature?
+      Submit it to our directory.
+    </p>
+
+    <a class="submit-btn" href="mailto:jimibhai45@gmail.com">
+      Add Your AI Tool
+    </a>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -474,6 +1225,13 @@
       Discover useful AI tools in one place.
     </p>
 
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#tools">AI Tools</a>
+      <a href="#submit">Submit Tool</a>
+    </div>
+
     <p>
       © 2026 AI Tools Hub. All rights reserved.
     </p>
@@ -481,63 +1239,76 @@
   </footer>
 
 
-  <!-- SEARCH + CATEGORY JAVASCRIPT -->
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
 
   <script>
 
-    const searchInput = document.getElementById("searchInput");
+    const searchInput =
+      document.getElementById("searchInput");
 
-    const cards = document.querySelectorAll(".card");
+    const cards =
+      document.querySelectorAll(".card");
+
+    const categoryButtons =
+      document.querySelectorAll(".category-btn");
+
+    const resultCount =
+      document.getElementById("resultCount");
+
+    const noResults =
+      document.getElementById("noResults");
 
 
-    /* SEARCH */
+    let selectedCategory = "all";
 
-    searchInput.addEventListener("input", function () {
 
-      const searchText = this.value.toLowerCase();
+    /* =========================
+       FILTER FUNCTION
+    ========================= */
 
-      cards.forEach(function (card) {
+    function filterTools() {
+
+      const searchText =
+        searchInput.value.toLowerCase().trim();
+
+      let visibleTools = 0;
+
+
+      cards.forEach(function(card) {
 
         const name =
-          card.querySelector("h3").textContent.toLowerCase();
+          card.querySelector("h3")
+          .textContent
+          .toLowerCase();
 
         const description =
-          card.querySelector("p").textContent.toLowerCase();
+          card.querySelector("p")
+          .textContent
+          .toLowerCase();
 
         const category =
-          card.dataset.category.toLowerCase();
+          card.dataset.category
+          .toLowerCase();
 
-        if (
+
+        const matchesSearch =
           name.includes(searchText) ||
           description.includes(searchText) ||
-          category.includes(searchText)
-        ) {
-
-          card.style.display = "block";
-
-        } else {
-
-          card.style.display = "none";
-
-        }
-
-      });
-
-    });
+          category.includes(searchText);
 
 
-    /* CATEGORY FILTER */
+        const matchesCategory =
+          selectedCategory === "all" ||
+          category === selectedCategory;
 
-    function filterCategory(category) {
 
-      cards.forEach(function (card) {
+        if (matchesSearch && matchesCategory) {
 
-        if (
-          category === "all" ||
-          card.dataset.category === category
-        ) {
+          card.style.display = "flex";
 
-          card.style.display = "block";
+          visibleTools++;
 
         } else {
 
@@ -546,8 +1317,65 @@
         }
 
       });
+
+
+      resultCount.textContent =
+        visibleTools + " tools found";
+
+
+      if (visibleTools === 0) {
+
+        noResults.style.display = "block";
+
+      } else {
+
+        noResults.style.display = "none";
+
+      }
 
     }
+
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    searchInput.addEventListener(
+      "input",
+      filterTools
+    );
+
+
+    /* =========================
+       CATEGORY BUTTONS
+    ========================= */
+
+    categoryButtons.forEach(function(button) {
+
+      button.addEventListener(
+        "click",
+        function() {
+
+          categoryButtons.forEach(function(btn) {
+
+            btn.classList.remove("active");
+
+          });
+
+
+          this.classList.add("active");
+
+
+          selectedCategory =
+            this.dataset.category;
+
+
+          filterTools();
+
+        }
+      );
+
+    });
 
   </script>
 
