@@ -2,82 +2,25 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <url>
-        <loc>https://jimibhai45-stack.github.io/ai-tools-website/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
+  <url>
+    <loc>https://jimibhai45-stack.github.io/ai-tools-website/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 
-    <url>
-        <loc>https://jimibhai45-stack.github.io/ai-tools-website/tool.html?tool=chatgpt</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
+  <url>
+    <loc>https://jimibhai45-stack.github.io/ai-tools-website/about.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-    <url>
-        <loc>https://jimibhai45-stack.github.io/ai-tools-website/tool.html?tool=claude</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://jimibhai45-stack.github.io/ai-tools-website/tool.html?tool=gemini</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://jimibhai45-stack.github.io/ai-tools-website/tool.html?tool=perplexity</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://jimibhai45-stack.github.io/ai-tools-website/tool.html?tool=midjourney</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://jimibhai45-stack.github.io/ai-tools-website/tool.html?tool=canva</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://jimibhai45-stack.github.io/ai-tools-website/tool.html?tool=cursor</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://jimibhai45-stack.github.io/ai-tools-website/tool.html?tool=copilot</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://jimibhai45-stack.github.io/ai-tools-website/tool.html?tool=jasper</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://jimibhai45-stack.github.io/ai-tools-website/tool.html?tool=notion</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://jimibhai45-stack.github.io/ai-tools-website/tool.html?tool=grammarly</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://jimibhai45-stack.github.io/ai-tools-website/tool.html?tool=elevenlabs</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
+  <url>
+    <loc>https://jimibhai45-stack.github.io/ai-tools-website/contact.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
 </urlset>
