@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta name="description" content="Detailed information, features, pricing, use cases and reviews for the best AI tools.">
+
+  <meta name="theme-color" content="#6366f1">
+
   <title>AI Tool Details | AI Tools Hub</title>
-  <meta name="description" content="Explore detailed information, features, pricing, ratings and use cases for the best AI tools.">
-  <meta name="theme-color" content="#0f172a">
 
   <style>
     * {
@@ -16,35 +19,36 @@
     }
 
     :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --secondary: #8b5cf6;
       --bg: #f8fafc;
       --card: #ffffff;
       --text: #0f172a;
       --muted: #64748b;
       --border: #e2e8f0;
-      --primary: #4f46e5;
-      --primary-dark: #3730a3;
       --success: #16a34a;
       --danger: #dc2626;
-      --header: rgba(255,255,255,0.92);
-      --shadow: 0 15px 45px rgba(15,23,42,0.08);
+      --warning: #f59e0b;
+      --shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
     }
 
     body.dark {
-      --bg: #020617;
-      --card: #0f172a;
+      --bg: #0f172a;
+      --card: #111827;
       --text: #f8fafc;
       --muted: #94a3b8;
       --border: #1e293b;
-      --header: rgba(2,6,23,0.92);
-      --shadow: 0 15px 45px rgba(0,0,0,0.3);
+      --shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
     }
 
     body {
-      font-family: Inter, Arial, Helvetica, sans-serif;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      transition: 0.3s ease;
+      transition: background 0.25s ease, color 0.25s ease;
     }
 
     a {
@@ -53,24 +57,29 @@
     }
 
     button {
-      font-family: inherit;
+      font: inherit;
     }
 
     /* HEADER */
+
     header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: var(--header);
-      backdrop-filter: blur(16px);
+      z-index: 1000;
+      background: rgba(248, 250, 252, 0.92);
       border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    body.dark header {
+      background: rgba(15, 23, 42, 0.92);
     }
 
     .nav {
-      max-width: 1200px;
+      max-width: 1180px;
       margin: auto;
       min-height: 72px;
-      padding: 0 20px;
+      padding: 0 22px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -78,13 +87,22 @@
     }
 
     .brand {
-      font-size: 23px;
-      font-weight: 900;
-      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 21px;
+      font-weight: 800;
     }
 
-    .brand span {
-      color: var(--primary);
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      font-size: 21px;
     }
 
     .nav-actions {
@@ -93,143 +111,170 @@
       gap: 10px;
     }
 
-    .nav-btn {
+    .back-btn,
+    .theme-btn {
       border: 1px solid var(--border);
       background: var(--card);
       color: var(--text);
       padding: 10px 15px;
-      border-radius: 10px;
+      border-radius: 11px;
       cursor: pointer;
-      font-weight: 700;
       transition: 0.2s;
     }
 
-    .nav-btn:hover {
+    .back-btn:hover,
+    .theme-btn:hover {
       border-color: var(--primary);
-      color: var(--primary);
       transform: translateY(-1px);
     }
 
-    /* CONTAINER */
+    /* MAIN */
+
     .container {
-      max-width: 1200px;
+      max-width: 1180px;
       margin: auto;
-      padding: 28px 20px 60px;
-    }
-
-    .back {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      color: var(--muted);
-      font-weight: 700;
-      margin-bottom: 25px;
-    }
-
-    .back:hover {
-      color: var(--primary);
+      padding: 35px 22px 70px;
     }
 
     /* HERO */
-    .hero {
-      background:
-        radial-gradient(circle at 90% 10%, rgba(99,102,241,0.18), transparent 35%),
-        radial-gradient(circle at 10% 90%, rgba(14,165,233,0.12), transparent 30%),
-        var(--card);
+
+    .tool-hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 35px;
+      border-radius: 26px;
+      padding: 38px;
       box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: 110px 1fr auto;
-      align-items: center;
-      gap: 28px;
       margin-bottom: 28px;
     }
 
+    .tool-hero::before {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: rgba(99, 102, 241, 0.08);
+      right: -100px;
+      top: -130px;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      display: flex;
+      gap: 25px;
+      align-items: flex-start;
+    }
+
     .tool-logo {
-      width: 110px;
-      height: 110px;
-      object-fit: contain;
+      width: 105px;
+      height: 105px;
       border-radius: 24px;
-      background: #fff;
-      padding: 12px;
+      object-fit: cover;
       border: 1px solid var(--border);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      background: white;
+      padding: 8px;
+      flex-shrink: 0;
     }
 
-    .tool-title {
-      font-size: clamp(30px, 5vw, 52px);
-      line-height: 1.08;
-      letter-spacing: -1.8px;
-      margin-bottom: 10px;
-    }
-
-    .tagline {
-      color: var(--muted);
-      font-size: 18px;
-      max-width: 720px;
-      margin-bottom: 18px;
+    .hero-info {
+      flex: 1;
     }
 
     .badges {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
+      margin-bottom: 13px;
     }
 
     .badge {
       display: inline-flex;
       align-items: center;
-      padding: 6px 11px;
+      padding: 5px 11px;
       border-radius: 999px;
-      font-size: 13px;
-      font-weight: 800;
-      background: rgba(79,70,229,0.1);
-      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      background: #eef2ff;
+      color: #4f46e5;
     }
 
-    .badge.green {
-      background: rgba(22,163,74,0.1);
-      color: var(--success);
-    }
-
-    .badge.orange {
-      background: rgba(234,88,12,0.1);
+    .badge.trending {
+      background: #fff7ed;
       color: #ea580c;
     }
 
-    .badge.gray {
-      background: rgba(100,116,139,0.12);
-      color: var(--muted);
+    .badge.free {
+      background: #ecfdf5;
+      color: #15803d;
     }
 
-    .hero-actions {
+    .tool-title {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      color: var(--muted);
+      font-size: 19px;
+      max-width: 720px;
+      margin-bottom: 18px;
+    }
+
+    .rating {
       display: flex;
-      flex-direction: column;
-      gap: 10px;
-      min-width: 170px;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .stars {
+      color: var(--warning);
+      letter-spacing: 1px;
+    }
+
+    .rating strong {
+      font-size: 15px;
+    }
+
+    .rating span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
     }
 
     .primary-btn,
     .secondary-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 19px;
       border-radius: 12px;
-      padding: 13px 18px;
-      font-weight: 800;
-      text-align: center;
+      font-weight: 700;
       cursor: pointer;
       transition: 0.2s;
     }
 
     .primary-btn {
-      background: var(--primary);
       color: white;
-      border: 1px solid var(--primary);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border: none;
     }
 
     .primary-btn:hover {
-      background: var(--primary-dark);
       transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
     }
 
     .secondary-btn {
@@ -240,90 +285,133 @@
 
     .secondary-btn:hover {
       border-color: var(--primary);
-      color: var(--primary);
     }
 
-    /* GRID */
-    .main-grid {
+    .favorite.active {
+      color: #e11d48;
+      border-color: #fda4af;
+    }
+
+    /* LAYOUT */
+
+    .content-layout {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 330px;
-      gap: 25px;
+      gap: 26px;
       align-items: start;
     }
 
-    .content {
-      display: grid;
-      gap: 22px;
+    .main-column,
+    .sidebar {
+      min-width: 0;
     }
 
-    .card {
+    .section-card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 26px;
+      border-radius: var(--radius);
+      padding: 28px;
       box-shadow: var(--shadow);
+      margin-bottom: 22px;
     }
 
-    .card h2 {
+    .section-title {
       font-size: 22px;
       margin-bottom: 15px;
+      letter-spacing: -0.3px;
     }
 
-    .card p {
+    .section-text {
       color: var(--muted);
+      font-size: 15px;
+      white-space: pre-line;
     }
 
     /* FEATURES */
+
     .feature-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
-      margin-top: 18px;
     }
 
     .feature {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+      padding: 14px;
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 16px;
-      background: var(--bg);
+      border-radius: 13px;
+      background: rgba(99, 102, 241, 0.025);
+    }
+
+    .feature-icon {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: #eef2ff;
+      color: var(--primary);
+      font-weight: 800;
     }
 
     .feature strong {
       display: block;
-      margin-bottom: 5px;
+      font-size: 14px;
+      margin-bottom: 2px;
     }
 
-    .feature span {
+    .feature p {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
     }
 
     /* USE CASES */
-    .use-list {
+
+    .use-case-list {
       display: grid;
-      gap: 10px;
-      margin-top: 15px;
+      gap: 11px;
     }
 
-    .use-item {
+    .use-case {
       display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      color: var(--muted);
+      gap: 12px;
+      padding: 13px 14px;
+      border-radius: 12px;
+      background: rgba(99, 102, 241, 0.05);
     }
 
-    .check {
-      color: var(--success);
-      font-weight: 900;
+    .use-case-number {
+      width: 28px;
+      height: 28px;
       flex-shrink: 0;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: var(--primary);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .use-case strong {
+      font-size: 14px;
+    }
+
+    .use-case p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 2px;
     }
 
     /* PROS CONS */
+
     .pros-cons {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
-      margin-top: 15px;
     }
 
     .pros,
@@ -336,47 +424,54 @@
     .pros h3 {
       color: var(--success);
       margin-bottom: 10px;
+      font-size: 17px;
     }
 
     .cons h3 {
       color: var(--danger);
       margin-bottom: 10px;
+      font-size: 17px;
     }
 
     .pros ul,
     .cons ul {
-      padding-left: 18px;
+      padding-left: 19px;
       color: var(--muted);
+      font-size: 14px;
     }
 
-    li {
-      margin: 7px 0;
+    .pros li,
+    .cons li {
+      margin-bottom: 7px;
     }
 
     /* SIDEBAR */
-    .sidebar {
-      display: grid;
-      gap: 18px;
-      position: sticky;
-      top: 95px;
+
+    .side-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 23px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
     }
 
-    .info-list {
-      display: grid;
-      gap: 14px;
+    .side-title {
+      font-size: 17px;
+      margin-bottom: 17px;
     }
 
     .info-row {
       display: flex;
       justify-content: space-between;
       gap: 15px;
+      padding: 12px 0;
       border-bottom: 1px solid var(--border);
-      padding-bottom: 11px;
+      font-size: 14px;
     }
 
     .info-row:last-child {
       border-bottom: none;
-      padding-bottom: 0;
     }
 
     .info-label {
@@ -384,68 +479,115 @@
     }
 
     .info-value {
-      font-weight: 800;
+      font-weight: 700;
       text-align: right;
     }
 
     .tip {
-      background: linear-gradient(135deg, rgba(79,70,229,0.12), rgba(14,165,233,0.1));
-      border: 1px solid rgba(79,70,229,0.18);
+      border-left: 4px solid var(--primary);
+      background: rgba(99, 102, 241, 0.07);
     }
 
-    .tip h3 {
-      margin-bottom: 8px;
+    .tip p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* TAGS */
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 12px;
+      background: var(--bg);
     }
 
     /* RELATED */
+
     .related-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 16px;
+      gap: 13px;
     }
 
-    .related {
+    .related-card {
+      display: block;
+      padding: 15px;
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
-      background: var(--bg);
+      border-radius: 14px;
       transition: 0.2s;
     }
 
-    .related:hover {
-      transform: translateY(-3px);
+    .related-card:hover {
       border-color: var(--primary);
+      transform: translateY(-2px);
     }
 
-    .related img {
-      width: 45px;
-      height: 45px;
-      object-fit: contain;
+    .related-logo {
+      width: 42px;
+      height: 42px;
       border-radius: 10px;
-      background: white;
-      padding: 5px;
+      object-fit: cover;
       margin-bottom: 9px;
     }
 
-    .related strong {
+    .related-card strong {
       display: block;
+      font-size: 14px;
     }
 
-    .related small {
+    .related-card span {
       color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* NOT FOUND */
+
+    .not-found {
+      max-width: 650px;
+      margin: 70px auto;
+      text-align: center;
+      padding: 45px 25px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .not-found-icon {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .not-found h1 {
+      margin-bottom: 8px;
+    }
+
+    .not-found p {
+      color: var(--muted);
+      margin-bottom: 22px;
     }
 
     /* FOOTER */
+
     footer {
       border-top: 1px solid var(--border);
-      padding: 30px 20px;
+      padding: 30px 22px;
       text-align: center;
       color: var(--muted);
-      margin-top: 20px;
+      font-size: 13px;
     }
 
     /* TOAST */
+
     .toast {
       position: fixed;
       bottom: 25px;
@@ -455,10 +597,11 @@
       color: white;
       padding: 12px 18px;
       border-radius: 10px;
-      font-weight: 700;
+      font-size: 14px;
       opacity: 0;
+      pointer-events: none;
       transition: 0.3s;
-      z-index: 999;
+      z-index: 2000;
     }
 
     .toast.show {
@@ -467,67 +610,90 @@
     }
 
     /* MOBILE */
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 85px 1fr;
-      }
 
-      .tool-logo {
-        width: 85px;
-        height: 85px;
-      }
-
-      .hero-actions {
-        grid-column: 1 / -1;
-        flex-direction: row;
-      }
-
-      .hero-actions > * {
-        flex: 1;
-      }
-
-      .main-grid {
+    @media (max-width: 850px) {
+      .content-layout {
         grid-template-columns: 1fr;
       }
 
       .sidebar {
-        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .side-card {
+        margin-bottom: 0;
       }
     }
 
     @media (max-width: 650px) {
       .nav {
         min-height: 64px;
+        padding: 0 15px;
       }
 
       .brand {
-        font-size: 19px;
+        font-size: 17px;
       }
 
-      .nav-btn {
-        padding: 8px 10px;
+      .brand-icon {
+        width: 37px;
+        height: 37px;
+      }
+
+      .back-btn {
+        font-size: 0;
+        padding: 10px 12px;
+      }
+
+      .back-btn::before {
+        content: "←";
+        font-size: 18px;
+      }
+
+      .theme-btn {
+        padding: 9px 11px;
       }
 
       .container {
-        padding: 20px 14px 45px;
+        padding: 20px 14px 50px;
       }
 
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 23px;
-        text-align: center;
+      .tool-hero {
+        padding: 23px 18px;
+        border-radius: 20px;
+      }
+
+      .hero-content {
+        gap: 16px;
       }
 
       .tool-logo {
-        margin: auto;
+        width: 70px;
+        height: 70px;
+        border-radius: 16px;
       }
 
-      .badges {
-        justify-content: center;
+      .tool-title {
+        font-size: 32px;
       }
 
-      .hero-actions {
+      .tagline {
+        font-size: 16px;
+      }
+
+      .hero-buttons {
         flex-direction: column;
+      }
+
+      .primary-btn,
+      .secondary-btn {
+        width: 100%;
+      }
+
+      .section-card {
+        padding: 20px 17px;
       }
 
       .feature-grid,
@@ -536,8 +702,12 @@
         grid-template-columns: 1fr;
       }
 
-      .card {
-        padding: 20px;
+      .sidebar {
+        display: block;
+      }
+
+      .side-card {
+        margin-bottom: 15px;
       }
     }
   </style>
@@ -545,783 +715,1400 @@
 
 <body>
 
-<header>
-  <div class="nav">
-    <a href="index.html" class="brand">
-      AI <span>Tools</span> Hub
-    </a>
+  <!-- HEADER -->
 
-    <div class="nav-actions">
-      <a href="index.html" class="nav-btn">← Back</a>
-      <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">🌙</button>
-    </div>
-  </div>
-</header>
+  <header>
+    <div class="nav">
 
-<main class="container">
+      <a href="index.html" class="brand">
+        <span class="brand-icon">🤖</span>
+        <span>AI Tools Hub</span>
+      </a>
 
-  <a href="index.html" class="back">← Back to AI Tools</a>
-
-  <section class="hero">
-
-    <img id="toolLogo" class="tool-logo" src="" alt="AI Tool Logo">
-
-    <div>
-      <h1 id="toolName" class="tool-title">AI Tool</h1>
-
-      <p id="toolTagline" class="tagline">
-        Discover this powerful AI tool.
-      </p>
-
-      <div class="badges">
-        <span class="badge" id="categoryBadge">Category</span>
-        <span class="badge green" id="pricingBadge">Free</span>
-        <span class="badge orange" id="trendingBadge">🔥 Trending</span>
-        <span class="badge gray" id="ratingBadge">⭐ 4.8</span>
+      <div class="nav-actions">
+        <button class="back-btn" onclick="goBack()">← Back</button>
+        <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
       </div>
+
     </div>
+  </header>
 
-    <div class="hero-actions">
-      <a id="visitBtn"
-         href="#"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="primary-btn">
-        Visit Official Website ↗
-      </a>
 
-      <button class="secondary-btn" id="favoriteBtn" onclick="toggleFavorite()">
-        ♡ Add to Favorites
-      </button>
-    </div>
+  <main class="container">
 
-  </section>
+    <!-- TOOL CONTENT WILL BE INSERTED HERE -->
 
-  <div class="main-grid">
+    <div id="toolPage"></div>
 
-    <div class="content">
+  </main>
 
-      <!-- ABOUT -->
-      <section class="card">
-        <h2>About <span id="aboutName">This Tool</span></h2>
-        <p id="description"></p>
-      </section>
 
-      <!-- FEATURES -->
-      <section class="card">
-        <h2>✨ Key Features</h2>
-        <div class="feature-grid" id="features"></div>
-      </section>
+  <footer>
+    <p>© 2026 AI Tools Hub. Discover smarter ways to work with AI.</p>
+  </footer>
 
-      <!-- USE CASES -->
-      <section class="card">
-        <h2>🎯 Best Use Cases</h2>
-        <div class="use-list" id="useCases"></div>
-      </section>
 
-      <!-- PROS CONS -->
-      <section class="card">
-        <h2>⚖️ Pros & Cons</h2>
+  <div class="toast" id="toast"></div>
 
-        <div class="pros-cons">
 
-          <div class="pros">
-            <h3>✓ Pros</h3>
-            <ul id="pros"></ul>
+  <script>
+
+    /* =========================================================
+       AI TOOLS DATABASE
+       ========================================================= */
+
+    const tools = {
+
+      chatgpt: {
+        name: "ChatGPT",
+        tagline: "AI assistant for writing, learning, brainstorming, coding and everyday tasks.",
+        category: "Chatbots",
+        pricing: "Free + Paid",
+        rating: "4.8",
+        reviews: "10,000+",
+        trending: true,
+        logo: "https://www.google.com/s2/favicons?domain=chatgpt.com&sz=128",
+        website: "https://chatgpt.com/",
+        description: `ChatGPT is a versatile AI assistant designed to help people communicate, learn, create and solve problems faster. It can understand natural-language instructions and generate useful responses for a wide variety of everyday and professional tasks.
+
+Users can use ChatGPT for writing and editing, brainstorming ideas, explaining difficult topics, creating study material, coding assistance, summarizing information, planning projects and many other workflows.
+
+Its conversational interface makes it especially useful for people who want to work with AI without learning complicated software. From students and creators to developers and business professionals, ChatGPT can act as a flexible digital assistant for many different needs.`,
+
+        features: [
+          ["💬", "Conversational AI", "Ask questions and work through tasks using natural language."],
+          ["✍️", "Writing Assistance", "Create, rewrite, summarize and improve written content."],
+          ["💻", "Coding Support", "Generate, explain, debug and improve code."],
+          ["🧠", "Learning Support", "Break down complex concepts into easier explanations."],
+          ["💡", "Brainstorming", "Generate ideas for projects, content, business and more."],
+          ["📊", "Data & Analysis", "Work with information and reason through structured problems."]
+        ],
+
+        useCases: [
+          ["Content creation", "Write blog ideas, drafts, social posts, emails and marketing copy."],
+          ["Education", "Understand concepts, prepare notes and practice questions."],
+          ["Programming", "Get help with code, debugging, explanations and development tasks."],
+          ["Business", "Draft documents, brainstorm strategies and organize ideas."],
+          ["Productivity", "Plan tasks, summarize text and speed up repetitive work."]
+        ],
+
+        pros: [
+          "Very versatile for different types of tasks",
+          "Easy conversational interface",
+          "Useful for writing and brainstorming",
+          "Strong coding and learning assistance",
+          "Large ecosystem of AI workflows"
+        ],
+
+        cons: [
+          "Some advanced capabilities require a paid plan",
+          "AI-generated information should still be verified",
+          "Output quality depends heavily on the instructions provided"
+        ],
+
+        audience: "Students, creators, developers, researchers, marketers, professionals and anyone looking for a general-purpose AI assistant.",
+
+        tip: "Give ChatGPT clear context, your desired format and an example of the result you want. More specific instructions usually produce more useful output.",
+
+        tags: ["AI Assistant", "Writing", "Coding", "Research", "Productivity", "Learning"]
+      },
+
+
+      claude: {
+        name: "Claude",
+        tagline: "AI assistant focused on thoughtful writing, analysis, reasoning and productivity.",
+        category: "Chatbots",
+        pricing: "Free + Paid",
+        rating: "4.7",
+        reviews: "8,000+",
+        trending: true,
+        logo: "https://www.google.com/s2/favicons?domain=claude.ai&sz=128",
+        website: "https://claude.ai/",
+        description: `Claude is an AI assistant developed by Anthropic with a strong focus on helpfulness, reasoning, writing and careful responses. It can assist with research, document analysis, brainstorming, coding, summarization and professional communication.
+
+Claude is particularly useful when users need to work with substantial amounts of text or want assistance organizing complicated information. Its conversational interface allows users to provide context and refine the result through follow-up instructions.
+
+Professionals can use Claude for drafting documents, analyzing information, generating ideas, reviewing content and supporting software development workflows.`,
+
+        features: [
+          ["🧠", "Reasoning", "Work through complex questions and multi-step problems."],
+          ["📄", "Document Analysis", "Analyze and summarize large amounts of written information."],
+          ["✍️", "Writing", "Draft, edit and improve professional and creative content."],
+          ["💻", "Coding", "Assist with programming, debugging and technical explanations."],
+          ["🔍", "Analysis", "Organize information and identify important details."],
+          ["💬", "Conversation", "Refine results through natural back-and-forth conversations."]
+        ],
+
+        useCases: [
+          ["Professional writing", "Draft reports, emails, proposals and business documents."],
+          ["Research", "Organize and analyze information from provided materials."],
+          ["Coding", "Review code and help solve development problems."],
+          ["Document review", "Summarize long documents and extract key points."],
+          ["Brainstorming", "Explore ideas and compare different approaches."]
+        ],
+
+        pros: [
+          "Strong writing and reasoning capabilities",
+          "Useful for long-form content and documents",
+          "Clean conversational experience",
+          "Good fit for professional workflows",
+          "Helpful for coding and analysis"
+        ],
+
+        cons: [
+          "Some advanced features are paid",
+          "AI responses still require human verification",
+          "Availability of features can depend on plan and region"
+        ],
+
+        audience: "Professionals, writers, developers, researchers, students and users who frequently work with documents and complex information.",
+
+        tip: "When analyzing a long document, clearly tell Claude what you want extracted, compared or summarized instead of asking only for a generic summary.",
+
+        tags: ["AI Assistant", "Writing", "Analysis", "Coding", "Research", "Documents"]
+      },
+
+
+      gemini: {
+        name: "Gemini",
+        tagline: "Google's AI assistant for research, productivity, writing and multimodal tasks.",
+        category: "Chatbots",
+        pricing: "Free + Paid",
+        rating: "4.7",
+        reviews: "9,000+",
+        trending: true,
+        logo: "https://www.google.com/s2/favicons?domain=gemini.google.com&sz=128",
+        website: "https://gemini.google.com/",
+        description: `Gemini is Google's family of AI assistants and models designed to help users with writing, reasoning, research, coding and multimodal tasks.
+
+It can be useful for everyday questions as well as professional workflows where users need help understanding information, generating content, brainstorming ideas or working with different types of input.
+
+Gemini is especially attractive to people who already use Google's ecosystem and want AI assistance integrated into their broader productivity workflow.`,
+
+        features: [
+          ["✨", "AI Assistance", "Get help with questions, writing and everyday tasks."],
+          ["🔎", "Research", "Explore topics and organize information."],
+          ["🖼️", "Multimodal", "Work with different forms of information and content."],
+          ["💻", "Coding", "Generate and explain programming solutions."],
+          ["✍️", "Writing", "Draft and refine emails, articles and other content."],
+          ["🧩", "Problem Solving", "Break complex tasks into manageable steps."]
+        ],
+
+        useCases: [
+          ["Research", "Explore topics and organize useful information."],
+          ["Writing", "Create drafts, summaries and professional messages."],
+          ["Learning", "Get explanations and study assistance."],
+          ["Coding", "Understand programming concepts and troubleshoot code."],
+          ["Productivity", "Brainstorm, plan and organize tasks."]
+        ],
+
+        pros: [
+          "Strong general-purpose AI assistant",
+          "Useful for research and learning",
+          "Works across many task types",
+          "Good choice for Google ecosystem users",
+          "Supports multimodal workflows"
+        ],
+
+        cons: [
+          "Some features depend on account or plan",
+          "AI-generated information should be checked",
+          "Capabilities can change as models are updated"
+        ],
+
+        audience: "Students, professionals, researchers, creators and Google ecosystem users.",
+
+        tip: "Describe the goal first and then provide the relevant context. This helps Gemini understand what kind of answer or output you need.",
+
+        tags: ["Google AI", "Chatbot", "Research", "Writing", "Coding", "Productivity"]
+      },
+
+
+      perplexity: {
+        name: "Perplexity",
+        tagline: "AI-powered search and research assistant for finding and understanding information.",
+        category: "Research",
+        pricing: "Free + Paid",
+        rating: "4.6",
+        reviews: "7,000+",
+        trending: true,
+        logo: "https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128",
+        website: "https://www.perplexity.ai/",
+        description: `Perplexity is an AI-powered search and research platform designed to help users find information and understand topics through conversational queries.
+
+Instead of simply returning a traditional list of search results, Perplexity combines search with AI-generated explanations and source references. This can make it useful for exploring unfamiliar subjects, comparing information and getting a quick overview of a topic.
+
+It is particularly useful for researchers, students, professionals and anyone who wants a faster starting point for online research.`,
+
+        features: [
+          ["🔎", "AI Search", "Search for information using natural-language questions."],
+          ["📚", "Research", "Explore topics and build an understanding of complex subjects."],
+          ["🔗", "Sources", "Provides references alongside many answers."],
+          ["⚡", "Fast Answers", "Get summarized information without manually opening many pages."],
+          ["🧠", "Follow-up Questions", "Continue research conversationally."],
+          ["📊", "Comparisons", "Compare products, ideas and information."]
+        ],
+
+        useCases: [
+          ["Online research", "Quickly investigate unfamiliar subjects."],
+          ["Fact finding", "Locate relevant information and sources."],
+          ["Academic research", "Build initial understanding before deeper research."],
+          ["Product research", "Compare options and important specifications."],
+          ["News exploration", "Explore current topics and developments."]
+        ],
+
+        pros: [
+          "Excellent research-oriented workflow",
+          "Conversational search experience",
+          "Sources can make verification easier",
+          "Fast topic exploration",
+          "Useful for comparisons"
+        ],
+
+        cons: [
+          "Sources and generated summaries should still be checked",
+          "Some advanced capabilities require a subscription",
+          "Search quality can vary by query"
+        ],
+
+        audience: "Students, researchers, professionals, journalists, shoppers and curious internet users.",
+
+        tip: "Use specific research questions and ask follow-up questions to narrow the topic rather than relying on one broad query.",
+
+        tags: ["Research", "AI Search", "Sources", "News", "Information"]
+      },
+
+
+      midjourney: {
+        name: "Midjourney",
+        tagline: "AI image generation platform for creating artistic and imaginative visuals.",
+        category: "Image",
+        pricing: "Paid",
+        rating: "4.7",
+        reviews: "8,000+",
+        trending: true,
+        logo: "https://www.google.com/s2/favicons?domain=midjourney.com&sz=128",
+        website: "https://www.midjourney.com/",
+        description: `Midjourney is a generative AI platform focused on creating images from natural-language descriptions.
+
+It is widely used for concept art, visual exploration, creative projects, character concepts, environments, advertising ideas and other image-generation workflows.
+
+Users can describe a visual idea and experiment with different prompts and variations to explore possible compositions, styles and artistic directions. This makes Midjourney particularly valuable during the early stages of visual design and creative development.`,
+
+        features: [
+          ["🎨", "AI Image Generation", "Create images from natural-language descriptions."],
+          ["🖌️", "Artistic Styles", "Explore many visual aesthetics and creative directions."],
+          ["💡", "Idea Exploration", "Turn rough concepts into visual references."],
+          ["🔄", "Variations", "Experiment with different versions of an idea."],
+          ["🧑‍🎨", "Concept Art", "Develop characters, environments and visual concepts."],
+          ["📸", "Visual Development", "Create inspiration for creative projects."]
+        ],
+
+        useCases: [
+          ["Concept art", "Create early visual concepts for projects."],
+          ["Marketing", "Explore advertising and campaign visuals."],
+          ["Game design", "Develop characters, environments and mood boards."],
+          ["Creative projects", "Generate visual inspiration and experimentation."],
+          ["Social media", "Create eye-catching visual content."]
+        ],
+
+        pros: [
+          "High-quality creative image generation",
+          "Excellent for visual experimentation",
+          "Useful for concept development",
+          "Large creative community",
+          "Strong artistic capabilities"
+        ],
+
+        cons: [
+          "Primarily focused on visual generation",
+          "Paid plans are required for normal use",
+          "Precise control can require prompt experimentation"
+        ],
+
+        audience: "Designers, artists, marketers, content creators, game developers and creative professionals.",
+
+        tip: "Describe the subject, environment, lighting, composition and desired visual style separately to create more controlled prompts.",
+
+        tags: ["AI Art", "Image Generation", "Design", "Creative", "Concept Art"]
+      },
+
+
+      canva: {
+        name: "Canva AI",
+        tagline: "AI-powered design and content creation inside Canva's visual workspace.",
+        category: "Design",
+        pricing: "Free + Paid",
+        rating: "4.7",
+        reviews: "9,000+",
+        trending: true,
+        logo: "https://www.google.com/s2/favicons?domain=canva.com&sz=128",
+        website: "https://www.canva.com/",
+        description: `Canva AI brings generative AI capabilities into Canva's popular visual design platform. It helps users create and edit designs, generate content and speed up creative workflows.
+
+Because Canva combines AI features with a large collection of templates, graphics, presentations and social-media formats, users can move from an idea to a polished visual without needing advanced design software.
+
+It is useful for individuals, small businesses, marketers, educators and creators who regularly need professional-looking visual content.`,
+
+        features: [
+          ["🎨", "AI Design", "Generate and enhance visual designs using AI."],
+          ["📝", "Content Creation", "Create written and visual content for different formats."],
+          ["📱", "Social Media", "Design posts, stories and marketing graphics."],
+          ["📊", "Presentations", "Build professional presentations quickly."],
+          ["🖼️", "Image Tools", "Edit and enhance images with AI-assisted features."],
+          ["📐", "Templates", "Start with ready-made designs and customize them."]
+        ],
+
+        useCases: [
+          ["Social media", "Create posts, stories, thumbnails and graphics."],
+          ["Marketing", "Build advertisements, promotional material and campaigns."],
+          ["Presentations", "Create slides for school or business."],
+          ["Education", "Design worksheets, classroom material and presentations."],
+          ["Branding", "Create visual assets for small businesses and projects."]
+        ],
+
+        pros: [
+          "Very beginner-friendly design interface",
+          "Large template ecosystem",
+          "AI integrated with design tools",
+          "Useful for social media content",
+          "Good for non-designers"
+        ],
+
+        cons: [
+          "Some premium features require payment",
+          "Advanced professional design workflows may need specialized software",
+          "AI output can require manual editing"
+        ],
+
+        audience: "Creators, marketers, students, teachers, entrepreneurs, small businesses and social-media managers.",
+
+        tip: "Start with a template or clear design goal, then use AI to generate or refine individual elements instead of trying to create everything from scratch.",
+
+        tags: ["Design", "AI Design", "Social Media", "Presentations", "Marketing"]
+      },
+
+
+      cursor: {
+        name: "Cursor",
+        tagline: "AI-powered code editor built to help developers write and understand software faster.",
+        category: "Coding",
+        pricing: "Free + Paid",
+        rating: "4.8",
+        reviews: "6,000+",
+        trending: true,
+        logo: "https://www.google.com/s2/favicons?domain=cursor.com&sz=128",
+        website: "https://cursor.com/",
+        description: `Cursor is an AI-powered code editor designed around modern software development workflows. It combines a familiar coding environment with AI assistance that can help developers understand code, generate changes, debug problems and work across larger projects.
+
+Instead of treating AI as a separate chatbot, Cursor integrates assistance directly into the development environment. This can reduce context switching and make it easier to ask questions about the project being edited.
+
+Cursor is especially useful for developers who want AI assistance throughout the software development lifecycle, from exploring an existing codebase to implementing and refining features.`,
+
+        features: [
+          ["💻", "AI Coding", "Generate and improve code directly inside the editor."],
+          ["🔍", "Code Understanding", "Ask questions about files and project structure."],
+          ["🛠️", "Debugging", "Get assistance investigating and fixing coding problems."],
+          ["⚡", "Code Completion", "Speed up development with AI-assisted suggestions."],
+          ["📁", "Project Context", "Work with context from the current codebase."],
+          ["🔄", "Refactoring", "Help restructure and improve existing code."]
+        ],
+
+        useCases: [
+          ["Web development", "Build and refine websites and web applications."],
+          ["Debugging", "Investigate errors and possible solutions."],
+          ["Learning to code", "Understand unfamiliar code and programming concepts."],
+          ["Refactoring", "Improve structure and maintainability."],
+          ["Rapid prototyping", "Build early versions of applications faster."]
+        ],
+
+        pros: [
+          "AI is integrated directly into the coding environment",
+          "Useful for understanding existing projects",
+          "Can accelerate repetitive coding work",
+          "Helpful for debugging and refactoring",
+          "Designed around developer workflows"
+        ],
+
+        cons: [
+          "Best suited to users comfortable with coding",
+          "AI-generated code still needs review",
+          "Some advanced features require paid plans"
+        ],
+
+        audience: "Software developers, web developers, students learning programming and technical teams.",
+
+        tip: "Before asking AI to make a large change, describe the intended behavior and constraints. Review generated changes before accepting them into your project.",
+
+        tags: ["Coding", "Developer Tools", "Code Editor", "Programming", "Software"]
+      },
+
+
+      copilot: {
+        name: "GitHub Copilot",
+        tagline: "AI coding assistant that helps developers write, understand and modify code.",
+        category: "Coding",
+        pricing: "Free + Paid",
+        rating: "4.7",
+        reviews: "7,000+",
+        trending: true,
+        logo: "https://www.google.com/s2/favicons?domain=github.com&sz=128",
+        website: "https://github.com/features/copilot",
+        description: `GitHub Copilot is an AI coding assistant designed to help developers write software more efficiently. It can provide code suggestions, answer programming questions and assist with tasks across the development process.
+
+Copilot is useful for both experienced developers and learners because it can help explain code, suggest implementations and reduce repetitive typing. Developers can use it within supported development environments and GitHub workflows.
+
+Like any AI coding assistant, generated code should be reviewed carefully, tested and adapted to the project's requirements and security standards.`,
+
+        features: [
+          ["⌨️", "Code Suggestions", "Generate coding suggestions while you work."],
+          ["💬", "Coding Chat", "Ask questions about programming and development."],
+          ["🔧", "Code Assistance", "Modify, explain and improve existing code."],
+          ["🧪", "Development Support", "Assist with tests and common development tasks."],
+          ["📚", "Code Explanation", "Understand unfamiliar code more quickly."],
+          ["🚀", "Productivity", "Reduce repetitive coding work."]
+        ],
+
+        useCases: [
+          ["Software development", "Speed up everyday coding tasks."],
+          ["Learning", "Understand programming concepts and examples."],
+          ["Testing", "Generate ideas for test cases and test code."],
+          ["Documentation", "Assist with comments and technical explanations."],
+          ["Debugging", "Explore possible causes and fixes for errors."]
+        ],
+
+        pros: [
+          "Strong integration with developer workflows",
+          "Useful for repetitive coding tasks",
+          "Can explain unfamiliar code",
+          "Helpful across many programming languages",
+          "Good productivity assistant"
+        ],
+
+        cons: [
+          "Generated code requires review and testing",
+          "Advanced features may require a subscription",
+          "Suggestions are not guaranteed to be correct"
+        ],
+
+        audience: "Developers, engineering teams, programmers and students learning software development.",
+
+        tip: "Use Copilot as a coding assistant rather than an automatic replacement for code review. Always test generated code and check security-sensitive logic manually.",
+
+        tags: ["Coding", "GitHub", "Programming", "Developer", "Software"]
+      },
+
+
+      jasper: {
+        name: "Jasper",
+        tagline: "AI marketing platform for creating brand-focused content and campaigns.",
+        category: "Writing",
+        pricing: "Paid",
+        rating: "4.5",
+        reviews: "5,000+",
+        trending: false,
+        logo: "https://www.google.com/s2/favicons?domain=jasper.ai&sz=128",
+        website: "https://www.jasper.ai/",
+        description: `Jasper is an AI platform focused on marketing content and brand communication. It is designed to help teams create, organize and refine content for campaigns and marketing workflows.
+
+Marketing teams can use Jasper for brainstorming, drafting, repurposing and adapting content across different channels. Its focus on brand consistency makes it particularly relevant for businesses producing content regularly.
+
+Jasper is best suited to teams that want AI assistance specifically around marketing rather than a general-purpose conversational assistant.`,
+
+        features: [
+          ["📣", "Marketing Content", "Create content for marketing campaigns and channels."],
+          ["✍️", "Copywriting", "Draft and refine marketing copy."],
+          ["🏷️", "Brand Voice", "Maintain a consistent communication style."],
+          ["🔄", "Content Repurposing", "Adapt existing content into new formats."],
+          ["💡", "Campaign Ideas", "Brainstorm marketing concepts and messaging."],
+          ["📊", "Marketing Workflow", "Support recurring content production."]
+        ],
+
+        useCases: [
+          ["Marketing campaigns", "Develop campaign ideas and written assets."],
+          ["Advertising", "Draft advertising copy and variations."],
+          ["Blogging", "Create outlines and content drafts."],
+          ["Social media", "Generate social posts and campaign ideas."],
+          ["Brand communication", "Maintain consistent messaging."]
+        ],
+
+        pros: [
+          "Marketing-focused AI workflow",
+          "Useful for content teams",
+          "Helpful for brainstorming campaigns",
+          "Designed around brand consistency",
+          "Good for recurring marketing work"
+        ],
+
+        cons: [
+          "Primarily aimed at marketing users",
+          "Paid product",
+          "AI-generated marketing copy still needs editing"
+        ],
+
+        audience: "Marketing teams, agencies, content creators, copywriters and businesses.",
+
+        tip: "Provide Jasper with your audience, brand style and campaign objective to get more relevant marketing content.",
+
+        tags: ["Marketing", "Copywriting", "Content", "Branding", "Advertising"]
+      },
+
+
+      notion: {
+        name: "Notion AI",
+        tagline: "AI assistance integrated into Notion for writing, organization and knowledge work.",
+        category: "Productivity",
+        pricing: "Free + Paid",
+        rating: "4.6",
+        reviews: "6,000+",
+        trending: false,
+        logo: "https://www.google.com/s2/favicons?domain=notion.so&sz=128",
+        website: "https://www.notion.so/product/ai",
+        description: `Notion AI adds artificial intelligence capabilities to the Notion workspace. It can help users write, summarize, brainstorm, organize information and work with content directly inside their workspace.
+
+For teams already using Notion for notes, documentation, project planning or knowledge management, having AI available in the same environment can make everyday workflows faster.
+
+Notion AI is especially useful when a user's information and documents already live inside Notion and they want assistance without moving content between different applications.`,
+
+        features: [
+          ["📝", "AI Writing", "Draft, rewrite and improve text inside Notion."],
+          ["📋", "Summarization", "Turn long notes into concise summaries."],
+          ["💡", "Brainstorming", "Generate ideas within workspace documents."],
+          ["🗂️", "Organization", "Help structure information and notes."],
+          ["📚", "Knowledge Work", "Work with information stored in Notion."],
+          ["⚡", "Productivity", "Reduce repetitive writing and organization tasks."]
+        ],
+
+        useCases: [
+          ["Meeting notes", "Summarize discussions and extract important points."],
+          ["Project planning", "Organize tasks, ideas and project information."],
+          ["Documentation", "Draft internal documentation and guides."],
+          ["Writing", "Create and refine text directly in your workspace."],
+          ["Knowledge management", "Work with existing notes and information."]
+        ],
+
+        pros: [
+          "Integrated into Notion workflows",
+          "Useful for notes and documentation",
+          "Good summarization features",
+          "Convenient for existing Notion users",
+          "Helps organize knowledge"
+        ],
+
+        cons: [
+          "Most useful within the Notion ecosystem",
+          "Some AI usage may require a paid plan",
+          "Generated content should be reviewed"
+        ],
+
+        audience: "Students, teams, project managers, writers, entrepreneurs and existing Notion users.",
+
+        tip: "Keep related project information together in Notion so AI has better context when helping with summaries, planning and documentation.",
+
+        tags: ["Productivity", "Notes", "Writing", "Workspace", "Knowledge"]
+      },
+
+
+      grammarly: {
+        name: "Grammarly",
+        tagline: "AI-powered writing assistant for clearer, more effective communication.",
+        category: "Writing",
+        pricing: "Free + Paid",
+        rating: "4.6",
+        reviews: "8,000+",
+        trending: false,
+        logo: "https://www.google.com/s2/favicons?domain=grammarly.com&sz=128",
+        website: "https://www.grammarly.com/",
+        description: `Grammarly is an AI-powered writing assistant designed to help users improve grammar, clarity, tone and overall communication.
+
+It can assist with everyday writing such as emails, messages, documents, essays and professional communication. Its AI features can also help users rewrite sentences, adjust tone and generate or refine text.
+
+Grammarly is particularly useful for people who write frequently and want an additional layer of assistance while communicating online or creating documents.`,
+
+        features: [
+          ["✍️", "Writing Suggestions", "Improve grammar, spelling and sentence structure."],
+          ["🎯", "Clarity", "Make writing easier to understand."],
+          ["🎭", "Tone", "Adjust communication style for different audiences."],
+          ["🔄", "Rewriting", "Rewrite sentences and paragraphs."],
+          ["💡", "AI Assistance", "Generate and improve written content."],
+          ["📧", "Communication", "Support emails, messages and professional writing."]
+        ],
+
+        useCases: [
+          ["Emails", "Improve professional and personal email writing."],
+          ["Academic writing", "Review essays, assignments and written work."],
+          ["Business writing", "Improve reports, messages and documents."],
+          ["Content creation", "Polish articles and online content."],
+          ["Everyday communication", "Write clearer messages and posts."]
+        ],
+
+        pros: [
+          "Easy to use",
+          "Excellent for writing improvement",
+          "Useful across many types of communication",
+          "Helpful tone and clarity suggestions",
+          "Good for everyday writing"
+        ],
+
+        cons: [
+          "Advanced features require payment",
+          "AI suggestions should match your own voice",
+          "Not a replacement for expert editing in critical documents"
+        ],
+
+        audience: "Students, professionals, writers, marketers, job seekers and anyone who writes frequently.",
+
+        tip: "Use Grammarly to improve your draft rather than writing everything automatically. Keeping your original ideas and voice usually produces better communication.",
+
+        tags: ["Writing", "Grammar", "Editing", "Communication", "Productivity"]
+      },
+
+
+      elevenlabs: {
+        name: "ElevenLabs",
+        tagline: "AI voice platform for realistic speech, voice generation and audio content.",
+        category: "Voice",
+        pricing: "Free + Paid",
+        rating: "4.7",
+        reviews: "6,000+",
+        trending: true,
+        logo: "https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=128",
+        website: "https://elevenlabs.io/",
+        description: `ElevenLabs is an AI audio platform focused on realistic voice generation and speech technology. It can be used to create spoken audio for videos, narration, educational content, games and other creative projects.
+
+The platform is particularly useful for creators who need high-quality voice output without recording every piece of narration manually. Different voices and speaking styles can be explored depending on the workflow and available features.
+
+It can help reduce the time required to produce narration and audio content, although users should always follow applicable consent, rights and platform rules when working with voices.`,
+
+        features: [
+          ["🎙️", "AI Voice", "Generate natural-sounding speech from text."],
+          ["🔊", "Text to Speech", "Turn written scripts into spoken audio."],
+          ["🎬", "Video Narration", "Create voiceovers for videos and presentations."],
+          ["📚", "Audio Content", "Produce narration for educational and creative projects."],
+          ["🌍", "Multilingual", "Support voice workflows across languages."],
+          ["🎧", "Audio Production", "Speed up voice-related content production."]
+        ],
+
+        useCases: [
+          ["YouTube", "Create narration and voiceovers for videos."],
+          ["Education", "Produce spoken educational material."],
+          ["Audiobooks", "Create narration workflows for long-form audio."],
+          ["Games", "Develop voices for characters and prototypes."],
+          ["Marketing", "Create voiceovers for promotional content."]
+        ],
+
+        pros: [
+          "High-quality AI voice generation",
+          "Useful for creators and media production",
+          "Can reduce recording time",
+          "Strong text-to-speech workflow",
+          "Useful across many audio projects"
+        ],
+
+        cons: [
+          "Some advanced capabilities require payment",
+          "Voice rights and consent must be handled responsibly",
+          "Generated audio should be reviewed before publishing"
+        ],
+
+        audience: "Video creators, educators, developers, marketers, podcasters and media teams.",
+
+        tip: "Write natural scripts with punctuation and clear pauses. Better-written scripts generally produce better-sounding narration.",
+
+        tags: ["AI Voice", "Text to Speech", "Audio", "Voiceover", "Creator"]
+      }
+
+    };
+
+
+    /* =========================================================
+       URL / TOOL LOADING
+       ========================================================= */
+
+    const params = new URLSearchParams(window.location.search);
+
+    const toolId = (params.get("tool") || "").toLowerCase();
+
+    const tool = tools[toolId];
+
+    const page = document.getElementById("toolPage");
+
+
+    /* =========================================================
+       NOT FOUND
+       ========================================================= */
+
+    if (!tool) {
+
+      document.title = "Tool Not Found | AI Tools Hub";
+
+      page.innerHTML = `
+        <div class="not-found">
+
+          <div class="not-found-icon">🔍</div>
+
+          <h1>Tool Not Found</h1>
+
+          <p>
+            Sorry, we couldn't find the AI tool you're looking for.
+            Please return to the homepage and choose a tool from the directory.
+          </p>
+
+          <a href="index.html" class="primary-btn">
+            ← Back to AI Tools
+          </a>
+
+        </div>
+      `;
+
+    } else {
+
+      document.title = `${tool.name} - Features, Pricing & Review | AI Tools Hub`;
+
+      renderTool();
+
+    }
+
+
+    /* =========================================================
+       RENDER TOOL
+       ========================================================= */
+
+    function renderTool() {
+
+      const stars = "★★★★★";
+
+      const featuresHTML = tool.features.map(feature => `
+        <div class="feature">
+
+          <div class="feature-icon">
+            ${feature[0]}
           </div>
 
-          <div class="cons">
-            <h3>✕ Cons</h3>
-            <ul id="cons"></ul>
+          <div>
+            <strong>${feature[1]}</strong>
+            <p>${feature[2]}</p>
           </div>
 
         </div>
-      </section>
+      `).join("");
 
-      <!-- WHO IS IT FOR -->
-      <section class="card">
-        <h2>👥 Who Is It For?</h2>
-        <p id="audience"></p>
-      </section>
 
-      <!-- RELATED -->
-      <section class="card">
-        <h2>🔎 Related AI Tools</h2>
-        <p>Explore other popular tools you may also find useful.</p>
+      const useCasesHTML = tool.useCases.map((item, index) => `
+        <div class="use-case">
 
-        <div class="related-grid" id="relatedTools"></div>
-      </section>
-
-    </div>
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-
-      <section class="card">
-        <h2>Tool Information</h2>
-
-        <div class="info-list">
-
-          <div class="info-row">
-            <span class="info-label">Category</span>
-            <span class="info-value" id="infoCategory"></span>
+          <div class="use-case-number">
+            ${index + 1}
           </div>
 
-          <div class="info-row">
-            <span class="info-label">Pricing</span>
-            <span class="info-value" id="infoPricing"></span>
-          </div>
-
-          <div class="info-row">
-            <span class="info-label">Rating</span>
-            <span class="info-value" id="infoRating"></span>
-          </div>
-
-          <div class="info-row">
-            <span class="info-label">Best For</span>
-            <span class="info-value" id="infoBestFor"></span>
+          <div>
+            <strong>${item[0]}</strong>
+            <p>${item[1]}</p>
           </div>
 
         </div>
-      </section>
-
-      <section class="card tip">
-        <h3>💡 Quick Tip</h3>
-        <p id="quickTip"></p>
-      </section>
-
-    </aside>
-
-  </div>
-
-</main>
-
-<footer>
-  <p>© 2026 AI Tools Hub. Discover smarter tools for a smarter future.</p>
-</footer>
-
-<div class="toast" id="toast">Added to favorites</div>
-
-<script>
-
-  /* ==========================================
-     AI TOOLS DATABASE
-     ========================================== */
-
-  const tools = {
-
-    chatgpt: {
-      name: "ChatGPT",
-      tagline: "AI assistant for writing, coding, research, brainstorming and everyday tasks.",
-      category: "AI Assistant",
-      pricing: "Freemium",
-      rating: "⭐ 4.9",
-      trending: true,
-      logo: "https://www.google.com/s2/favicons?domain=chatgpt.com&sz=256",
-      url: "https://chatgpt.com/",
-      description:
-        "ChatGPT is a versatile AI assistant designed to help users write, learn, brainstorm, analyze information, solve problems, generate ideas and work with code. It can be useful for students, professionals, creators, developers and businesses.",
-      features: [
-        ["💬", "AI Conversations", "Ask questions and get helpful responses."],
-        ["✍️", "Writing", "Create, rewrite and improve content."],
-        ["💻", "Coding", "Generate, explain and debug code."],
-        ["🧠", "Problem Solving", "Work through complex ideas and tasks."],
-        ["📚", "Learning", "Understand concepts and study topics."],
-        ["💡", "Brainstorming", "Generate ideas and creative concepts."]
-      ],
-      useCases: [
-        "Writing emails, articles and social media content",
-        "Programming and debugging",
-        "Research and learning",
-        "Business brainstorming",
-        "Content creation",
-        "Summarizing and explaining information"
-      ],
-      pros: [
-        "Very versatile",
-        "Easy to use",
-        "Useful for many different tasks",
-        "Strong writing and coding capabilities"
-      ],
-      cons: [
-        "Some advanced features require a paid plan",
-        "AI responses should still be reviewed",
-        "Availability of features can vary by plan"
-      ],
-      audience:
-        "Students, developers, writers, marketers, business professionals, researchers, creators and anyone looking for a general-purpose AI assistant.",
-      bestFor: "General AI",
-      quickTip:
-        "Give ChatGPT clear context, your desired format and examples of what you want. Better instructions usually produce better results."
-    },
-
-    claude: {
-      name: "Claude",
-      tagline: "AI assistant focused on writing, analysis, reasoning and working with long documents.",
-      category: "AI Assistant",
-      pricing: "Freemium",
-      rating: "⭐ 4.8",
-      trending: true,
-      logo: "https://www.google.com/s2/favicons?domain=claude.ai&sz=256",
-      url: "https://claude.ai/",
-      description:
-        "Claude is an AI assistant designed for conversation, writing, analysis, reasoning, coding and document-based workflows. It is especially useful when users need thoughtful responses and assistance with large amounts of text.",
-      features: [
-        ["🧠", "Reasoning", "Work through complex questions and ideas."],
-        ["📄", "Documents", "Analyze and work with long text."],
-        ["✍️", "Writing", "Draft and refine professional content."],
-        ["💻", "Coding", "Assist with programming and technical tasks."],
-        ["🔍", "Analysis", "Break down information and identify insights."],
-        ["💬", "Conversation", "Natural conversational AI assistance."]
-      ],
-      useCases: [
-        "Long-form writing",
-        "Document analysis",
-        "Research assistance",
-        "Coding",
-        "Professional communication",
-        "Idea development"
-      ],
-      pros: [
-        "Strong writing quality",
-        "Good analytical abilities",
-        "Useful for long documents",
-        "Clean conversational experience"
-      ],
-      cons: [
-        "Some features require paid access",
-        "Usage limits may apply",
-        "Feature availability can change"
-      ],
-      audience:
-        "Writers, researchers, students, developers, analysts and professionals who work with large amounts of text.",
-      bestFor: "Writing & Analysis",
-      quickTip:
-        "When working with a long document, clearly explain what you want extracted, compared or summarized."
-    },
-
-    gemini: {
-      name: "Gemini",
-      tagline: "Google's AI assistant for research, productivity, writing and multimodal tasks.",
-      category: "AI Assistant",
-      pricing: "Freemium",
-      rating: "⭐ 4.7",
-      trending: true,
-      logo: "https://www.google.com/s2/favicons?domain=gemini.google.com&sz=256",
-      url: "https://gemini.google.com/",
-      description:
-        "Gemini is Google's AI assistant that can help with writing, brainstorming, learning, research, coding and multimodal tasks. It is particularly useful for people already using Google's ecosystem.",
-      features: [
-        ["🔎", "Research", "Explore questions and gather information."],
-        ["✍️", "Writing", "Create and improve written content."],
-        ["🖼️", "Multimodal", "Work with different types of information."],
-        ["💻", "Coding", "Get help with programming."],
-        ["💡", "Brainstorming", "Generate ideas and plans."],
-        ["📚", "Learning", "Explain concepts and study topics."]
-      ],
-      useCases: [
-        "Research",
-        "Writing and editing",
-        "Learning",
-        "Brainstorming",
-        "Coding",
-        "Productivity tasks"
-      ],
-      pros: [
-        "Strong Google ecosystem integration",
-        "Useful multimodal capabilities",
-        "Good for research and productivity",
-        "Easy web access"
-      ],
-      cons: [
-        "Some advanced capabilities may require paid plans",
-        "Results should be verified",
-        "Features can vary by region and plan"
-      ],
-      audience:
-        "Students, professionals, researchers, creators and users who frequently work with Google products.",
-      bestFor: "Research",
-      quickTip:
-        "Use specific questions and mention exactly what kind of answer, format or level of detail you need."
-    },
-
-    perplexity: {
-      name: "Perplexity",
-      tagline: "AI-powered search and research assistant designed to provide answers with sources.",
-      category: "AI Search",
-      pricing: "Freemium",
-      rating: "⭐ 4.7",
-      trending: true,
-      logo: "https://www.google.com/s2/favicons?domain=perplexity.ai&sz=256",
-      url: "https://www.perplexity.ai/",
-      description:
-        "Perplexity is an AI-powered search and research platform designed to answer questions while helping users explore information from online sources. It is useful for research, comparisons and discovering information quickly.",
-      features: [
-        ["🔎", "AI Search", "Search the web using natural language."],
-        ["📚", "Research", "Explore topics and gather information."],
-        ["🔗", "Sources", "Review referenced sources."],
-        ["⚡", "Fast Answers", "Get concise research-oriented responses."],
-        ["🧠", "Follow-ups", "Continue research through conversations."],
-        ["📊", "Comparisons", "Compare products, concepts and information."]
-      ],
-      useCases: [
-        "Online research",
-        "Fact finding",
-        "Product comparisons",
-        "Academic exploration",
-        "Current information discovery",
-        "Topic research"
-      ],
-      pros: [
-        "Research-focused experience",
-        "Sources are easy to inspect",
-        "Fast information discovery",
-        "Useful for comparisons"
-      ],
-      cons: [
-        "Sources should still be checked",
-        "Some advanced features are paid",
-        "Search results can vary"
-      ],
-      audience:
-        "Students, researchers, journalists, professionals and anyone who wants an AI-assisted search experience.",
-      bestFor: "Research & Search",
-      quickTip:
-        "Ask focused research questions and open the cited sources when accuracy matters."
-    },
-
-    midjourney: {
-      name: "Midjourney",
-      tagline: "AI image generation platform for creating imaginative and high-quality visuals.",
-      category: "AI Image",
-      pricing: "Paid",
-      rating: "⭐ 4.6",
-      trending: true,
-      logo: "https://www.google.com/s2/favicons?domain=midjourney.com&sz=256",
-      url: "https://www.midjourney.com/",
-      description:
-        "Midjourney is an AI image generation platform used to create artistic and imaginative visuals from text prompts. It is popular among designers, creators, artists and marketers.",
-      features: [
-        ["🎨", "Image Generation", "Create visuals from text prompts."],
-        ["✨", "Creative Styles", "Explore different artistic directions."],
-        ["🖼️", "Visual Concepts", "Develop ideas and concepts quickly."],
-        ["📸", "High Quality", "Generate detailed visual compositions."],
-        ["💡", "Ideation", "Turn creative ideas into visual concepts."],
-        ["🚀", "Fast Iteration", "Experiment with multiple visual directions."]
-      ],
-      useCases: [
-        "Concept art",
-        "Marketing visuals",
-        "Creative projects",
-        "Design inspiration",
-        "Storytelling",
-        "Visual experimentation"
-      ],
-      pros: [
-        "Strong creative output",
-        "Excellent for visual exploration",
-        "Large creative community",
-        "Useful for concept development"
-      ],
-      cons: [
-        "Paid service",
-        "Prompt experimentation may be needed",
-        "Commercial and usage considerations should be reviewed"
-      ],
-      audience:
-        "Designers, artists, marketers, creators, photographers and people interested in AI-generated imagery.",
-      bestFor: "AI Images",
-      quickTip:
-        "Describe the subject, environment, lighting, composition and visual style when writing image prompts."
-    },
-
-    canva: {
-      name: "Canva AI",
-      tagline: "AI-powered creative tools for presentations, designs, social posts and visual content.",
-      category: "Design",
-      pricing: "Freemium",
-      rating: "⭐ 4.6",
-      trending: true,
-      logo: "https://www.google.com/s2/favicons?domain=canva.com&sz=256",
-      url: "https://www.canva.com/",
-      description:
-        "Canva combines graphic design tools with AI-powered features to help users create presentations, social media graphics, marketing materials and other visual content without requiring advanced design skills.",
-      features: [
-        ["🎨", "Design", "Create professional visual content."],
-        ["🤖", "AI Tools", "Use AI to accelerate creative workflows."],
-        ["📊", "Presentations", "Build polished presentation designs."],
-        ["📱", "Social Media", "Create content for social platforms."],
-        ["🖼️", "Templates", "Start from professionally designed templates."],
-        ["⚡", "Easy Editing", "Quickly customize designs."]
-      ],
-      useCases: [
-        "Social media posts",
-        "Presentations",
-        "Marketing graphics",
-        "Posters and flyers",
-        "Brand content",
-        "Visual communication"
-      ],
-      pros: [
-        "Beginner friendly",
-        "Large template library",
-        "Useful AI features",
-        "Good for quick visual content"
-      ],
-      cons: [
-        "Some premium features require payment",
-        "Advanced design users may want more specialized tools",
-        "Export options can vary by plan"
-      ],
-      audience:
-        "Students, marketers, small businesses, creators, teachers and professionals who need attractive designs quickly.",
-      bestFor: "Design",
-      quickTip:
-        "Start with a template close to your goal, then use AI features to customize the content and design faster."
-    },
-
-    cursor: {
-      name: "Cursor",
-      tagline: "AI-powered code editor designed to help developers write, understand and modify code.",
-      category: "AI Coding",
-      pricing: "Freemium",
-      rating: "⭐ 4.7",
-      trending: true,
-      logo: "https://www.google.com/s2/favicons?domain=cursor.com&sz=256",
-      url: "https://cursor.com/",
-      description:
-        "Cursor is an AI-powered code editor built for software development. It helps developers understand codebases, generate code, make changes and work through programming tasks more efficiently.",
-      features: [
-        ["💻", "AI Coding", "Generate and modify code with AI."],
-        ["🔍", "Codebase Understanding", "Work with larger projects."],
-        ["🛠️", "Editing", "Make AI-assisted code changes."],
-        ["🐛", "Debugging", "Get help identifying coding issues."],
-        ["⚡", "Productivity", "Speed up repetitive development tasks."],
-        ["🧠", "Code Explanation", "Understand unfamiliar code."]
-      ],
-      useCases: [
-        "Software development",
-        "Debugging",
-        "Code refactoring",
-        "Learning programming",
-        "Building applications",
-        "Working with existing codebases"
-      ],
-      pros: [
-        "Developer-focused workflow",
-        "Useful code assistance",
-        "Can work across projects",
-        "Helps reduce repetitive coding"
-      ],
-      cons: [
-        "Primarily aimed at developers",
-        "Advanced usage may require payment",
-        "AI-generated code should be reviewed"
-      ],
-      audience:
-        "Software developers, programmers, engineering teams and students learning to code.",
-      bestFor: "Coding",
-      quickTip:
-        "Give the AI clear context about your project and desired change before asking it to modify code."
-    },
-
-    copilot: {
-      name: "GitHub Copilot",
-      tagline: "AI coding assistant that helps developers write and understand software.",
-      category: "AI Coding",
-      pricing: "Paid",
-      rating: "⭐ 4.6",
-      trending: true,
-      logo: "https://www.google.com/s2/favicons?domain=github.com&sz=256",
-      url: "https://github.com/features/copilot",
-      description:
-        "GitHub Copilot is an AI coding assistant designed to help developers write code, understand programming concepts and improve development workflows.",
-      features: [
-        ["💻", "Code Suggestions", "Generate coding suggestions while you work."],
-        ["🧠", "Code Assistance", "Get help understanding code."],
-        ["⌨️", "Editor Integration", "Work inside supported development environments."],
-        ["🐛", "Debugging", "Assist with diagnosing programming issues."],
-        ["📝", "Documentation", "Help create comments and documentation."],
-        ["⚡", "Productivity", "Speed up common development tasks."]
-      ],
-      useCases: [
-        "Software development",
-        "Code completion",
-        "Debugging",
-        "Learning programming",
-        "Documentation",
-        "Developer productivity"
-      ],
-      pros: [
-        "Developer-focused",
-        "Integrates into coding workflows",
-        "Can speed up repetitive tasks",
-        "Useful for learning and experimentation"
-      ],
-      cons: [
-        "Paid plans are available",
-        "Generated code needs review",
-        "Suggestions may not always be correct"
-      ],
-      audience:
-        "Developers, software engineers, programmers, students and technical teams.",
-      bestFor: "Programming",
-      quickTip:
-        "Use meaningful function names and comments so the coding assistant has better context for its suggestions."
-    }
-
-  };
-
-
-  /* ==========================================
-     GET TOOL FROM URL
-     ========================================== */
-
-  const params = new URLSearchParams(window.location.search);
-
-  let toolKey = (params.get("tool") || "chatgpt").toLowerCase();
-
-  if (!tools[toolKey]) {
-    toolKey = "chatgpt";
-  }
-
-  const tool = tools[toolKey];
-
-
-  /* ==========================================
-     LOAD TOOL DATA
-     ========================================== */
-
-  document.title = tool.name + " - AI Tools Hub";
-
-  document.getElementById("toolLogo").src = tool.logo;
-  document.getElementById("toolLogo").alt = tool.name + " Logo";
-
-  document.getElementById("toolName").textContent = tool.name;
-  document.getElementById("toolTagline").textContent = tool.tagline;
-  document.getElementById("aboutName").textContent = tool.name;
-
-  document.getElementById("categoryBadge").textContent = tool.category;
-  document.getElementById("pricingBadge").textContent = tool.pricing;
-  document.getElementById("ratingBadge").textContent = tool.rating;
-
-  document.getElementById("description").textContent = tool.description;
-
-  document.getElementById("visitBtn").href = tool.url;
-
-  document.getElementById("infoCategory").textContent = tool.category;
-  document.getElementById("infoPricing").textContent = tool.pricing;
-  document.getElementById("infoRating").textContent = tool.rating;
-  document.getElementById("infoBestFor").textContent = tool.bestFor;
-
-  document.getElementById("audience").textContent = tool.audience;
-  document.getElementById("quickTip").textContent = tool.quickTip;
-
-
-  /* ==========================================
-     TRENDING BADGE
-     ========================================== */
-
-  const trendingBadge = document.getElementById("trendingBadge");
-
-  if (tool.trending) {
-    trendingBadge.style.display = "inline-flex";
-  } else {
-    trendingBadge.style.display = "none";
-  }
-
-
-  /* ==========================================
-     FEATURES
-     ========================================== */
-
-  const featuresContainer = document.getElementById("features");
-
-  featuresContainer.innerHTML = tool.features.map(feature => `
-    <div class="feature">
-      <strong>${feature[0]} ${feature[1]}</strong>
-      <span>${feature[2]}</span>
-    </div>
-  `).join("");
-
-
-  /* ==========================================
-     USE CASES
-     ========================================== */
-
-  const useCasesContainer = document.getElementById("useCases");
-
-  useCasesContainer.innerHTML = tool.useCases.map(item => `
-    <div class="use-item">
-      <span class="check">✓</span>
-      <span>${item}</span>
-    </div>
-  `).join("");
-
-
-  /* ==========================================
-     PROS
-     ========================================== */
-
-  const prosContainer = document.getElementById("pros");
-
-  prosContainer.innerHTML = tool.pros.map(item => `
-    <li>${item}</li>
-  `).join("");
-
-
-  /* ==========================================
-     CONS
-     ========================================== */
-
-  const consContainer = document.getElementById("cons");
-
-  consContainer.innerHTML = tool.cons.map(item => `
-    <li>${item}</li>
-  `).join("");
-
-
-  /* ==========================================
-     RELATED TOOLS
-     ========================================== */
-
-  const relatedContainer = document.getElementById("relatedTools");
-
-  const relatedKeys = Object.keys(tools)
-    .filter(key => key !== toolKey)
-    .slice(0, 3);
-
-  relatedContainer.innerHTML = relatedKeys.map(key => {
-
-    const related = tools[key];
-
-    return `
-      <a class="related" href="tool.html?tool=${key}">
-        <img src="${related.logo}" alt="${related.name} Logo">
-        <strong>${related.name}</strong>
-        <small>${related.category} · ${related.rating}</small>
-      </a>
-    `;
-
-  }).join("");
-
-
-  /* ==========================================
-     FAVORITES
-     ========================================== */
-
-  function getFavorites() {
-    try {
-      return JSON.parse(localStorage.getItem("aiToolsFavorites") || "[]");
-    } catch {
-      return [];
-    }
-  }
-
-  function updateFavoriteButton() {
-
-    const favorites = getFavorites();
-    const button = document.getElementById("favoriteBtn");
-
-    if (favorites.includes(toolKey)) {
-      button.textContent = "♥ Remove from Favorites";
-    } else {
-      button.textContent = "♡ Add to Favorites";
-    }
-  }
-
-  function toggleFavorite() {
-
-    let favorites = getFavorites();
-
-    if (favorites.includes(toolKey)) {
-
-      favorites = favorites.filter(item => item !== toolKey);
-
-      showToast("Removed from favorites");
-
-    } else {
-
-      favorites.push(toolKey);
-
-      showToast("Added to favorites");
+      `).join("");
+
+
+      const prosHTML = tool.pros.map(item => `
+        <li>${item}</li>
+      `).join("");
+
+
+      const consHTML = tool.cons.map(item => `
+        <li>${item}</li>
+      `).join("");
+
+
+      const tagsHTML = tool.tags.map(tag => `
+        <span class="tag">${tag}</span>
+      `).join("");
+
+
+      page.innerHTML = `
+
+        <!-- HERO -->
+
+        <section class="tool-hero">
+
+          <div class="hero-content">
+
+            <img
+              class="tool-logo"
+              src="${tool.logo}"
+              alt="${tool.name} logo"
+              onerror="this.src='https://www.google.com/s2/favicons?domain=example.com&sz=128'"
+            >
+
+            <div class="hero-info">
+
+              <div class="badges">
+
+                <span class="badge">
+                  ${tool.category}
+                </span>
+
+                <span class="badge free">
+                  ${tool.pricing}
+                </span>
+
+                ${
+                  tool.trending
+                  ? `<span class="badge trending">🔥 Trending</span>`
+                  : ""
+                }
+
+              </div>
+
+              <h1 class="tool-title">
+                ${tool.name}
+              </h1>
+
+              <p class="tagline">
+                ${tool.tagline}
+              </p>
+
+              <div class="rating">
+
+                <span class="stars">
+                  ${stars}
+                </span>
+
+                <strong>
+                  ${tool.rating}/5
+                </strong>
+
+                <span>
+                  Based on ${tool.reviews} ratings
+                </span>
+
+              </div>
+
+              <div class="hero-buttons">
+
+                <a
+                  href="${tool.website}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="primary-btn"
+                >
+                  🌐 Visit Official Website
+                </a>
+
+                <button
+                  class="secondary-btn favorite"
+                  id="favoriteBtn"
+                  onclick="toggleFavorite()"
+                >
+                  ♡ Add to Favorites
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- CONTENT -->
+
+        <div class="content-layout">
+
+          <div class="main-column">
+
+            <!-- EXTENDED DESCRIPTION -->
+
+            <section class="section-card">
+
+              <h2 class="section-title">
+                About ${tool.name}
+              </h2>
+
+              <p class="section-text">
+                ${tool.description}
+              </p>
+
+            </section>
+
+
+            <!-- FEATURES -->
+
+            <section class="section-card">
+
+              <h2 class="section-title">
+                ✨ Key Features
+              </h2>
+
+              <div class="feature-grid">
+                ${featuresHTML}
+              </div>
+
+            </section>
+
+
+            <!-- USE CASES -->
+
+            <section class="section-card">
+
+              <h2 class="section-title">
+                🎯 Best Use Cases
+              </h2>
+
+              <div class="use-case-list">
+                ${useCasesHTML}
+              </div>
+
+            </section>
+
+
+            <!-- PROS CONS -->
+
+            <section class="section-card">
+
+              <h2 class="section-title">
+                ⚖️ Pros & Cons
+              </h2>
+
+              <div class="pros-cons">
+
+                <div class="pros">
+
+                  <h3>✅ Pros</h3>
+
+                  <ul>
+                    ${prosHTML}
+                  </ul>
+
+                </div>
+
+                <div class="cons">
+
+                  <h3>❌ Cons</h3>
+
+                  <ul>
+                    ${consHTML}
+                  </ul>
+
+                </div>
+
+              </div>
+
+            </section>
+
+
+            <!-- WHO IS IT FOR -->
+
+            <section class="section-card">
+
+              <h2 class="section-title">
+                👥 Who is ${tool.name} for?
+              </h2>
+
+              <p class="section-text">
+                ${tool.audience}
+              </p>
+
+            </section>
+
+
+            <!-- TAGS -->
+
+            <section class="section-card">
+
+              <h2 class="section-title">
+                🏷️ Tool Tags
+              </h2>
+
+              <div class="tag-list">
+                ${tagsHTML}
+              </div>
+
+            </section>
+
+
+            <!-- RELATED -->
+
+            <section class="section-card">
+
+              <h2 class="section-title">
+                🔗 Related AI Tools
+              </h2>
+
+              <div
+                class="related-grid"
+                id="relatedTools"
+              ></div>
+
+            </section>
+
+          </div>
+
+
+          <!-- SIDEBAR -->
+
+          <aside class="sidebar">
+
+            <div class="side-card">
+
+              <h3 class="side-title">
+                📋 Tool Information
+              </h3>
+
+              <div class="info-row">
+
+                <span class="info-label">
+                  Category
+                </span>
+
+                <span class="info-value">
+                  ${tool.category}
+                </span>
+
+              </div>
+
+              <div class="info-row">
+
+                <span class="info-label">
+                  Pricing
+                </span>
+
+                <span class="info-value">
+                  ${tool.pricing}
+                </span>
+
+              </div>
+
+              <div class="info-row">
+
+                <span class="info-label">
+                  Rating
+                </span>
+
+                <span class="info-value">
+                  ⭐ ${tool.rating}
+                </span>
+
+              </div>
+
+              <div class="info-row">
+
+                <span class="info-label">
+                  Reviews
+                </span>
+
+                <span class="info-value">
+                  ${tool.reviews}
+                </span>
+
+              </div>
+
+              <div class="info-row">
+
+                <span class="info-label">
+                  Trending
+                </span>
+
+                <span class="info-value">
+                  ${tool.trending ? "🔥 Yes" : "No"}
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="side-card tip">
+
+              <h3 class="side-title">
+                💡 Quick Tip
+              </h3>
+
+              <p>
+                ${tool.tip}
+              </p>
+
+            </div>
+
+
+            <div class="side-card">
+
+              <h3 class="side-title">
+                🌐 Official Website
+              </h3>
+
+              <a
+                href="${tool.website}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="primary-btn"
+                style="width:100%;"
+              >
+                Visit ${tool.name}
+              </a>
+
+            </div>
+
+          </aside>
+
+        </div>
+      `;
+
+      renderRelatedTools();
+
+      updateFavoriteButton();
 
     }
 
-    localStorage.setItem(
-      "aiToolsFavorites",
-      JSON.stringify(favorites)
-    );
 
-    updateFavoriteButton();
-  }
+    /* =========================================================
+       RELATED TOOLS
+       ========================================================= */
 
-  updateFavoriteButton();
+    function renderRelatedTools() {
+
+      const container = document.getElementById("relatedTools");
+
+      if (!container) return;
+
+      const related = Object.entries(tools)
+        .filter(([id, item]) => {
+
+          if (id === toolId) return false;
+
+          return item.category === tool.category;
+
+        })
+        .slice(0, 3);
 
 
-  /* ==========================================
-     DARK MODE
-     ========================================== */
+      let finalRelated = related;
 
-  function updateThemeButton() {
 
-    const button = document.getElementById("themeBtn");
+      if (finalRelated.length < 3) {
 
-    if (document.body.classList.contains("dark")) {
-      button.textContent = "☀️";
-    } else {
-      button.textContent = "🌙";
+        const extra = Object.entries(tools)
+          .filter(([id]) => {
+
+            return id !== toolId &&
+                   !finalRelated.some(([rid]) => rid === id);
+
+          })
+          .slice(0, 3 - finalRelated.length);
+
+        finalRelated = [
+          ...finalRelated,
+          ...extra
+        ];
+
+      }
+
+
+      container.innerHTML = finalRelated.map(([id, item]) => `
+
+        <a
+          href="tool.html?tool=${id}"
+          class="related-card"
+        >
+
+          <img
+            src="${item.logo}"
+            alt="${item.name} logo"
+            class="related-logo"
+          >
+
+          <strong>
+            ${item.name}
+          </strong>
+
+          <span>
+            ${item.category} · ⭐ ${item.rating}
+          </span>
+
+        </a>
+
+      `).join("");
+
     }
-  }
 
-  function toggleTheme() {
 
-    document.body.classList.toggle("dark");
+    /* =========================================================
+       FAVORITES
+       ========================================================= */
 
-    localStorage.setItem(
-      "aiToolsTheme",
-      document.body.classList.contains("dark")
-        ? "dark"
-        : "light"
-    );
+    function getFavorites() {
+
+      try {
+
+        return JSON.parse(
+          localStorage.getItem("aiToolsFavorites") || "[]"
+        );
+
+      } catch {
+
+        return [];
+
+      }
+
+    }
+
+
+    function toggleFavorite() {
+
+      if (!tool) return;
+
+      let favorites = getFavorites();
+
+      const index = favorites.indexOf(toolId);
+
+      if (index === -1) {
+
+        favorites.push(toolId);
+
+        showToast(
+          `${tool.name} added to favorites ❤️`
+        );
+
+      } else {
+
+        favorites.splice(index, 1);
+
+        showToast(
+          `${tool.name} removed from favorites`
+        );
+
+      }
+
+      localStorage.setItem(
+        "aiToolsFavorites",
+        JSON.stringify(favorites)
+      );
+
+      updateFavoriteButton();
+
+    }
+
+
+    function updateFavoriteButton() {
+
+      const button =
+        document.getElementById("favoriteBtn");
+
+      if (!button) return;
+
+      const favorites = getFavorites();
+
+      if (favorites.includes(toolId)) {
+
+        button.classList.add("active");
+
+        button.innerHTML =
+          "♥ Saved to Favorites";
+
+      } else {
+
+        button.classList.remove("active");
+
+        button.innerHTML =
+          "♡ Add to Favorites";
+
+      }
+
+    }
+
+
+    /* =========================================================
+       TOAST
+       ========================================================= */
+
+    function showToast(message) {
+
+      const toast =
+        document.getElementById("toast");
+
+      toast.textContent = message;
+
+      toast.classList.add("show");
+
+      setTimeout(() => {
+
+        toast.classList.remove("show");
+
+      }, 2200);
+
+    }
+
+
+    /* =========================================================
+       DARK MODE
+       ========================================================= */
+
+    function toggleTheme() {
+
+      document.body.classList.toggle("dark");
+
+      const isDark =
+        document.body.classList.contains("dark");
+
+      localStorage.setItem(
+        "aiToolsDarkMode",
+        isDark ? "true" : "false"
+      );
+
+      updateThemeButton();
+
+    }
+
+
+    function updateThemeButton() {
+
+      const button =
+        document.getElementById("themeBtn");
+
+      if (!button) return;
+
+      const isDark =
+        document.body.classList.contains("dark");
+
+      button.textContent =
+        isDark ? "☀️" : "🌙";
+
+    }
+
+
+    if (
+      localStorage.getItem("aiToolsDarkMode") === "true"
+    ) {
+
+      document.body.classList.add("dark");
+
+    }
 
     updateThemeButton();
-  }
-
-  if (localStorage.getItem("aiToolsTheme") === "dark") {
-    document.body.classList.add("dark");
-  }
-
-  updateThemeButton();
 
 
-  /* ==========================================
-     TOAST MESSAGE
-     ========================================== */
+    /* =========================================================
+       BACK BUTTON
+       ========================================================= */
 
-  function showToast(message) {
+    function goBack() {
 
-    const toast = document.getElementById("toast");
+      if (document.referrer.includes(
+        window.location.hostname
+      )) {
 
-    toast.textContent = message;
-    toast.classList.add("show");
+        history.back();
 
-    setTimeout(() => {
-      toast.classList.remove("show");
-    }, 2200);
-  }
+      } else {
 
+        window.location.href = "index.html";
 
-  /* ==========================================
-     LOGO ERROR FALLBACK
-     ========================================== */
+      }
 
-  document.getElementById("toolLogo").addEventListener("error", function() {
-    this.src =
-      "https://via.placeholder.com/256?text=AI";
-  });
+    }
 
-</script>
+  </script>
 
 </body>
 </html>
