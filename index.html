@@ -2,23 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Discover the best AI tools for writing, coding, research, image generation, voice, design, productivity and more.">
-  <meta name="keywords" content="AI tools, free AI tools, ChatGPT, Claude, Gemini, CapCut, AI writing, AI coding, AI image generation">
+  <title>AI Tools Hub – 50+ Best AI Tools Directory</title>
 
-  <link rel="canonical" href="https://jimibhai45-stack.github.io/ai-tools-website/">
+  <meta
+    name="description"
+    content="Discover 50+ of the best AI tools for writing, coding, research, image generation, voice, design, productivity and chatbots."
+  >
 
-  <title>AI Tools Hub - Discover the Best AI Tools</title>
+  <meta
+    name="keywords"
+    content="AI tools, best AI tools, free AI tools, ChatGPT, Claude, Gemini, AI writing tools, AI image tools, AI coding tools"
+  >
 
-  <meta property="og:title" content="AI Tools Hub - Discover the Best AI Tools">
-  <meta property="og:description" content="Find the best AI tools for writing, coding, research, design, images, voice and productivity.">
+  <link
+    rel="canonical"
+    href="https://jimibhai45-stack.github.io/ai-tools-website/"
+  >
+
+  <meta property="og:title" content="AI Tools Hub – 50+ Best AI Tools">
+  <meta
+    property="og:description"
+    content="Explore 50+ AI tools for writing, coding, research, images, voice, design, productivity and chatbots."
+  >
+  <meta
+    property="og:url"
+    content="https://jimibhai45-stack.github.io/ai-tools-website/"
+  >
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jimibhai45-stack.github.io/ai-tools-website/">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="AI Tools Hub">
-  <meta name="twitter:description" content="Discover useful AI tools in one place.">
+  <meta
+    name="twitter:description"
+    content="Discover 50+ useful AI tools in one place."
+  >
 
   <style>
     * {
@@ -27,11 +47,20 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f7f8fc;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
       color: #172033;
       line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     header {
@@ -39,11 +68,11 @@
       border-bottom: 1px solid #e5e7eb;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
 
     .nav {
-      max-width: 1150px;
+      max-width: 1180px;
       margin: auto;
       padding: 16px 20px;
       display: flex;
@@ -53,14 +82,13 @@
     }
 
     .logo {
-      text-decoration: none;
-      color: #111827;
       font-size: 24px;
       font-weight: 800;
+      color: #111827;
     }
 
     .logo span {
-      color: #6366f1;
+      color: #4f46e5;
     }
 
     nav {
@@ -70,41 +98,43 @@
     }
 
     nav a {
-      text-decoration: none;
-      color: #374151;
+      font-size: 14px;
       font-weight: 600;
+      color: #4b5563;
     }
 
     nav a:hover {
-      color: #6366f1;
+      color: #4f46e5;
     }
 
     .hero {
+      background: linear-gradient(135deg, #eef2ff, #f8fafc);
+      padding: 70px 20px;
       text-align: center;
-      padding: 70px 20px 45px;
-      background: linear-gradient(135deg, #eef2ff, #ffffff);
     }
 
     .hero h1 {
-      font-size: 48px;
-      line-height: 1.15;
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.1;
       margin-bottom: 18px;
+      color: #111827;
     }
 
     .hero h1 span {
-      color: #6366f1;
+      color: #4f46e5;
     }
 
     .hero p {
       max-width: 700px;
-      margin: auto;
-      color: #667085;
+      margin: 0 auto 30px;
+      color: #5b6475;
       font-size: 18px;
     }
 
     .search-box {
       max-width: 700px;
-      margin: 30px auto 0;
+      margin: auto;
+      position: relative;
     }
 
     .search-box input {
@@ -115,42 +145,68 @@
       font-size: 16px;
       outline: none;
       background: #fff;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
     }
 
     .search-box input:focus {
       border-color: #6366f1;
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
     }
 
     .container {
-      max-width: 1150px;
+      max-width: 1180px;
       margin: auto;
       padding: 45px 20px;
     }
 
-    .categories {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
+    .section-title {
+      text-align: center;
       margin-bottom: 25px;
     }
 
+    .section-title h2 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #6b7280;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
     .category-btn {
-      border: 1px solid #d1d5db;
-      background: #fff;
+      border: 1px solid #dbe0e8;
+      background: #ffffff;
       color: #374151;
       padding: 10px 15px;
       border-radius: 999px;
       cursor: pointer;
       font-weight: 600;
-      transition: .2s;
+      font-size: 14px;
+      transition: 0.2s ease;
     }
 
-    .category-btn:hover,
-    .category-btn.active {
-      background: #6366f1;
-      color: #fff;
+    .category-btn:hover {
       border-color: #6366f1;
+      color: #4f46e5;
+    }
+
+    .category-btn.active {
+      background: #4f46e5;
+      color: white;
+      border-color: #4f46e5;
+    }
+
+    .count {
+      opacity: 0.75;
+      font-size: 12px;
     }
 
     .toolbar {
@@ -162,183 +218,244 @@
       flex-wrap: wrap;
     }
 
-    .results-count {
-      color: #667085;
+    #resultsCount {
+      color: #6b7280;
+      font-size: 14px;
       font-weight: 600;
     }
 
     .sort-select {
-      padding: 10px 14px;
       border: 1px solid #d1d5db;
-      border-radius: 10px;
       background: #fff;
+      padding: 10px 13px;
+      border-radius: 9px;
       font-size: 14px;
+      cursor: pointer;
+      outline: none;
     }
 
     .tools-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
     }
 
     .tool-card {
-      background: #fff;
+      background: #ffffff;
       border: 1px solid #e5e7eb;
-      border-radius: 18px;
-      padding: 22px;
-      transition: .2s;
+      border-radius: 16px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
+      min-height: 290px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .tool-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0,0,0,.08);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
     }
 
     .tool-top {
       display: flex;
-      align-items: center;
-      gap: 14px;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
       margin-bottom: 15px;
     }
 
     .tool-icon {
-      width: 55px;
-      height: 55px;
-      border-radius: 14px;
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
       object-fit: cover;
       background: #f1f5f9;
-    }
-
-    .tool-name {
-      font-size: 20px;
-      font-weight: 800;
-    }
-
-    .tool-category {
-      color: #6366f1;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .tool-description {
-      color: #667085;
-      margin-bottom: 18px;
-      flex: 1;
+      border: 1px solid #e5e7eb;
     }
 
     .badges {
       display: flex;
-      gap: 7px;
       flex-wrap: wrap;
-      margin-bottom: 18px;
+      gap: 5px;
+      justify-content: flex-end;
     }
 
     .badge {
       display: inline-block;
-      padding: 5px 9px;
-      border-radius: 7px;
-      font-size: 12px;
-      font-weight: 700;
-      background: #f1f5f9;
-      color: #475569;
-    }
-
-    .badge.popular {
-      background: #fff7ed;
-      color: #c2410c;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
     }
 
     .badge.free {
-      background: #ecfdf3;
-      color: #027a48;
+      background: #dcfce7;
+      color: #166534;
     }
 
     .badge.paid {
-      background: #fef2f2;
-      color: #b42318;
+      background: #fee2e2;
+      color: #991b1b;
     }
 
     .badge.freemium {
-      background: #eff6ff;
-      color: #1d4ed8;
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .badge.popular {
+      background: #ede9fe;
+      color: #5b21b6;
+    }
+
+    .tool-card h3 {
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #111827;
+    }
+
+    .category-label {
+      color: #4f46e5;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .tool-card p {
+      color: #6b7280;
+      font-size: 14px;
+      flex-grow: 1;
     }
 
     .tool-link {
-      display: block;
+      margin-top: 18px;
+      display: inline-block;
       text-align: center;
-      text-decoration: none;
       background: #111827;
-      color: #fff;
-      padding: 11px 15px;
-      border-radius: 10px;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 9px;
+      font-size: 13px;
       font-weight: 700;
+      transition: 0.2s ease;
     }
 
     .tool-link:hover {
-      background: #6366f1;
+      background: #4f46e5;
     }
 
     .no-results {
       display: none;
       text-align: center;
       padding: 50px 20px;
-      color: #667085;
+      background: #fff;
+      border: 1px dashed #d1d5db;
+      border-radius: 14px;
+      color: #6b7280;
     }
 
-    .info-section {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 45px 20px;
+    .no-results h3 {
+      color: #111827;
+      margin-bottom: 8px;
     }
 
-    .info-section h2 {
-      margin-bottom: 12px;
-      font-size: 30px;
-    }
-
-    .info-section p {
-      color: #667085;
-      margin-bottom: 15px;
-    }
-
-    footer {
-      margin-top: 30px;
+    .submit-section {
+      margin-top: 50px;
       background: #111827;
-      color: #d1d5db;
-      padding: 35px 20px;
+      color: white;
+      border-radius: 18px;
+      padding: 45px 25px;
       text-align: center;
     }
 
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 8px;
+    .submit-section h2 {
+      margin-bottom: 10px;
+      font-size: 30px;
     }
 
-    @media (max-width: 900px) {
+    .submit-section p {
+      color: #d1d5db;
+      max-width: 650px;
+      margin: 0 auto 20px;
+    }
+
+    .submit-btn {
+      display: inline-block;
+      background: #ffffff;
+      color: #111827;
+      padding: 12px 20px;
+      border-radius: 9px;
+      font-weight: 700;
+    }
+
+    footer {
+      margin-top: 50px;
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+      padding: 25px 20px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a:hover {
+      color: #4f46e5;
+    }
+
+    @media (max-width: 1000px) {
       .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
-    @media (max-width: 650px) {
+    @media (max-width: 750px) {
       .nav {
         flex-direction: column;
       }
 
       nav {
         justify-content: center;
-        gap: 12px;
-      }
-
-      .hero h1 {
-        font-size: 36px;
       }
 
       .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        padding: 55px 20px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .tools-grid {
         grid-template-columns: 1fr;
+      }
+
+      .toolbar {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .sort-select {
+        width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 16px;
       }
     }
   </style>
@@ -346,1024 +463,1553 @@
 
 <body>
 
-<header>
-  <div class="nav">
-    <a href="index.html" class="logo">
-      AI Tools <span>Hub</span>
-    </a>
+  <!-- Header -->
+  <header>
+    <div class="nav">
 
-    <nav>
-      <a href="#tools">Tools</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="#submit">Submit Tool</a>
-    </nav>
-  </div>
-</header>
+      <a href="index.html" class="logo">
+        AI Tools <span>Hub</span>
+      </a>
 
-<section class="hero">
-  <h1>Discover the Best <span>AI Tools</span></h1>
-  <p>
-    Explore useful AI tools for writing, coding, research, images,
-    voice, design and productivity — all in one place.
-  </p>
+      <nav>
+        <a href="#tools">Tools</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#submit">Submit Tool</a>
+      </nav>
 
-  <div class="search-box">
-    <input
-      type="search"
-      id="searchInput"
-      placeholder="Search AI tools..."
-      aria-label="Search AI tools"
-    >
-  </div>
-</section>
+    </div>
+  </header>
 
-<main id="tools" class="container">
 
-  <div class="categories" id="categories">
+  <!-- Hero -->
+  <section class="hero">
 
-    <button class="category-btn active" onclick="filterCategory('All', this)">
-      All Tools
-    </button>
+    <h1>
+      Discover the Best <span>AI Tools</span>
+    </h1>
 
-    <button class="category-btn" onclick="filterCategory('Chatbots', this)">
-      Chatbots
-    </button>
+    <p>
+      Explore 50+ AI tools for writing, coding, research, image generation,
+      voice, design, productivity and more.
+    </p>
 
-    <button class="category-btn" onclick="filterCategory('Writing', this)">
-      Writing
-    </button>
-
-    <button class="category-btn" onclick="filterCategory('Image', this)">
-      Image
-    </button>
-
-    <button class="category-btn" onclick="filterCategory('Coding', this)">
-      Coding
-    </button>
-
-    <button class="category-btn" onclick="filterCategory('Research', this)">
-      Research
-    </button>
-
-    <button class="category-btn" onclick="filterCategory('Voice', this)">
-      Voice
-    </button>
-
-    <button class="category-btn" onclick="filterCategory('Design', this)">
-      Design
-    </button>
-
-    <button class="category-btn" onclick="filterCategory('Productivity', this)">
-      Productivity
-    </button>
-
-  </div>
-
-  <div class="toolbar">
-    <div class="results-count" id="resultsCount">
-      30 tools found
+    <div class="search-box">
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search AI tools..."
+        aria-label="Search AI tools"
+      >
     </div>
 
-    <select id="sortSelect" class="sort-select">
-      <option value="default">Default Order</option>
-      <option value="az">A–Z</option>
-      <option value="za">Z–A</option>
-      <option value="popular">Most Popular</option>
-      <option value="free">Free First</option>
-    </select>
-  </div>
+  </section>
 
-  <div class="tools-grid" id="toolsGrid">
 
-    <!-- 1 -->
-    <article class="tool-card"
-      data-name="ChatGPT"
-      data-category="Chatbots"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=chatgpt.com&sz=128"
-          alt="ChatGPT">
-        <div>
-          <div class="tool-name">ChatGPT</div>
-          <div class="tool-category">Chatbots</div>
+  <!-- Tools -->
+  <main class="container" id="tools">
+
+    <div class="section-title">
+      <h2>AI Tools Directory</h2>
+      <p>Find the right AI tool for your needs.</p>
+    </div>
+
+
+    <!-- Categories -->
+    <div class="categories">
+
+      <button
+        class="category-btn active"
+        onclick="filterCategory('All Tools', this)"
+      >
+        All Tools <span class="count">(50)</span>
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="filterCategory('Chatbots', this)"
+      >
+        Chatbots <span class="count">(7)</span>
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="filterCategory('Writing', this)"
+      >
+        Writing <span class="count">(8)</span>
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="filterCategory('Image', this)"
+      >
+        Image <span class="count">(10)</span>
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="filterCategory('Coding', this)"
+      >
+        Coding <span class="count">(5)</span>
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="filterCategory('Research', this)"
+      >
+        Research <span class="count">(3)</span>
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="filterCategory('Voice', this)"
+      >
+        Voice <span class="count">(6)</span>
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="filterCategory('Design', this)"
+      >
+        Design <span class="count">(7)</span>
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="filterCategory('Productivity', this)"
+      >
+        Productivity <span class="count">(4)</span>
+      </button>
+
+    </div>
+
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+
+      <div id="resultsCount">
+        Showing 50 tools
+      </div>
+
+      <select
+        id="sortSelect"
+        class="sort-select"
+        aria-label="Sort tools"
+      >
+        <option value="default">Default</option>
+        <option value="az">A–Z</option>
+        <option value="za">Z–A</option>
+        <option value="popular">Most Popular</option>
+        <option value="free">Free First</option>
+      </select>
+
+    </div>
+
+
+    <!-- Tool Grid -->
+    <div class="tools-grid" id="toolsGrid">
+
+
+      <!-- 1 -->
+      <article
+        class="tool-card"
+        data-name="ChatGPT"
+        data-category="Chatbots"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img
+            class="tool-icon"
+            loading="lazy"
+            src="https://www.google.com/s2/favicons?domain=chatgpt.com&sz=128"
+            alt="ChatGPT logo"
+          >
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI assistant for writing, coding, research, brainstorming and everyday tasks.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://chatgpt.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>ChatGPT</h3>
+        <div class="category-label">Chatbots</div>
+        <p>AI assistant for conversations, writing, research, coding and everyday tasks.</p>
+        <a class="tool-link" href="https://chatgpt.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 2 -->
-    <article class="tool-card"
-      data-name="Claude"
-      data-category="Chatbots"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=claude.ai&sz=128"
-          alt="Claude">
-        <div>
-          <div class="tool-name">Claude</div>
-          <div class="tool-category">Chatbots</div>
+
+      <!-- 2 -->
+      <article
+        class="tool-card"
+        data-name="Claude"
+        data-category="Chatbots"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=claude.ai&sz=128" alt="Claude logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI assistant for writing, analysis, coding, documents and complex tasks.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://claude.ai/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Claude</h3>
+        <div class="category-label">Chatbots</div>
+        <p>AI assistant designed for writing, analysis, coding and complex tasks.</p>
+        <a class="tool-link" href="https://claude.ai/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 3 -->
-    <article class="tool-card"
-      data-name="Gemini"
-      data-category="Chatbots"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=gemini.google.com&sz=128"
-          alt="Gemini">
-        <div>
-          <div class="tool-name">Gemini</div>
-          <div class="tool-category">Chatbots</div>
+
+      <!-- 3 -->
+      <article
+        class="tool-card"
+        data-name="Gemini"
+        data-category="Chatbots"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=gemini.google.com&sz=128" alt="Gemini logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        Google's AI assistant for conversations, ideas, research and productivity.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://gemini.google.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Gemini</h3>
+        <div class="category-label">Chatbots</div>
+        <p>Google AI assistant for conversations, information, writing and creative tasks.</p>
+        <a class="tool-link" href="https://gemini.google.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 4 -->
-    <article class="tool-card"
-      data-name="Perplexity"
-      data-category="Research"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128"
-          alt="Perplexity">
-        <div>
-          <div class="tool-name">Perplexity</div>
-          <div class="tool-category">Research</div>
+
+      <!-- 4 -->
+      <article
+        class="tool-card"
+        data-name="Perplexity"
+        data-category="Research"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128" alt="Perplexity logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI-powered search and research assistant that helps find answers and sources.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://www.perplexity.ai/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Perplexity</h3>
+        <div class="category-label">Research</div>
+        <p>AI search and research assistant for finding and understanding information.</p>
+        <a class="tool-link" href="https://www.perplexity.ai/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 5 -->
-    <article class="tool-card"
-      data-name="Midjourney"
-      data-category="Image"
-      data-pricing="Paid"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=midjourney.com&sz=128"
-          alt="Midjourney">
-        <div>
-          <div class="tool-name">Midjourney</div>
-          <div class="tool-category">Image</div>
+
+      <!-- 5 -->
+      <article
+        class="tool-card"
+        data-name="Midjourney"
+        data-category="Image"
+        data-pricing="Paid"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=midjourney.com&sz=128" alt="Midjourney logo">
+          <div class="badges">
+            <span class="badge paid">Paid</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI image generation platform for creating artistic and highly detailed visuals.
-      </p>
-      <div class="badges">
-        <span class="badge paid">Paid</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://www.midjourney.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Midjourney</h3>
+        <div class="category-label">Image</div>
+        <p>AI image generation platform for creating detailed and creative visuals.</p>
+        <a class="tool-link" href="https://www.midjourney.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 6 -->
-    <article class="tool-card"
-      data-name="Canva"
-      data-category="Design"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=canva.com&sz=128"
-          alt="Canva">
-        <div>
-          <div class="tool-name">Canva</div>
-          <div class="tool-category">Design</div>
+
+      <!-- 6 -->
+      <article
+        class="tool-card"
+        data-name="Canva"
+        data-category="Design"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=canva.com&sz=128" alt="Canva logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        Design platform with AI features for graphics, presentations, social posts and more.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://www.canva.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Canva</h3>
+        <div class="category-label">Design</div>
+        <p>Design platform with AI-powered tools for graphics, presentations and content.</p>
+        <a class="tool-link" href="https://www.canva.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 7 -->
-    <article class="tool-card"
-      data-name="Cursor"
-      data-category="Coding"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=cursor.com&sz=128"
-          alt="Cursor">
-        <div>
-          <div class="tool-name">Cursor</div>
-          <div class="tool-category">Coding</div>
+
+      <!-- 7 -->
+      <article
+        class="tool-card"
+        data-name="Cursor"
+        data-category="Coding"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=cursor.com&sz=128" alt="Cursor logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI-powered code editor designed to help developers write and understand code faster.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://cursor.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Cursor</h3>
+        <div class="category-label">Coding</div>
+        <p>AI-powered code editor for writing, understanding and modifying software.</p>
+        <a class="tool-link" href="https://cursor.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 8 -->
-    <article class="tool-card"
-      data-name="GitHub Copilot"
-      data-category="Coding"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=github.com&sz=128"
-          alt="GitHub Copilot">
-        <div>
-          <div class="tool-name">GitHub Copilot</div>
-          <div class="tool-category">Coding</div>
+
+      <!-- 8 -->
+      <article
+        class="tool-card"
+        data-name="GitHub Copilot"
+        data-category="Coding"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=github.com&sz=128" alt="GitHub Copilot logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI coding assistant that helps with code completion, chat and development workflows.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://github.com/features/copilot" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>GitHub Copilot</h3>
+        <div class="category-label">Coding</div>
+        <p>AI coding assistant that helps developers write and understand code.</p>
+        <a class="tool-link" href="https://github.com/features/copilot" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 9 -->
-    <article class="tool-card"
-      data-name="Jasper"
-      data-category="Writing"
-      data-pricing="Paid"
-      data-popular="false">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=jasper.ai&sz=128"
-          alt="Jasper">
-        <div>
-          <div class="tool-name">Jasper</div>
-          <div class="tool-category">Writing</div>
+
+      <!-- 9 -->
+      <article
+        class="tool-card"
+        data-name="Jasper"
+        data-category="Writing"
+        data-pricing="Paid"
+        data-popular="false"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=jasper.ai&sz=128" alt="Jasper logo">
+          <div class="badges">
+            <span class="badge paid">Paid</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI platform for marketing content, copywriting and brand-focused content creation.
-      </p>
-      <div class="badges">
-        <span class="badge paid">Paid</span>
-      </div>
-      <a class="tool-link" href="https://www.jasper.ai/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Jasper</h3>
+        <div class="category-label">Writing</div>
+        <p>AI platform for marketing content, brand writing and business copy.</p>
+        <a class="tool-link" href="https://www.jasper.ai/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 10 -->
-    <article class="tool-card"
-      data-name="Notion AI"
-      data-category="Productivity"
-      data-pricing="Paid"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=notion.com&sz=128"
-          alt="Notion AI">
-        <div>
-          <div class="tool-name">Notion AI</div>
-          <div class="tool-category">Productivity</div>
+
+      <!-- 10 -->
+      <article
+        class="tool-card"
+        data-name="Notion AI"
+        data-category="Productivity"
+        data-pricing="Paid"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=notion.so&sz=128" alt="Notion AI logo">
+          <div class="badges">
+            <span class="badge paid">Paid</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI features inside Notion for writing, summarizing, organizing and knowledge work.
-      </p>
-      <div class="badges">
-        <span class="badge paid">Paid</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://www.notion.com/product/ai" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Notion AI</h3>
+        <div class="category-label">Productivity</div>
+        <p>AI features inside Notion for writing, summarizing, organizing and productivity.</p>
+        <a class="tool-link" href="https://www.notion.so/product/ai" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 11 -->
-    <article class="tool-card"
-      data-name="Grammarly"
-      data-category="Writing"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=grammarly.com&sz=128"
-          alt="Grammarly">
-        <div>
-          <div class="tool-name">Grammarly</div>
-          <div class="tool-category">Writing</div>
+
+      <!-- 11 -->
+      <article
+        class="tool-card"
+        data-name="Grammarly"
+        data-category="Writing"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=grammarly.com&sz=128" alt="Grammarly logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI writing assistant for grammar, clarity, rewriting and communication.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://www.grammarly.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Grammarly</h3>
+        <div class="category-label">Writing</div>
+        <p>AI writing assistant for grammar, clarity, tone and content improvement.</p>
+        <a class="tool-link" href="https://www.grammarly.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 12 -->
-    <article class="tool-card"
-      data-name="ElevenLabs"
-      data-category="Voice"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=128"
-          alt="ElevenLabs">
-        <div>
-          <div class="tool-name">ElevenLabs</div>
-          <div class="tool-category">Voice</div>
+
+      <!-- 12 -->
+      <article
+        class="tool-card"
+        data-name="ElevenLabs"
+        data-category="Voice"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=128" alt="ElevenLabs logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI voice platform for realistic text-to-speech, voice creation and audio tools.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://elevenlabs.io/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>ElevenLabs</h3>
+        <div class="category-label">Voice</div>
+        <p>AI voice platform for text-to-speech, voice generation and audio content.</p>
+        <a class="tool-link" href="https://elevenlabs.io/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 13 -->
-    <article class="tool-card"
-      data-name="CapCut"
-      data-category="Design"
-      data-pricing="Freemium"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=capcut.com&sz=128"
-          alt="CapCut">
-        <div>
-          <div class="tool-name">CapCut</div>
-          <div class="tool-category">Design</div>
+
+      <!-- 13 -->
+      <article
+        class="tool-card"
+        data-name="CapCut"
+        data-category="Design"
+        data-pricing="Freemium"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=capcut.com&sz=128" alt="CapCut logo">
+          <div class="badges">
+            <span class="badge freemium">Freemium</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI-powered video editing platform for creating and editing social media videos.
-      </p>
-      <div class="badges">
-        <span class="badge freemium">Freemium</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://www.capcut.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>CapCut</h3>
+        <div class="category-label">Design</div>
+        <p>AI-powered video editing platform for short videos, social content and more.</p>
+        <a class="tool-link" href="https://www.capcut.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 14 -->
-    <article class="tool-card"
-      data-name="Runway"
-      data-category="Image"
-      data-pricing="Freemium"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=runwayml.com&sz=128"
-          alt="Runway">
-        <div>
-          <div class="tool-name">Runway</div>
-          <div class="tool-category">Image</div>
+
+      <!-- 14 -->
+      <article
+        class="tool-card"
+        data-name="Runway"
+        data-category="Image"
+        data-pricing="Freemium"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=runwayml.com&sz=128" alt="Runway logo">
+          <div class="badges">
+            <span class="badge freemium">Freemium</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI creative platform for generating and editing images and videos.
-      </p>
-      <div class="badges">
-        <span class="badge freemium">Freemium</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://runwayml.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Runway</h3>
+        <div class="category-label">Image</div>
+        <p>Generative AI platform for creating and editing images and videos.</p>
+        <a class="tool-link" href="https://runwayml.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 15 -->
-    <article class="tool-card"
-      data-name="Ideogram"
-      data-category="Image"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=ideogram.ai&sz=128"
-          alt="Ideogram">
-        <div>
-          <div class="tool-name">Ideogram</div>
-          <div class="tool-category">Image</div>
+
+      <!-- 15 -->
+      <article
+        class="tool-card"
+        data-name="Ideogram"
+        data-category="Image"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=ideogram.ai&sz=128" alt="Ideogram logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI image generator known for creative designs, posters and text in images.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://ideogram.ai/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Ideogram</h3>
+        <div class="category-label">Image</div>
+        <p>AI image generator known for creative visuals and text rendering.</p>
+        <a class="tool-link" href="https://ideogram.ai/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 16 -->
-    <article class="tool-card"
-      data-name="Leonardo AI"
-      data-category="Image"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=leonardo.ai&sz=128"
-          alt="Leonardo AI">
-        <div>
-          <div class="tool-name">Leonardo AI</div>
-          <div class="tool-category">Image</div>
+
+      <!-- 16 -->
+      <article
+        class="tool-card"
+        data-name="Leonardo AI"
+        data-category="Image"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=leonardo.ai&sz=128" alt="Leonardo AI logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI creative platform for image generation, design and visual content creation.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://leonardo.ai/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Leonardo AI</h3>
+        <div class="category-label">Image</div>
+        <p>AI creative platform for generating images, artwork and visual assets.</p>
+        <a class="tool-link" href="https://leonardo.ai/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 17 -->
-    <article class="tool-card"
-      data-name="Descript"
-      data-category="Voice"
-      data-pricing="Free"
-      data-popular="false">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=descript.com&sz=128"
-          alt="Descript">
-        <div>
-          <div class="tool-name">Descript</div>
-          <div class="tool-category">Voice</div>
+
+      <!-- 17 -->
+      <article
+        class="tool-card"
+        data-name="Descript"
+        data-category="Voice"
+        data-pricing="Free"
+        data-popular="false"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=descript.com&sz=128" alt="Descript logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI-powered audio and video editor with transcription and voice features.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-      </div>
-      <a class="tool-link" href="https://www.descript.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Descript</h3>
+        <div class="category-label">Voice</div>
+        <p>AI-powered audio and video editor with transcription and editing tools.</p>
+        <a class="tool-link" href="https://www.descript.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 18 -->
-    <article class="tool-card"
-      data-name="Otter AI"
-      data-category="Voice"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=otter.ai&sz=128"
-          alt="Otter AI">
-        <div>
-          <div class="tool-name">Otter AI</div>
-          <div class="tool-category">Voice</div>
+
+      <!-- 18 -->
+      <article
+        class="tool-card"
+        data-name="Otter AI"
+        data-category="Voice"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=otter.ai&sz=128" alt="Otter AI logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI meeting assistant for transcription, notes, summaries and conversations.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://otter.ai/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Otter AI</h3>
+        <div class="category-label">Voice</div>
+        <p>AI meeting assistant for transcription, notes and conversation summaries.</p>
+        <a class="tool-link" href="https://otter.ai/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 19 -->
-    <article class="tool-card"
-      data-name="Gamma"
-      data-category="Productivity"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=gamma.app&sz=128"
-          alt="Gamma">
-        <div>
-          <div class="tool-name">Gamma</div>
-          <div class="tool-category">Productivity</div>
+
+      <!-- 19 -->
+      <article
+        class="tool-card"
+        data-name="Gamma"
+        data-category="Productivity"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=gamma.app&sz=128" alt="Gamma logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI tool for creating presentations, documents and visual content quickly.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://gamma.app/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Gamma</h3>
+        <div class="category-label">Productivity</div>
+        <p>AI tool for creating presentations, documents and visual content.</p>
+        <a class="tool-link" href="https://gamma.app/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 20 -->
-    <article class="tool-card"
-      data-name="Copy.ai"
-      data-category="Writing"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=copy.ai&sz=128"
-          alt="Copy.ai">
-        <div>
-          <div class="tool-name">Copy.ai</div>
-          <div class="tool-category">Writing</div>
+
+      <!-- 20 -->
+      <article
+        class="tool-card"
+        data-name="Copy.ai"
+        data-category="Writing"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=copy.ai&sz=128" alt="Copy.ai logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI platform for marketing copy, content creation and business workflows.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://www.copy.ai/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Copy.ai</h3>
+        <div class="category-label">Writing</div>
+        <p>AI writing platform for marketing copy, content and business workflows.</p>
+        <a class="tool-link" href="https://www.copy.ai/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 21 -->
-    <article class="tool-card"
-      data-name="QuillBot"
-      data-category="Writing"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=quillbot.com&sz=128"
-          alt="QuillBot">
-        <div>
-          <div class="tool-name">QuillBot</div>
-          <div class="tool-category">Writing</div>
+
+      <!-- 21 -->
+      <article
+        class="tool-card"
+        data-name="QuillBot"
+        data-category="Writing"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=quillbot.com&sz=128" alt="QuillBot logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI writing tool for paraphrasing, summarizing and improving written content.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://quillbot.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>QuillBot</h3>
+        <div class="category-label">Writing</div>
+        <p>AI writing assistant for paraphrasing, summarizing and improving text.</p>
+        <a class="tool-link" href="https://quillbot.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 22 -->
-    <article class="tool-card"
-      data-name="Remove.bg"
-      data-category="Image"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=remove.bg&sz=128"
-          alt="Remove.bg">
-        <div>
-          <div class="tool-name">Remove.bg</div>
-          <div class="tool-category">Image</div>
+
+      <!-- 22 -->
+      <article
+        class="tool-card"
+        data-name="Remove.bg"
+        data-category="Image"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=remove.bg&sz=128" alt="Remove.bg logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI-powered tool that automatically removes backgrounds from images.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://www.remove.bg/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Remove.bg</h3>
+        <div class="category-label">Image</div>
+        <p>AI tool that automatically removes backgrounds from images.</p>
+        <a class="tool-link" href="https://www.remove.bg/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 23 -->
-    <article class="tool-card"
-      data-name="PhotoRoom"
-      data-category="Design"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=photoroom.com&sz=128"
-          alt="PhotoRoom">
-        <div>
-          <div class="tool-name">PhotoRoom</div>
-          <div class="tool-category">Design</div>
+
+      <!-- 23 -->
+      <article
+        class="tool-card"
+        data-name="PhotoRoom"
+        data-category="Design"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=photoroom.com&sz=128" alt="PhotoRoom logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI photo editing platform for backgrounds, product photos and visual content.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://www.photoroom.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>PhotoRoom</h3>
+        <div class="category-label">Design</div>
+        <p>AI photo editor for backgrounds, product images and creative designs.</p>
+        <a class="tool-link" href="https://www.photoroom.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 24 -->
-    <article class="tool-card"
-      data-name="Zapier"
-      data-category="Productivity"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=zapier.com&sz=128"
-          alt="Zapier">
-        <div>
-          <div class="tool-name">Zapier</div>
-          <div class="tool-category">Productivity</div>
+
+      <!-- 24 -->
+      <article
+        class="tool-card"
+        data-name="Zapier"
+        data-category="Productivity"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=zapier.com&sz=128" alt="Zapier logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        Automation platform with AI features for connecting apps and automating workflows.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://zapier.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Zapier</h3>
+        <div class="category-label">Productivity</div>
+        <p>Automation platform connecting apps and AI-powered workflows.</p>
+        <a class="tool-link" href="https://zapier.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 25 -->
-    <article class="tool-card"
-      data-name="Adobe Firefly"
-      data-category="Image"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=adobe.com&sz=128"
-          alt="Adobe Firefly">
-        <div>
-          <div class="tool-name">Adobe Firefly</div>
-          <div class="tool-category">Image</div>
+
+      <!-- 25 -->
+      <article
+        class="tool-card"
+        data-name="Adobe Firefly"
+        data-category="Image"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=firefly.adobe.com&sz=128" alt="Adobe Firefly logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        Adobe's generative AI tools for creating and editing images and creative content.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://firefly.adobe.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Adobe Firefly</h3>
+        <div class="category-label">Image</div>
+        <p>Generative AI tools for creating and editing images and creative assets.</p>
+        <a class="tool-link" href="https://firefly.adobe.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 26 -->
-    <article class="tool-card"
-      data-name="Suno"
-      data-category="Voice"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=suno.com&sz=128"
-          alt="Suno">
-        <div>
-          <div class="tool-name">Suno</div>
-          <div class="tool-category">Voice</div>
+
+      <!-- 26 -->
+      <article
+        class="tool-card"
+        data-name="Suno"
+        data-category="Voice"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=suno.com&sz=128" alt="Suno logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI music creation platform for generating songs and musical ideas from prompts.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://suno.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Suno</h3>
+        <div class="category-label">Voice</div>
+        <p>AI music generation platform for creating songs and audio experiences.</p>
+        <a class="tool-link" href="https://suno.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 27 -->
-    <article class="tool-card"
-      data-name="DeepL"
-      data-category="Writing"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=deepl.com&sz=128"
-          alt="DeepL">
-        <div>
-          <div class="tool-name">DeepL</div>
-          <div class="tool-category">Writing</div>
+
+      <!-- 27 -->
+      <article
+        class="tool-card"
+        data-name="DeepL"
+        data-category="Writing"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=deepl.com&sz=128" alt="DeepL logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI translation and writing assistant for translating and improving text.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://www.deepl.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>DeepL</h3>
+        <div class="category-label">Writing</div>
+        <p>AI translation and writing platform for natural multilingual communication.</p>
+        <a class="tool-link" href="https://www.deepl.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 28 -->
-    <article class="tool-card"
-      data-name="Wix AI"
-      data-category="Design"
-      data-pricing="Free"
-      data-popular="false">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=wix.com&sz=128"
-          alt="Wix AI">
-        <div>
-          <div class="tool-name">Wix AI</div>
-          <div class="tool-category">Design</div>
+
+      <!-- 28 -->
+      <article
+        class="tool-card"
+        data-name="Wix AI"
+        data-category="Design"
+        data-pricing="Free"
+        data-popular="false"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=wix.com&sz=128" alt="Wix AI logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI website creation and design features for building websites more quickly.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-      </div>
-      <a class="tool-link" href="https://www.wix.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Wix AI</h3>
+        <div class="category-label">Design</div>
+        <p>AI website creation and design tools for building websites faster.</p>
+        <a class="tool-link" href="https://www.wix.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 29 -->
-    <article class="tool-card"
-      data-name="Replit"
-      data-category="Coding"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=replit.com&sz=128"
-          alt="Replit">
-        <div>
-          <div class="tool-name">Replit</div>
-          <div class="tool-category">Coding</div>
+
+      <!-- 29 -->
+      <article
+        class="tool-card"
+        data-name="Replit"
+        data-category="Coding"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=replit.com&sz=128" alt="Replit logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI-powered development platform for building, coding and deploying applications.
-      </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://replit.com/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
+        <h3>Replit</h3>
+        <div class="category-label">Coding</div>
+        <p>Online development platform with AI assistance for building software.</p>
+        <a class="tool-link" href="https://replit.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
 
-    <!-- 30 -->
-    <article class="tool-card"
-      data-name="Mistral Le Chat"
-      data-category="Chatbots"
-      data-pricing="Free"
-      data-popular="true">
-      <div class="tool-top">
-        <img class="tool-icon" loading="lazy"
-          src="https://www.google.com/s2/favicons?domain=chat.mistral.ai&sz=128"
-          alt="Mistral Le Chat">
-        <div>
-          <div class="tool-name">Mistral Le Chat</div>
-          <div class="tool-category">Chatbots</div>
+
+      <!-- 30 -->
+      <article
+        class="tool-card"
+        data-name="Mistral Le Chat"
+        data-category="Chatbots"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=chat.mistral.ai&sz=128" alt="Mistral Le Chat logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
         </div>
-      </div>
-      <p class="tool-description">
-        AI assistant for conversations, writing, research, analysis and coding tasks.
+        <h3>Mistral Le Chat</h3>
+        <div class="category-label">Chatbots</div>
+        <p>AI conversational assistant from Mistral for everyday and professional tasks.</p>
+        <a class="tool-link" href="https://chat.mistral.ai/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 31 -->
+      <article
+        class="tool-card"
+        data-name="DeepSeek"
+        data-category="Chatbots"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=deepseek.com&sz=128" alt="DeepSeek logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>DeepSeek</h3>
+        <div class="category-label">Chatbots</div>
+        <p>AI assistant for reasoning, coding, research and general conversations.</p>
+        <a class="tool-link" href="https://www.deepseek.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 32 -->
+      <article
+        class="tool-card"
+        data-name="Grok"
+        data-category="Chatbots"
+        data-pricing="Freemium"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=grok.com&sz=128" alt="Grok logo">
+          <div class="badges">
+            <span class="badge freemium">Freemium</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>Grok</h3>
+        <div class="category-label">Chatbots</div>
+        <p>AI assistant for conversations, research, coding and creative tasks.</p>
+        <a class="tool-link" href="https://grok.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 33 -->
+      <article
+        class="tool-card"
+        data-name="Poe"
+        data-category="Chatbots"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=poe.com&sz=128" alt="Poe logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>Poe</h3>
+        <div class="category-label">Chatbots</div>
+        <p>AI platform that lets users interact with different AI models and bots.</p>
+        <a class="tool-link" href="https://poe.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 34 -->
+      <article
+        class="tool-card"
+        data-name="Hugging Face"
+        data-category="Research"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=huggingface.co&sz=128" alt="Hugging Face logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>Hugging Face</h3>
+        <div class="category-label">Research</div>
+        <p>AI community and platform for models, datasets, research and machine learning.</p>
+        <a class="tool-link" href="https://huggingface.co/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 35 -->
+      <article
+        class="tool-card"
+        data-name="Figma AI"
+        data-category="Design"
+        data-pricing="Freemium"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=figma.com&sz=128" alt="Figma AI logo">
+          <div class="badges">
+            <span class="badge freemium">Freemium</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>Figma AI</h3>
+        <div class="category-label">Design</div>
+        <p>AI-powered design features for creating, editing and exploring interface ideas.</p>
+        <a class="tool-link" href="https://www.figma.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 36 -->
+      <article
+        class="tool-card"
+        data-name="VEED"
+        data-category="Design"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=veed.io&sz=128" alt="VEED logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>VEED</h3>
+        <div class="category-label">Design</div>
+        <p>Online AI video editor for creating social videos, subtitles and content.</p>
+        <a class="tool-link" href="https://www.veed.io/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 37 -->
+      <article
+        class="tool-card"
+        data-name="Synthesia"
+        data-category="Voice"
+        data-pricing="Freemium"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=synthesia.io&sz=128" alt="Synthesia logo">
+          <div class="badges">
+            <span class="badge freemium">Freemium</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>Synthesia</h3>
+        <div class="category-label">Voice</div>
+        <p>AI video platform for creating presenter videos with digital avatars and voices.</p>
+        <a class="tool-link" href="https://www.synthesia.io/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 38 -->
+      <article
+        class="tool-card"
+        data-name="HeyGen"
+        data-category="Voice"
+        data-pricing="Freemium"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=heygen.com&sz=128" alt="HeyGen logo">
+          <div class="badges">
+            <span class="badge freemium">Freemium</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>HeyGen</h3>
+        <div class="category-label">Voice</div>
+        <p>AI video creation platform with avatars, voice generation and translation.</p>
+        <a class="tool-link" href="https://www.heygen.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 39 -->
+      <article
+        class="tool-card"
+        data-name="Pika"
+        data-category="Image"
+        data-pricing="Freemium"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=pika.art&sz=128" alt="Pika logo">
+          <div class="badges">
+            <span class="badge freemium">Freemium</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>Pika</h3>
+        <div class="category-label">Image</div>
+        <p>Generative AI platform for creating and transforming creative videos.</p>
+        <a class="tool-link" href="https://pika.art/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 40 -->
+      <article
+        class="tool-card"
+        data-name="Luma AI"
+        data-category="Image"
+        data-pricing="Freemium"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=lumalabs.ai&sz=128" alt="Luma AI logo">
+          <div class="badges">
+            <span class="badge freemium">Freemium</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>Luma AI</h3>
+        <div class="category-label">Image</div>
+        <p>AI creative platform for generating and working with visual and video content.</p>
+        <a class="tool-link" href="https://lumalabs.ai/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 41 -->
+      <article
+        class="tool-card"
+        data-name="Kling AI"
+        data-category="Image"
+        data-pricing="Freemium"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=klingai.com&sz=128" alt="Kling AI logo">
+          <div class="badges">
+            <span class="badge freemium">Freemium</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>Kling AI</h3>
+        <div class="category-label">Image</div>
+        <p>Generative AI platform for creating images and videos from prompts.</p>
+        <a class="tool-link" href="https://klingai.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 42 -->
+      <article
+        class="tool-card"
+        data-name="Tome"
+        data-category="Productivity"
+        data-pricing="Free"
+        data-popular="false"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=tome.app&sz=128" alt="Tome logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+          </div>
+        </div>
+        <h3>Tome</h3>
+        <div class="category-label">Productivity</div>
+        <p>AI presentation and storytelling tool for creating polished visual content.</p>
+        <a class="tool-link" href="https://tome.app/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 43 -->
+      <article
+        class="tool-card"
+        data-name="Beautiful.ai"
+        data-category="Design"
+        data-pricing="Freemium"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=beautiful.ai&sz=128" alt="Beautiful.ai logo">
+          <div class="badges">
+            <span class="badge freemium">Freemium</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>Beautiful.ai</h3>
+        <div class="category-label">Design</div>
+        <p>AI presentation maker for creating professional slides and presentations.</p>
+        <a class="tool-link" href="https://www.beautiful.ai/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 44 -->
+      <article
+        class="tool-card"
+        data-name="Writesonic"
+        data-category="Writing"
+        data-pricing="Freemium"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=writesonic.com&sz=128" alt="Writesonic logo">
+          <div class="badges">
+            <span class="badge freemium">Freemium</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>Writesonic</h3>
+        <div class="category-label">Writing</div>
+        <p>AI content platform for articles, marketing copy and business content.</p>
+        <a class="tool-link" href="https://writesonic.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 45 -->
+      <article
+        class="tool-card"
+        data-name="Wordtune"
+        data-category="Writing"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=wordtune.com&sz=128" alt="Wordtune logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>Wordtune</h3>
+        <div class="category-label">Writing</div>
+        <p>AI writing assistant for rewriting, improving and expanding written content.</p>
+        <a class="tool-link" href="https://www.wordtune.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 46 -->
+      <article
+        class="tool-card"
+        data-name="Speechify"
+        data-category="Voice"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=speechify.com&sz=128" alt="Speechify logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>Speechify</h3>
+        <div class="category-label">Voice</div>
+        <p>Text-to-speech platform that turns written content into natural-sounding audio.</p>
+        <a class="tool-link" href="https://speechify.com/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 47 -->
+      <article
+        class="tool-card"
+        data-name="Murf AI"
+        data-category="Voice"
+        data-pricing="Freemium"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=murf.ai&sz=128" alt="Murf AI logo">
+          <div class="badges">
+            <span class="badge freemium">Freemium</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>Murf AI</h3>
+        <div class="category-label">Voice</div>
+        <p>AI voice generator for voiceovers, presentations, videos and audio content.</p>
+        <a class="tool-link" href="https://murf.ai/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 48 -->
+      <article
+        class="tool-card"
+        data-name="Krisp"
+        data-category="Productivity"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=krisp.ai&sz=128" alt="Krisp logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>Krisp</h3>
+        <div class="category-label">Productivity</div>
+        <p>AI meeting assistant with noise cancellation and productivity features.</p>
+        <a class="tool-link" href="https://krisp.ai/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 49 -->
+      <article
+        class="tool-card"
+        data-name="Character AI"
+        data-category="Chatbots"
+        data-pricing="Free"
+        data-popular="true"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=character.ai&sz=128" alt="Character AI logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+            <span class="badge popular">Popular</span>
+          </div>
+        </div>
+        <h3>Character AI</h3>
+        <div class="category-label">Chatbots</div>
+        <p>AI chatbot platform for conversations with customizable AI characters.</p>
+        <a class="tool-link" href="https://character.ai/" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+      <!-- 50 -->
+      <article
+        class="tool-card"
+        data-name="Grammarly AI Detector"
+        data-category="Writing"
+        data-pricing="Free"
+        data-popular="false"
+      >
+        <div class="tool-top">
+          <img class="tool-icon" loading="lazy" src="https://www.google.com/s2/favicons?domain=grammarly.com&sz=128" alt="Grammarly AI Detector logo">
+          <div class="badges">
+            <span class="badge free">Free</span>
+          </div>
+        </div>
+        <h3>Grammarly AI Detector</h3>
+        <div class="category-label">Writing</div>
+        <p>Tool for analyzing text and providing AI-related writing insights.</p>
+        <a class="tool-link" href="https://www.grammarly.com/ai-detector" target="_blank" rel="noopener">Visit Tool</a>
+      </article>
+
+
+    </div>
+
+
+    <!-- No Results -->
+    <div class="no-results" id="noResults">
+
+      <h3>No tools found</h3>
+
+      <p>
+        Try another search term or select a different category.
       </p>
-      <div class="badges">
-        <span class="badge free">Free</span>
-        <span class="badge popular">Popular</span>
-      </div>
-      <a class="tool-link" href="https://chat.mistral.ai/" target="_blank" rel="noopener">Visit Tool</a>
-    </article>
 
-  </div>
+    </div>
 
-  <div class="no-results" id="noResults">
-    <h2>No AI tools found</h2>
-    <p>Try another search or select a different category.</p>
-  </div>
 
-</main>
+    <!-- Submit -->
+    <section class="submit-section" id="submit">
 
-<section class="info-section" id="submit">
-  <h2>Submit an AI Tool</h2>
-  <p>
-    Know a useful AI tool that should be listed on AI Tools Hub?
-    Contact us and send the tool details for consideration.
-  </p>
-  <a class="tool-link" href="contact.html">
-    Submit a Tool
-  </a>
-</section>
+      <h2>Have an AI Tool?</h2>
 
-<footer>
-  <p>© 2026 AI Tools Hub. All rights reserved.</p>
-  <p>
-    <a href="index.html">Tools</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </p>
-</footer>
+      <p>
+        Know a useful AI tool that should be listed here?
+        Submit it and help us grow the AI Tools Hub directory.
+      </p>
 
-<script>
+      <a href="contact.html" class="submit-btn">
+        Submit a Tool
+      </a>
 
-  let selectedCategory = "All";
+    </section>
 
-  const searchInput = document.getElementById("searchInput");
-  const sortSelect = document.getElementById("sortSelect");
-  const toolsGrid = document.getElementById("toolsGrid");
-  const noResults = document.getElementById("noResults");
-  const resultsCount = document.getElementById("resultsCount");
+  </main>
 
-  function getTools() {
-    return Array.from(document.querySelectorAll(".tool-card"));
-  }
 
-  function updateCategoryCounts() {
+  <!-- Footer -->
+  <footer>
 
-    const tools = getTools();
+    <div class="footer-links">
+      <a href="index.html">Tools</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
-    const counts = {};
+    <p>
+      © 2026 AI Tools Hub. All rights reserved.
+    </p>
 
-    tools.forEach(tool => {
-      const category = tool.dataset.category;
+  </footer>
 
-      if (!counts[category]) {
-        counts[category] = 0;
+
+  <script>
+
+    let selectedCategory = "All Tools";
+
+    const searchInput = document.getElementById("searchInput");
+    const sortSelect = document.getElementById("sortSelect");
+    const toolsGrid = document.getElementById("toolsGrid");
+    const noResults = document.getElementById("noResults");
+    const resultsCount = document.getElementById("resultsCount");
+
+    const categoryButtons = document.querySelectorAll(".category-btn");
+
+
+    function getTools() {
+      return Array.from(
+        document.querySelectorAll(".tool-card")
+      );
+    }
+
+
+    function updateCategoryCounts() {
+
+      const tools = getTools();
+
+      const counts = {};
+
+      tools.forEach(tool => {
+
+        const category =
+          tool.dataset.category;
+
+        counts[category] =
+          (counts[category] || 0) + 1;
+
+      });
+
+
+      categoryButtons.forEach(button => {
+
+        const onclickValue =
+          button.getAttribute("onclick");
+
+        if (!onclickValue) return;
+
+        const match =
+          onclickValue.match(/filterCategory\('([^']+)'/);
+
+        if (!match) return;
+
+        const category = match[1];
+
+        const countElement =
+          button.querySelector(".count");
+
+        if (!countElement) return;
+
+        if (category === "All Tools") {
+
+          countElement.textContent =
+            `(${tools.length})`;
+
+        } else {
+
+          countElement.textContent =
+            `(${counts[category] || 0})`;
+
+        }
+
+      });
+
+    }
+
+
+    function updateTools() {
+
+      const searchTerm =
+        searchInput.value
+          .trim()
+          .toLowerCase();
+
+      const sortValue =
+        sortSelect.value;
+
+      let tools = getTools();
+
+
+      /* Search + Category */
+
+      tools.forEach(tool => {
+
+        const name =
+          tool.dataset.name.toLowerCase();
+
+        const category =
+          tool.dataset.category.toLowerCase();
+
+        const description =
+          tool.querySelector("p").textContent.toLowerCase();
+
+        const matchesSearch =
+          !searchTerm ||
+          name.includes(searchTerm) ||
+          category.includes(searchTerm) ||
+          description.includes(searchTerm);
+
+        const matchesCategory =
+          selectedCategory === "All Tools" ||
+          tool.dataset.category === selectedCategory;
+
+        tool.style.display =
+          matchesSearch && matchesCategory
+            ? "flex"
+            : "none";
+
+      });
+
+
+      /* Get visible tools */
+
+      let visibleTools =
+        tools.filter(tool =>
+          tool.style.display !== "none"
+        );
+
+
+      /* Sorting */
+
+      if (sortValue === "az") {
+
+        visibleTools.sort((a, b) =>
+          a.dataset.name.localeCompare(
+            b.dataset.name
+          )
+        );
+
       }
 
-      counts[category]++;
-    });
+      else if (sortValue === "za") {
 
-    document.querySelectorAll(".category-btn").forEach(button => {
+        visibleTools.sort((a, b) =>
+          b.dataset.name.localeCompare(
+            a.dataset.name
+          )
+        );
 
-      const originalText = button.dataset.originalText ||
-        button.textContent.trim().replace(/\s+\(\d+\)$/, "");
-
-      button.dataset.originalText = originalText;
-
-      if (originalText === "All Tools") {
-        button.textContent = `All Tools (${tools.length})`;
-      } else {
-        button.textContent =
-          `${originalText} (${counts[originalText] || 0})`;
       }
 
-    });
-  }
+      else if (sortValue === "popular") {
 
-  function updateTools() {
+        visibleTools.sort((a, b) =>
+          Number(b.dataset.popular === "true") -
+          Number(a.dataset.popular === "true")
+        );
 
-    const searchTerm = searchInput.value.toLowerCase().trim();
-    const sortValue = sortSelect.value;
+      }
 
-    let tools = getTools();
+      else if (sortValue === "free") {
 
-    tools.forEach(tool => {
-
-      const name = tool.dataset.name.toLowerCase();
-      const category = tool.dataset.category.toLowerCase();
-      const description =
-        tool.querySelector(".tool-description").textContent.toLowerCase();
-
-      const matchesSearch =
-        name.includes(searchTerm) ||
-        category.includes(searchTerm) ||
-        description.includes(searchTerm);
-
-      const matchesCategory =
-        selectedCategory === "All" ||
-        tool.dataset.category === selectedCategory;
-
-      tool.dataset.visible =
-        matchesSearch && matchesCategory ? "true" : "false";
-
-    });
-
-    tools = tools.filter(tool => tool.dataset.visible === "true");
-
-    if (sortValue === "az") {
-      tools.sort((a, b) =>
-        a.dataset.name.localeCompare(b.dataset.name)
-      );
-    }
-
-    if (sortValue === "za") {
-      tools.sort((a, b) =>
-        b.dataset.name.localeCompare(a.dataset.name)
-      );
-    }
-
-    if (sortValue === "popular") {
-      tools.sort((a, b) =>
-        Number(b.dataset.popular === "true") -
-        Number(a.dataset.popular === "true")
-      );
-    }
-
-    if (sortValue === "free") {
-      tools.sort((a, b) => {
-
-        const order = {
+        const pricingOrder = {
           "Free": 1,
           "Freemium": 2,
           "Paid": 3
         };
 
-        return order[a.dataset.pricing] -
-               order[b.dataset.pricing];
+        visibleTools.sort((a, b) =>
+          pricingOrder[a.dataset.pricing] -
+          pricingOrder[b.dataset.pricing]
+        );
+
+      }
+
+
+      /* Reorder visible tools */
+
+      visibleTools.forEach(tool => {
+
+        toolsGrid.appendChild(tool);
+
       });
+
+
+      /* Results count */
+
+      resultsCount.textContent =
+        `Showing ${visibleTools.length} of ${tools.length} tools`;
+
+
+      /* No results */
+
+      if (visibleTools.length === 0) {
+
+        noResults.style.display = "block";
+
+      } else {
+
+        noResults.style.display = "none";
+
+      }
+
     }
 
-    toolsGrid.innerHTML = "";
 
-    tools.forEach(tool => {
-      toolsGrid.appendChild(tool);
-      tool.style.display = "flex";
-    });
+    function filterCategory(category, button) {
 
-    const total = tools.length;
+      selectedCategory = category;
 
-    resultsCount.textContent =
-      `${total} ${total === 1 ? "tool" : "tools"} found`;
 
-    noResults.style.display =
-      total === 0 ? "block" : "none";
-  }
+      categoryButtons.forEach(btn => {
 
-  function filterCategory(category, button) {
+        btn.classList.remove("active");
 
-    selectedCategory = category;
+      });
 
-    document.querySelectorAll(".category-btn")
-      .forEach(btn => btn.classList.remove("active"));
 
-    button.classList.add("active");
+      if (button) {
 
+        button.classList.add("active");
+
+      }
+
+
+      updateTools();
+
+
+      document
+        .getElementById("tools")
+        .scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+    }
+
+
+    searchInput.addEventListener(
+      "input",
+      updateTools
+    );
+
+
+    sortSelect.addEventListener(
+      "change",
+      updateTools
+    );
+
+
+    updateCategoryCounts();
     updateTools();
 
-    document.getElementById("tools")
-      .scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-  }
-
-  searchInput.addEventListener("input", updateTools);
-
-  sortSelect.addEventListener("change", updateTools);
-
-  updateCategoryCounts();
-  updateTools();
-
-</script>
+  </script>
 
 </body>
 </html>
