@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>AI Tools Hub | Discover the Best AI Tools</title>
 
-  <meta name="description" content="Discover the best AI tools for writing, coding, design, research, productivity and more. Compare ratings, pricing and features.">
-  <meta name="keywords" content="AI tools, artificial intelligence, ChatGPT, Claude, Gemini, AI coding, AI image generation, AI productivity">
-
-  <meta name="theme-color" content="#4f46e5">
+  <meta
+    name="description"
+    content="Discover the best AI tools for writing, coding, image generation, productivity, research and more."
+  >
 
   <style>
+
+    /* =========================
+       RESET
+    ========================= */
 
     * {
       margin: 0;
@@ -19,42 +24,14 @@
       box-sizing: border-box;
     }
 
-    :root {
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --text: #0f172a;
-      --muted: #64748b;
-      --border: #e2e8f0;
-      --primary: #4f46e5;
-      --primary-dark: #3730a3;
-      --secondary: #eef2ff;
-      --success: #16a34a;
-      --danger: #dc2626;
-      --header: rgba(255,255,255,0.92);
-      --shadow: 0 12px 35px rgba(15,23,42,0.07);
-      --shadow-hover: 0 20px 45px rgba(15,23,42,0.12);
-    }
-
-    body.dark {
-      --bg: #020617;
-      --card: #0f172a;
-      --text: #f8fafc;
-      --muted: #94a3b8;
-      --border: #1e293b;
-      --secondary: #172554;
-      --header: rgba(2,6,23,0.94);
-      --shadow: 0 12px 35px rgba(0,0,0,0.25);
-      --shadow-hover: 0 20px 45px rgba(0,0,0,0.35);
-    }
-
     html {
       scroll-behavior: smooth;
     }
 
     body {
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f8fc;
+      color: #171717;
       line-height: 1.6;
       transition: background 0.3s ease, color 0.3s ease;
     }
@@ -66,70 +43,152 @@
 
     button,
     input,
-    textarea,
-    select {
+    textarea {
       font-family: inherit;
     }
 
+
+    /* =========================
+       DARK MODE
+    ========================= */
+
+    body.dark {
+      background: #111318;
+      color: #f5f5f5;
+    }
+
+    body.dark header {
+      background: rgba(17, 19, 24, 0.95);
+      border-color: #292c34;
+    }
+
+    body.dark .nav-links a {
+      color: #ddd;
+    }
+
+    body.dark .hero p,
+    body.dark .section-heading p,
+    body.dark .tool-card p,
+    body.dark .featured-card p {
+      color: #aaa;
+    }
+
+    body.dark .tool-card,
+    body.dark .featured-card,
+    body.dark .submit-box {
+      background: #191c23;
+      border-color: #2b2f38;
+      box-shadow: none;
+    }
+
+    body.dark .category-btn,
+    body.dark .category-badge,
+    body.dark .pricing,
+    body.dark .featured-badge {
+      background: #252932;
+      color: #ddd;
+      border-color: #333741;
+    }
+
+    body.dark .search-box {
+      background: #191c23;
+      border-color: #333741;
+    }
+
+    body.dark .search {
+      color: white;
+    }
+
+    body.dark footer {
+      background: #0b0d10;
+    }
+
+    body.dark .details-btn {
+      background: white;
+      color: #111;
+    }
+
+    body.dark .visit-btn {
+      color: white;
+      border-color: #444;
+    }
+
+
     /* =========================
        HEADER
-       ========================= */
+    ========================= */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: var(--header);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border);
+
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid #e8e8e8;
     }
 
-    .nav {
-      max-width: 1250px;
+    .navbar {
+      max-width: 1200px;
       margin: auto;
-      min-height: 72px;
+
+      height: 72px;
+
       padding: 0 20px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
     }
 
     .logo {
-      font-size: 24px;
-      font-weight: 900;
-      letter-spacing: -0.8px;
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
     }
 
     .logo span {
-      color: var(--primary);
+      font-size: 26px;
+      margin-right: 5px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 25px;
     }
 
     .nav-links a {
-      font-weight: 700;
-      color: var(--muted);
-      transition: 0.2s;
+      font-size: 14px;
+      font-weight: 600;
+      color: #444;
+
+      transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: var(--primary);
+      color: #6c5ce7;
+    }
+
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .theme-btn,
     .menu-btn {
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--text);
-      width: 42px;
-      height: 42px;
-      border-radius: 11px;
+      border: 1px solid #ddd;
+      background: white;
+
+      width: 40px;
+      height: 40px;
+
+      border-radius: 10px;
+
       cursor: pointer;
+
       font-size: 18px;
     }
 
@@ -137,529 +196,798 @@
       display: none;
     }
 
+
     /* =========================
        HERO
-       ========================= */
+    ========================= */
 
     .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 85px 20px 75px;
-      text-align: center;
-      background:
-        radial-gradient(circle at 15% 25%, rgba(99,102,241,0.17), transparent 30%),
-        radial-gradient(circle at 85% 30%, rgba(14,165,233,0.13), transparent 30%),
-        var(--bg);
-    }
-
-    .hero-content {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      position: relative;
-      z-index: 2;
+
+      padding: 90px 20px 70px;
+
+      text-align: center;
     }
 
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: var(--secondary);
-      color: var(--primary);
-      font-weight: 800;
-      font-size: 14px;
-      margin-bottom: 20px;
+      display: inline-block;
+
+      padding: 7px 14px;
+
+      border-radius: 30px;
+
+      background: #eeeaff;
+      color: #5b4bd8;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      margin-bottom: 18px;
     }
 
     .hero h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      line-height: 1.03;
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 1.05;
+
       letter-spacing: -3px;
-      margin-bottom: 22px;
+
+      margin-bottom: 20px;
     }
 
     .hero h1 span {
-      color: var(--primary);
+      background: linear-gradient(90deg, #6c5ce7, #00a8ff);
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .hero p {
-      max-width: 700px;
+      max-width: 680px;
       margin: auto;
-      color: var(--muted);
-      font-size: 19px;
+
+      color: #666;
+
+      font-size: 18px;
     }
+
 
     /* =========================
        SEARCH
-       ========================= */
+    ========================= */
 
-    .search-area {
-      max-width: 800px;
-      margin: 32px auto 0;
-      position: relative;
+    .search-section {
+      max-width: 850px;
+      margin: auto;
+
+      padding: 0 20px 45px;
     }
 
     .search-box {
-      width: 100%;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--text);
-      border-radius: 16px;
-      padding: 17px 20px 17px 52px;
-      outline: none;
-      font-size: 16px;
-      box-shadow: var(--shadow);
-    }
+      display: flex;
+      align-items: center;
 
-    .search-box:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 4px rgba(79,70,229,0.1);
+      background: white;
+
+      border: 1px solid #ddd;
+
+      border-radius: 18px;
+
+      padding: 5px 18px;
+
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     }
 
     .search-icon {
-      position: absolute;
-      left: 18px;
-      top: 50%;
-      transform: translateY(-50%);
       font-size: 20px;
+      margin-right: 10px;
     }
+
+    .search {
+      width: 100%;
+
+      border: none;
+      outline: none;
+
+      padding: 15px 5px;
+
+      background: transparent;
+
+      font-size: 16px;
+    }
+
 
     /* =========================
        STATS
-       ========================= */
+    ========================= */
 
     .stats {
-      max-width: 1050px;
-      margin: -5px auto 45px;
-      padding: 0 20px;
+      max-width: 900px;
+      margin: auto;
+
+      padding: 15px 20px 60px;
+
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      position: relative;
-      z-index: 5;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
     }
 
     .stat {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 17px;
-      padding: 20px;
       text-align: center;
-      box-shadow: var(--shadow);
+
+      padding: 22px;
+
+      background: white;
+
+      border: 1px solid #e9e9e9;
+
+      border-radius: 16px;
     }
 
     .stat strong {
       display: block;
+
       font-size: 28px;
-      margin-bottom: 3px;
+
+      margin-bottom: 4px;
     }
 
     .stat span {
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 700;
+      color: #777;
+
+      font-size: 13px;
     }
 
-    /* =========================
-       MAIN
-       ========================= */
 
-    .container {
-      max-width: 1250px;
+    /* =========================
+       GENERAL SECTION
+    ========================= */
+
+    .section {
+      max-width: 1200px;
+
       margin: auto;
-      padding: 0 20px 70px;
+
+      padding: 70px 20px;
     }
 
     .section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 20px;
-      margin-bottom: 22px;
+      text-align: center;
+
+      margin-bottom: 38px;
     }
 
     .section-heading h2 {
-      font-size: 32px;
-      letter-spacing: -1px;
+      font-size: 36px;
+
+      margin-bottom: 8px;
     }
 
     .section-heading p {
-      color: var(--muted);
+      color: #777;
     }
+
+    .section-label {
+      display: inline-block;
+
+      font-size: 13px;
+      font-weight: 800;
+
+      margin-bottom: 8px;
+    }
+
 
     /* =========================
        CATEGORIES
-       ========================= */
+    ========================= */
 
     .categories {
       display: flex;
+
       flex-wrap: wrap;
-      gap: 9px;
-      margin-bottom: 35px;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      margin-bottom: 40px;
     }
 
     .category-btn {
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--muted);
-      padding: 10px 15px;
-      border-radius: 999px;
+      border: 1px solid #ddd;
+
+      background: white;
+
+      color: #444;
+
+      padding: 9px 16px;
+
+      border-radius: 30px;
+
       cursor: pointer;
-      font-weight: 800;
-      transition: 0.2s;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      transition: all 0.2s ease;
     }
 
     .category-btn:hover,
     .category-btn.active {
-      background: var(--primary);
+      background: #171717;
       color: white;
-      border-color: var(--primary);
+      border-color: #171717;
     }
+
+    body.dark .category-btn:hover,
+    body.dark .category-btn.active {
+      background: white;
+      color: #111;
+    }
+
+
+    /* =========================
+       FEATURED
+    ========================= */
+
+    .featured-section {
+      max-width: 1200px;
+
+      margin: auto;
+
+      padding: 70px 20px;
+    }
+
+    .featured-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 24px;
+    }
+
+    .featured-card {
+      position: relative;
+
+      background: white;
+
+      border: 1px solid #e8e8e8;
+
+      border-radius: 22px;
+
+      padding: 28px;
+
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .featured-card:hover {
+      transform: translateY(-8px);
+
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+    }
+
+    .featured-badge {
+      position: absolute;
+
+      top: 18px;
+      right: 18px;
+
+      padding: 6px 10px;
+
+      border-radius: 20px;
+
+      background: #f1f1f1;
+
+      font-size: 11px;
+
+      font-weight: 800;
+    }
+
 
     /* =========================
        TOOL GRID
-       ========================= */
+    ========================= */
 
     .tools-grid {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+
+      gap: 24px;
     }
 
     .tool-card {
       position: relative;
-      background: var(--card);
-      border: 1px solid var(--border);
+
+      background: white;
+
+      border: 1px solid #e8e8e8;
+
       border-radius: 20px;
-      padding: 22px;
-      box-shadow: var(--shadow);
-      transition: 0.25s ease;
-      display: flex;
-      flex-direction: column;
-      min-height: 405px;
+
+      padding: 25px;
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
     }
 
     .tool-card:hover {
       transform: translateY(-6px);
-      box-shadow: var(--shadow-hover);
-      border-color: rgba(79,70,229,0.35);
+
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.09);
     }
+
+
+    /* =========================
+       LOGO
+    ========================= */
 
     .tool-top {
       display: flex;
-      justify-content: space-between;
+
       align-items: flex-start;
-      gap: 12px;
+
+      justify-content: space-between;
+
+      margin-bottom: 18px;
     }
 
     .tool-logo {
-      width: 65px;
-      height: 65px;
-      object-fit: contain;
+      width: 72px;
+      height: 72px;
+
+      border-radius: 18px;
+
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #f3f3f3;
+
+      border: 1px solid #eee;
+    }
+
+    .tool-logo img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    .favorite-btn {
+      width: 38px;
+      height: 38px;
+
+      border: 1px solid #ddd;
+
       background: white;
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 8px;
+
+      border-radius: 50%;
+
+      cursor: pointer;
+
+      font-size: 18px;
+
+      transition: all 0.2s ease;
     }
 
-    .trend {
-      background: rgba(234,88,12,0.1);
-      color: #ea580c;
-      border-radius: 999px;
-      padding: 6px 9px;
-      font-size: 12px;
-      font-weight: 900;
+    .favorite-btn:hover {
+      transform: scale(1.08);
     }
 
-    .tool-card h3 {
-      font-size: 23px;
-      margin: 17px 0 6px;
+    .favorite-btn.active {
+      background: #ffecec;
+
+      border-color: #ffb8b8;
     }
 
-    .tool-description {
-      color: var(--muted);
+
+    /* =========================
+       TOOL CONTENT
+    ========================= */
+
+    .tool-card h3,
+    .featured-card h3 {
+      font-size: 21px;
+
+      margin-bottom: 7px;
+    }
+
+    .category-badge {
+      display: inline-block;
+
+      background: #f2f2f2;
+
+      color: #555;
+
+      padding: 5px 10px;
+
+      border-radius: 20px;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      margin-bottom: 13px;
+    }
+
+    .tool-card p,
+    .featured-card p {
+      color: #666;
+
       font-size: 14px;
-      margin-bottom: 17px;
+
+      line-height: 1.65;
+
+      margin-bottom: 18px;
+
+      min-height: 68px;
     }
 
     .tool-meta {
       display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-bottom: 14px;
-    }
 
-    .badge {
-      display: inline-flex;
+      justify-content: space-between;
+
       align-items: center;
+
+      margin-bottom: 18px;
+
+      font-size: 13px;
+
+      font-weight: 700;
+    }
+
+    .pricing {
       padding: 5px 9px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 800;
-      background: var(--secondary);
-      color: var(--primary);
+
+      background: #f4f4f4;
+
+      border-radius: 8px;
+
+      font-size: 11px;
     }
 
-    .badge.free {
-      background: rgba(22,163,74,0.1);
-      color: var(--success);
-    }
 
-    .badge.paid {
-      background: rgba(220,38,38,0.1);
-      color: var(--danger);
-    }
-
-    .rating {
-      color: #d97706;
-      font-weight: 800;
-      font-size: 14px;
-      margin-bottom: 17px;
-    }
-
-    .features-mini {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 20px;
-    }
-
-    .features-mini span {
-      font-size: 12px;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      padding: 4px 7px;
-      border-radius: 7px;
-    }
+    /* =========================
+       BUTTONS
+    ========================= */
 
     .card-actions {
-      margin-top: auto;
       display: flex;
+
       gap: 9px;
     }
 
-    .details-btn {
+    .card-actions a {
       flex: 1;
-      background: var(--primary);
-      color: white;
-      padding: 11px 14px;
-      border-radius: 11px;
+
       text-align: center;
+
+      padding: 10px 8px;
+
+      border-radius: 10px;
+
+      font-size: 12px;
+
       font-weight: 800;
-      transition: 0.2s;
+    }
+
+    .details-btn {
+      background: #171717;
+
+      color: white;
+    }
+
+    .visit-btn {
+      border: 1px solid #ddd;
+
+      color: #222;
+
+      background: transparent;
     }
 
     .details-btn:hover {
-      background: var(--primary-dark);
+      opacity: 0.85;
     }
 
-    .website-btn {
-      width: 45px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--text);
-      border-radius: 11px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
+    .visit-btn:hover {
+      background: #f5f5f5;
     }
 
-    .website-btn:hover {
-      border-color: var(--primary);
-      color: var(--primary);
-    }
 
     /* =========================
-       EMPTY STATE
-       ========================= */
+       NO RESULTS
+    ========================= */
 
-    .empty {
-      display: none;
+    .no-results {
+      grid-column: 1 / -1;
+
       text-align: center;
-      padding: 50px 20px;
-      color: var(--muted);
-      border: 1px dashed var(--border);
-      border-radius: 18px;
-      margin-top: 20px;
+
+      padding: 60px 20px;
+
+      color: #777;
+
+      display: none;
     }
 
-    .empty h3 {
-      color: var(--text);
-      margin-bottom: 7px;
+    .no-results h3 {
+      color: inherit;
+
+      margin-bottom: 8px;
     }
+
 
     /* =========================
-       SUBMIT SECTION
-       ========================= */
+       SUBMIT TOOL
+    ========================= */
 
     .submit-section {
-      margin-top: 70px;
-      background:
-        radial-gradient(circle at 85% 20%, rgba(99,102,241,0.22), transparent 30%),
-        var(--card);
-      border: 1px solid var(--border);
-      border-radius: 25px;
-      padding: 40px;
-      box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 35px;
+      max-width: 900px;
+
+      margin: auto;
+
+      padding: 70px 20px;
     }
 
-    .submit-section h2 {
-      font-size: 34px;
+    .submit-box {
+      background: white;
+
+      border: 1px solid #e8e8e8;
+
+      border-radius: 24px;
+
+      padding: 40px;
+
+      text-align: center;
+
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+    }
+
+    .submit-box h2 {
       margin-bottom: 10px;
     }
 
-    .submit-section p {
-      color: var(--muted);
+    .submit-box p {
+      color: #777;
+
+      margin-bottom: 22px;
     }
 
-    .submit-form {
-      display: grid;
-      gap: 10px;
-    }
+    .submit-btn {
+      display: inline-block;
 
-    .submit-form input,
-    .submit-form textarea,
-    .submit-form select {
-      width: 100%;
-      border: 1px solid var(--border);
-      background: var(--bg);
-      color: var(--text);
-      padding: 13px;
-      border-radius: 10px;
-      outline: none;
-    }
+      padding: 12px 22px;
 
-    .submit-form textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
+      background: #171717;
 
-    .submit-form button {
-      border: none;
-      background: var(--primary);
       color: white;
-      padding: 13px;
+
       border-radius: 10px;
-      cursor: pointer;
-      font-weight: 800;
+
+      font-size: 14px;
+
+      font-weight: 700;
     }
+
 
     /* =========================
        FOOTER
-       ========================= */
+    ========================= */
 
     footer {
-      border-top: 1px solid var(--border);
-      padding: 35px 20px;
+      background: #111;
+
+      color: white;
+
+      margin-top: 50px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+
+      margin: auto;
+
+      padding: 55px 20px 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns: 2fr 1fr 1fr;
+
+      gap: 50px;
+
+      margin-bottom: 40px;
+    }
+
+    .footer-brand h3 {
+      font-size: 21px;
+
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+      max-width: 400px;
+
+      color: #aaa;
+
+      font-size: 14px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 15px;
+    }
+
+    .footer-column a {
+      display: block;
+
+      color: #aaa;
+
+      font-size: 13px;
+
+      margin-bottom: 9px;
+    }
+
+    .footer-column a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid #292929;
+
+      padding-top: 20px;
+
+      color: #888;
+
+      font-size: 12px;
+
       text-align: center;
-      color: var(--muted);
     }
 
-    .footer-logo {
-      font-size: 22px;
-      font-weight: 900;
-      color: var(--text);
-      margin-bottom: 7px;
-    }
-
-    .footer-logo span {
-      color: var(--primary);
-    }
 
     /* =========================
        TOAST
-       ========================= */
+    ========================= */
 
     .toast {
       position: fixed;
-      left: 50%;
+
       bottom: 25px;
+      left: 50%;
+
       transform: translate(-50%, 100px);
-      background: #0f172a;
+
+      background: #171717;
+
       color: white;
+
       padding: 12px 18px;
+
       border-radius: 10px;
-      font-weight: 700;
+
+      font-size: 13px;
+
       opacity: 0;
-      transition: 0.3s;
-      z-index: 9999;
+
+      transition: all 0.3s ease;
+
+      z-index: 2000;
     }
 
     .toast.show {
-      opacity: 1;
       transform: translate(-50%, 0);
+
+      opacity: 1;
     }
 
+
     /* =========================
-       RESPONSIVE
-       ========================= */
+       MOBILE
+    ========================= */
 
-    @media (max-width: 1000px) {
+    @media (max-width: 950px) {
 
-      .tools-grid {
+      .tools-grid,
+      .featured-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .submit-section {
-        grid-template-columns: 1fr;
+      .nav-links {
+        gap: 15px;
       }
 
     }
 
+
     @media (max-width: 700px) {
+
+      .navbar {
+        height: 65px;
+      }
 
       .nav-links {
         display: none;
+
+        position: absolute;
+
+        top: 65px;
+        left: 0;
+        right: 0;
+
+        background: white;
+
+        border-bottom: 1px solid #ddd;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+      body.dark .nav-links {
+        background: #111318;
+
+        border-color: #292c34;
+      }
+
+      .nav-links.show {
+        display: flex;
       }
 
       .menu-btn {
         display: block;
       }
 
-      .nav {
-        min-height: 64px;
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .tools-grid,
+      .featured-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
       }
 
       .hero {
-        padding: 65px 15px 60px;
+        padding-top: 65px;
       }
 
       .hero h1 {
         letter-spacing: -2px;
       }
 
-      .hero p {
-        font-size: 16px;
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, 1fr);
-        margin-bottom: 35px;
-      }
-
-      .tools-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section-heading {
-        display: block;
-      }
-
       .section-heading h2 {
-        margin-bottom: 5px;
+        font-size: 29px;
       }
 
-      .submit-section {
-        padding: 25px;
+    }
+
+
+    @media (max-width: 450px) {
+
+      .card-actions {
+        flex-direction: column;
       }
 
-      .submit-section h2 {
-        font-size: 28px;
+      .submit-box {
+        padding: 28px 20px;
       }
 
     }
@@ -667,273 +995,313 @@
   </style>
 </head>
 
+
 <body>
 
   <!-- =========================
        HEADER
-       ========================= -->
+  ========================= -->
 
   <header>
 
-    <div class="nav">
+    <nav class="navbar">
 
       <a href="index.html" class="logo">
-        AI <span>Tools</span> Hub
+        <span>🤖</span>
+        AI Tools Hub
       </a>
 
-      <nav class="nav-links">
-        <a href="#tools">Explore Tools</a>
-        <a href="#categories">Categories</a>
-        <a href="#submit">Submit Tool</a>
-      </nav>
+      <div class="nav-links" id="navLinks">
 
-      <div style="display:flex; gap:8px;">
+        <a href="index.html">Home</a>
+
+        <a href="#tools">AI Tools</a>
+
+        <a href="favorites.html">❤️ Favorites</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+      <div class="nav-buttons">
 
         <button
           class="theme-btn"
           id="themeBtn"
-          onclick="toggleTheme()"
-          aria-label="Toggle dark mode">
+          aria-label="Toggle dark mode"
+        >
           🌙
         </button>
 
         <button
           class="menu-btn"
-          onclick="toggleMobileMenu()"
-          aria-label="Menu">
+          id="menuBtn"
+          aria-label="Open menu"
+        >
           ☰
         </button>
 
       </div>
 
-    </div>
+    </nav>
 
   </header>
 
 
   <!-- =========================
        HERO
-       ========================= -->
+  ========================= -->
 
-  <section class="hero">
+  <main>
 
-    <div class="hero-content">
+    <section class="hero">
 
-      <div class="hero-badge">
-        🚀 The AI Tools Directory
-      </div>
+      <span class="hero-badge">
+        ✨ Discover the Future of AI
+      </span>
 
       <h1>
-        Discover the Best
+        Find the Best
         <span>AI Tools</span>
+        in One Place
       </h1>
 
       <p>
-        Explore powerful AI tools for writing, coding, design,
-        research, productivity, marketing and much more.
+        Explore powerful AI tools for writing, coding, research,
+        image generation, productivity, audio and more.
       </p>
 
-      <div class="search-area">
+    </section>
+
+
+    <!-- =========================
+         SEARCH
+    ========================= -->
+
+    <section class="search-section">
+
+      <div class="search-box">
 
         <span class="search-icon">🔍</span>
 
         <input
-          id="searchInput"
-          class="search-box"
           type="search"
+          class="search"
+          id="searchInput"
           placeholder="Search AI tools..."
-          autocomplete="off">
+          autocomplete="off"
+        >
 
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- =========================
-       STATS
-       ========================= -->
+    <!-- =========================
+         STATS
+    ========================= -->
 
-  <section class="stats">
+    <section class="stats">
 
-    <div class="stat">
-      <strong id="toolCount">0</strong>
-      <span>AI Tools</span>
-    </div>
+      <div class="stat">
 
-    <div class="stat">
-      <strong>8+</strong>
-      <span>Categories</span>
-    </div>
+        <strong id="toolCount">0</strong>
 
-    <div class="stat">
-      <strong>4.7★</strong>
-      <span>Avg. Rating</span>
-    </div>
+        <span>AI Tools</span>
 
-    <div class="stat">
-      <strong>2026</strong>
-      <span>Updated</span>
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       MAIN
-       ========================= -->
-
-  <main class="container" id="tools">
-
-    <div class="section-heading">
-
-      <div>
-        <h2>Explore AI Tools</h2>
-        <p>Find the right AI tool for your workflow.</p>
       </div>
 
-    </div>
+      <div class="stat">
+
+        <strong id="categoryCount">0</strong>
+
+        <span>Categories</span>
+
+      </div>
+
+      <div class="stat">
+
+        <strong>2026</strong>
+
+        <span>Updated</span>
+
+      </div>
+
+    </section>
 
 
     <!-- =========================
-         CATEGORIES
-         ========================= -->
+         FEATURED TOOLS
+    ========================= -->
 
-    <div class="categories" id="categories">
+    <section class="featured-section">
 
-      <button
-        class="category-btn active"
-        data-category="All">
-        All
-      </button>
+      <div class="section-heading">
 
-      <button
-        class="category-btn"
-        data-category="AI Assistant">
-        🤖 AI Assistants
-      </button>
+        <span class="section-label">
+          ✨ Handpicked for You
+        </span>
 
-      <button
-        class="category-btn"
-        data-category="AI Search">
-        🔎 AI Search
-      </button>
-
-      <button
-        class="category-btn"
-        data-category="AI Image">
-        🎨 AI Images
-      </button>
-
-      <button
-        class="category-btn"
-        data-category="Design">
-        🖌️ Design
-      </button>
-
-      <button
-        class="category-btn"
-        data-category="AI Coding">
-        💻 Coding
-      </button>
-
-      <button
-        class="category-btn"
-        data-category="AI Writing">
-        ✍️ Writing
-      </button>
-
-      <button
-        class="category-btn"
-        data-category="Productivity">
-        ⚡ Productivity
-      </button>
-
-    </div>
-
-
-    <!-- =========================
-         TOOLS GRID
-         ========================= -->
-
-    <div class="tools-grid" id="toolsGrid"></div>
-
-    <div class="empty" id="emptyState">
-
-      <h3>No AI tools found</h3>
-
-      <p>
-        Try another search term or select a different category.
-      </p>
-
-    </div>
-
-
-    <!-- =========================
-         SUBMIT TOOL
-         ========================= -->
-
-    <section class="submit-section" id="submit">
-
-      <div>
-
-        <div class="hero-badge">
-          💡 Have an AI Tool?
-        </div>
-
-        <h2>Submit Your AI Tool</h2>
+        <h2>Featured AI Tools</h2>
 
         <p>
-          Know an amazing AI tool that should be listed here?
-          Send us the details and help other users discover it.
+          Explore some of the most popular and powerful AI tools.
+        </p>
+
+      </div>
+
+      <div
+        class="featured-grid"
+        id="featuredGrid"
+      ></div>
+
+    </section>
+
+
+    <!-- =========================
+         ALL TOOLS
+    ========================= -->
+
+    <section
+      class="section"
+      id="tools"
+    >
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          🚀 Explore AI
+        </span>
+
+        <h2>All AI Tools</h2>
+
+        <p>
+          Find the perfect AI tool for your needs.
         </p>
 
       </div>
 
 
-      <form
-        class="submit-form"
-        id="submitForm">
+      <!-- CATEGORIES -->
 
-        <input
-          type="text"
-          id="submitName"
-          placeholder="Tool name"
-          required>
+      <div class="categories">
 
-        <input
-          type="url"
-          id="submitUrl"
-          placeholder="Official website URL"
-          required>
-
-        <select id="submitCategory" required>
-
-          <option value="">
-            Select category
-          </option>
-
-          <option>AI Assistant</option>
-          <option>AI Search</option>
-          <option>AI Image</option>
-          <option>Design</option>
-          <option>AI Coding</option>
-          <option>AI Writing</option>
-          <option>Productivity</option>
-
-        </select>
-
-        <textarea
-          id="submitDescription"
-          placeholder="Short description"
-          required></textarea>
-
-        <button type="submit">
-          Submit AI Tool →
+        <button
+          class="category-btn active"
+          data-category="All"
+        >
+          All
         </button>
 
-      </form>
+        <button
+          class="category-btn"
+          data-category="AI Assistant"
+        >
+          AI Assistant
+        </button>
+
+        <button
+          class="category-btn"
+          data-category="AI Search"
+        >
+          AI Search
+        </button>
+
+        <button
+          class="category-btn"
+          data-category="AI Image"
+        >
+          AI Image
+        </button>
+
+        <button
+          class="category-btn"
+          data-category="Design"
+        >
+          Design
+        </button>
+
+        <button
+          class="category-btn"
+          data-category="AI Coding"
+        >
+          AI Coding
+        </button>
+
+        <button
+          class="category-btn"
+          data-category="AI Writing"
+        >
+          AI Writing
+        </button>
+
+        <button
+          class="category-btn"
+          data-category="Productivity"
+        >
+          Productivity
+        </button>
+
+        <button
+          class="category-btn"
+          data-category="AI Audio"
+        >
+          AI Audio
+        </button>
+
+      </div>
+
+
+      <!-- TOOL GRID -->
+
+      <div
+        class="tools-grid"
+        id="toolsGrid"
+      ></div>
+
+
+      <div
+        class="no-results"
+        id="noResults"
+      >
+
+        <h3>😕 No AI tools found</h3>
+
+        <p>
+          Try another search or select a different category.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SUBMIT TOOL
+    ========================= -->
+
+    <section class="submit-section">
+
+      <div class="submit-box">
+
+        <h2>
+          🚀 Know an Amazing AI Tool?
+        </h2>
+
+        <p>
+          Help us grow the AI Tools Hub by suggesting a useful AI tool.
+        </p>
+
+        <a
+          href="contact.html"
+          class="submit-btn"
+        >
+          Submit an AI Tool
+        </a>
+
+      </div>
 
     </section>
 
@@ -942,33 +1310,84 @@
 
   <!-- =========================
        FOOTER
-       ========================= -->
+  ========================= -->
 
   <footer>
 
-    <div class="footer-logo">
-      AI <span>Tools</span> Hub
+    <div class="footer-inner">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <h3>🤖 AI Tools Hub</h3>
+
+          <p>
+            Your place to discover the best AI tools for
+            work, creativity, coding, research and productivity.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Explore</h4>
+
+          <a href="index.html">Home</a>
+
+          <a href="#tools">AI Tools</a>
+
+          <a href="favorites.html">Favorites</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Company</h4>
+
+          <a href="about.html">About</a>
+
+          <a href="contact.html">Contact</a>
+
+          <a href="privacy.html">Privacy Policy</a>
+
+          <a href="terms.html">Terms</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        © 2026 AI Tools Hub. All rights reserved.
+
+      </div>
+
     </div>
-
-    <p>
-      Discover smarter tools for a smarter future.
-    </p>
-
-    <p style="margin-top:8px; font-size:13px;">
-      © 2026 AI Tools Hub. All rights reserved.
-    </p>
 
   </footer>
 
 
-  <div class="toast" id="toast"></div>
+  <!-- TOAST -->
 
+  <div
+    class="toast"
+    id="toast"
+  ></div>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
 
   <script>
 
-    /* ==========================================
-       AI TOOLS DATA
-       ========================================== */
+    /* =========================
+       AI TOOLS DATABASE
+    ========================= */
 
     const tools = [
 
@@ -976,409 +1395,575 @@
         id: "chatgpt",
         name: "ChatGPT",
         category: "AI Assistant",
-        pricing: "Freemium",
         rating: "4.9",
-        trending: true,
-        logo: "https://www.google.com/s2/favicons?domain=chatgpt.com&sz=256",
-        url: "https://chatgpt.com/",
+        pricing: "Free + Paid",
+        featured: true,
+        logo: "https://www.google.com/s2/favicons?domain=chatgpt.com&sz=128",
+        url: "https://chatgpt.com",
         description:
-          "A versatile AI assistant for writing, coding, learning, brainstorming, research and everyday tasks.",
-        features: [
-          "Writing",
-          "Coding",
-          "Research",
-          "Brainstorming"
-        ]
+          "Powerful AI assistant for writing, coding, research, brainstorming and everyday tasks."
       },
 
       {
         id: "claude",
         name: "Claude",
         category: "AI Assistant",
-        pricing: "Freemium",
         rating: "4.8",
-        trending: true,
-        logo: "https://www.google.com/s2/favicons?domain=claude.ai&sz=256",
-        url: "https://claude.ai/",
+        pricing: "Free + Paid",
+        featured: true,
+        logo: "https://www.google.com/s2/favicons?domain=claude.ai&sz=128",
+        url: "https://claude.ai",
         description:
-          "An AI assistant designed for writing, reasoning, analysis, coding and working with long documents.",
-        features: [
-          "Writing",
-          "Analysis",
-          "Documents",
-          "Coding"
-        ]
+          "Advanced AI assistant designed for analysis, writing, coding and complex tasks."
       },
 
       {
         id: "gemini",
         name: "Gemini",
         category: "AI Assistant",
-        pricing: "Freemium",
         rating: "4.7",
-        trending: true,
-        logo: "https://www.google.com/s2/favicons?domain=gemini.google.com&sz=256",
-        url: "https://gemini.google.com/",
+        pricing: "Free + Paid",
+        featured: true,
+        logo: "https://www.google.com/s2/favicons?domain=gemini.google.com&sz=128",
+        url: "https://gemini.google.com",
         description:
-          "Google's AI assistant for research, writing, learning, coding, productivity and multimodal tasks.",
-        features: [
-          "Research",
-          "Writing",
-          "Learning",
-          "Productivity"
-        ]
+          "Google's AI assistant for answering questions, writing, research and creative work."
       },
 
       {
         id: "perplexity",
         name: "Perplexity",
         category: "AI Search",
-        pricing: "Freemium",
-        rating: "4.7",
-        trending: true,
-        logo: "https://www.google.com/s2/favicons?domain=perplexity.ai&sz=256",
-        url: "https://www.perplexity.ai/",
+        rating: "4.8",
+        pricing: "Free + Paid",
+        featured: true,
+        logo: "https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128",
+        url: "https://www.perplexity.ai",
         description:
-          "AI-powered search and research assistant for finding information and exploring topics with sources.",
-        features: [
-          "AI Search",
-          "Research",
-          "Sources",
-          "Comparisons"
-        ]
+          "AI-powered search engine that provides direct answers with web-based research."
       },
 
       {
         id: "midjourney",
         name: "Midjourney",
         category: "AI Image",
+        rating: "4.8",
         pricing: "Paid",
-        rating: "4.6",
-        trending: true,
-        logo: "https://www.google.com/s2/favicons?domain=midjourney.com&sz=256",
-        url: "https://www.midjourney.com/",
+        featured: true,
+        logo: "https://www.google.com/s2/favicons?domain=midjourney.com&sz=128",
+        url: "https://www.midjourney.com",
         description:
-          "Creative AI image generation platform for artwork, concepts, marketing visuals and imaginative designs.",
-        features: [
-          "AI Images",
-          "Creative Art",
-          "Concepts",
-          "Design"
-        ]
+          "Creative AI image generator for stunning artwork, concepts and visual ideas."
       },
 
       {
         id: "canva",
         name: "Canva AI",
         category: "Design",
-        pricing: "Freemium",
-        rating: "4.6",
-        trending: true,
-        logo: "https://www.google.com/s2/favicons?domain=canva.com&sz=256",
-        url: "https://www.canva.com/",
+        rating: "4.7",
+        pricing: "Free + Paid",
+        featured: true,
+        logo: "https://www.google.com/s2/favicons?domain=canva.com&sz=128",
+        url: "https://www.canva.com",
         description:
-          "AI-powered design platform for presentations, social media graphics, marketing content and visual projects.",
-        features: [
-          "Design",
-          "Presentations",
-          "Social Media",
-          "Templates"
-        ]
+          "AI-powered design platform for presentations, social media, graphics and more."
       },
 
       {
         id: "cursor",
         name: "Cursor",
         category: "AI Coding",
-        pricing: "Freemium",
-        rating: "4.7",
-        trending: true,
-        logo: "https://www.google.com/s2/favicons?domain=cursor.com&sz=256",
-        url: "https://cursor.com/",
+        rating: "4.8",
+        pricing: "Free + Paid",
+        featured: false,
+        logo: "https://www.google.com/s2/favicons?domain=cursor.com&sz=128",
+        url: "https://cursor.com",
         description:
-          "AI-powered code editor that helps developers understand, write, modify and debug software.",
-        features: [
-          "AI Coding",
-          "Debugging",
-          "Codebase",
-          "Refactoring"
-        ]
+          "AI-powered code editor that helps developers write, understand and improve code."
       },
 
       {
         id: "copilot",
         name: "GitHub Copilot",
         category: "AI Coding",
+        rating: "4.7",
         pricing: "Paid",
-        rating: "4.6",
-        trending: true,
-        logo: "https://www.google.com/s2/favicons?domain=github.com&sz=256",
+        featured: false,
+        logo: "https://www.google.com/s2/favicons?domain=github.com&sz=128",
         url: "https://github.com/features/copilot",
         description:
-          "AI coding assistant that helps developers write, understand, debug and improve software.",
-        features: [
-          "Code Suggestions",
-          "Coding",
-          "Debugging",
-          "Documentation"
-        ]
+          "AI coding assistant that helps developers write code faster and more efficiently."
       },
 
       {
         id: "jasper",
         name: "Jasper",
         category: "AI Writing",
+        rating: "4.6",
         pricing: "Paid",
-        rating: "4.5",
-        trending: false,
-        logo: "https://www.google.com/s2/favicons?domain=jasper.ai&sz=256",
-        url: "https://www.jasper.ai/",
+        featured: false,
+        logo: "https://www.google.com/s2/favicons?domain=jasper.ai&sz=128",
+        url: "https://www.jasper.ai",
         description:
-          "AI writing platform focused on marketing content, brand messaging, campaigns and business copy.",
-        features: [
-          "Marketing",
-          "Copywriting",
-          "Brand Voice",
-          "Content"
-        ]
+          "AI writing platform built for marketing content, campaigns and business teams."
       },
 
       {
         id: "notion",
         name: "Notion AI",
         category: "Productivity",
-        pricing: "Freemium",
-        rating: "4.5",
-        trending: true,
-        logo: "https://www.google.com/s2/favicons?domain=notion.so&sz=256",
-        url: "https://www.notion.so/product/ai",
+        rating: "4.6",
+        pricing: "Free + Paid",
+        featured: false,
+        logo: "https://www.google.com/s2/favicons?domain=notion.so&sz=128",
+        url: "https://www.notion.so",
         description:
-          "AI-powered productivity features integrated into Notion for writing, summarizing, organizing and knowledge work.",
-        features: [
-          "Productivity",
-          "Notes",
-          "Writing",
-          "Organization"
-        ]
+          "AI productivity assistant for notes, documents, project management and knowledge."
       },
 
       {
         id: "grammarly",
         name: "Grammarly",
         category: "AI Writing",
-        pricing: "Freemium",
-        rating: "4.5",
-        trending: false,
-        logo: "https://www.google.com/s2/favicons?domain=grammarly.com&sz=256",
-        url: "https://www.grammarly.com/",
+        rating: "4.6",
+        pricing: "Free + Paid",
+        featured: false,
+        logo: "https://www.google.com/s2/favicons?domain=grammarly.com&sz=128",
+        url: "https://www.grammarly.com",
         description:
-          "AI writing assistant for improving grammar, clarity, tone and professional communication.",
-        features: [
-          "Grammar",
-          "Writing",
-          "Tone",
-          "Editing"
-        ]
+          "AI writing assistant that improves grammar, clarity, tone and communication."
       },
 
       {
         id: "elevenlabs",
         name: "ElevenLabs",
         category: "AI Audio",
-        pricing: "Freemium",
-        rating: "4.6",
-        trending: true,
-        logo: "https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=256",
-        url: "https://elevenlabs.io/",
+        rating: "4.8",
+        pricing: "Free + Paid",
+        featured: false,
+        logo: "https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=128",
+        url: "https://elevenlabs.io",
         description:
-          "AI voice and audio platform for generating natural-sounding speech and creating voice experiences.",
-        features: [
-          "AI Voice",
-          "Text to Speech",
-          "Audio",
-          "Voice"
-        ]
+          "AI voice platform for realistic speech generation, voiceovers and audio creation."
       }
 
     ];
 
 
-    /* ==========================================
-       VARIABLES
-       ========================================== */
+    /* =========================
+       ELEMENTS
+    ========================= */
 
     const toolsGrid =
       document.getElementById("toolsGrid");
 
+    const featuredGrid =
+      document.getElementById("featuredGrid");
+
     const searchInput =
       document.getElementById("searchInput");
 
-    const emptyState =
-      document.getElementById("emptyState");
+    const noResults =
+      document.getElementById("noResults");
 
     const toolCount =
       document.getElementById("toolCount");
 
-    let currentCategory = "All";
-    let currentSearch = "";
+    const categoryCount =
+      document.getElementById("categoryCount");
+
+    const categoryButtons =
+      document.querySelectorAll(".category-btn");
 
 
-    /* ==========================================
-       RENDER TOOLS
-       ========================================== */
-
-    function renderTools() {
-
-      const filteredTools = tools.filter(tool => {
-
-        const categoryMatch =
-          currentCategory === "All" ||
-          tool.category === currentCategory;
-
-        const searchText =
-          (
-            tool.name +
-            " " +
-            tool.category +
-            " " +
-            tool.description +
-            " " +
-            tool.features.join(" ")
-          ).toLowerCase();
-
-        const searchMatch =
-          searchText.includes(
-            currentSearch.toLowerCase()
-          );
-
-        return categoryMatch && searchMatch;
-
-      });
+    let selectedCategory = "All";
 
 
-      toolsGrid.innerHTML = "";
+    /* =========================
+       FAVORITES
+    ========================= */
+
+    let favorites =
+      JSON.parse(
+        localStorage.getItem("aiToolsFavorites") || "[]"
+      );
 
 
-      filteredTools.forEach(tool => {
+    /* =========================
+       ESCAPE HTML
+    ========================= */
 
-        const card =
-          document.createElement("article");
+    function escapeHTML(text) {
 
-        card.className = "tool-card";
+      const div = document.createElement("div");
 
+      div.textContent = text;
 
-        let pricingClass = "";
+      return div.innerHTML;
 
-        if (tool.pricing === "Free") {
-          pricingClass = "free";
-        }
-
-        if (tool.pricing === "Paid") {
-          pricingClass = "paid";
-        }
+    }
 
 
-        const featureHTML =
-          tool.features
-            .map(feature => `<span>${feature}</span>`)
-            .join("");
+    /* =========================
+       TOOL CARD
+    ========================= */
 
+    function createToolCard(tool) {
 
-        card.innerHTML = `
+      const isFavorite =
+        favorites.includes(tool.id);
+
+      return `
+
+        <article
+          class="tool-card"
+          data-category="${escapeHTML(tool.category)}"
+        >
 
           <div class="tool-top">
 
-            <img
-              class="tool-logo"
-              src="${tool.logo}"
-              alt="${tool.name} logo"
-              loading="lazy"
-              onerror="this.src='https://via.placeholder.com/100?text=AI';">
+            <div class="tool-logo">
 
-            ${
-              tool.trending
-                ? `<span class="trend">🔥 Trending</span>`
-                : ""
-            }
+              <img
+                src="${tool.logo}"
+                alt="${escapeHTML(tool.name)} logo"
+                loading="lazy"
+                onerror="this.src='https://via.placeholder.com/100?text=AI'"
+              >
+
+            </div>
+
+            <button
+              class="favorite-btn ${isFavorite ? "active" : ""}"
+              data-favorite="${tool.id}"
+              aria-label="Add ${escapeHTML(tool.name)} to favorites"
+            >
+              ${isFavorite ? "❤️" : "♡"}
+            </button>
 
           </div>
 
 
-          <h3>${tool.name}</h3>
+          <h3>
+            ${escapeHTML(tool.name)}
+          </h3>
 
-          <p class="tool-description">
-            ${tool.description}
+
+          <span class="category-badge">
+            ${escapeHTML(tool.category)}
+          </span>
+
+
+          <p>
+            ${escapeHTML(tool.description)}
           </p>
 
 
           <div class="tool-meta">
 
-            <span class="badge">
-              ${tool.category}
+            <span>
+              ⭐ ${escapeHTML(tool.rating)}
             </span>
 
-            <span class="badge ${pricingClass}">
-              ${tool.pricing}
+            <span class="pricing">
+              ${escapeHTML(tool.pricing)}
             </span>
 
-          </div>
-
-
-          <div class="rating">
-            ⭐ ${tool.rating} / 5
-          </div>
-
-
-          <div class="features-mini">
-            ${featureHTML}
           </div>
 
 
           <div class="card-actions">
 
             <a
+              href="tool.html?tool=${encodeURIComponent(tool.id)}"
               class="details-btn"
-              href="tool.html?tool=${tool.id}">
-              View Details →
+            >
+              View Details
             </a>
 
             <a
-              class="website-btn"
               href="${tool.url}"
               target="_blank"
               rel="noopener noreferrer"
-              title="Visit official website">
-              ↗
+              class="visit-btn"
+            >
+              Visit ↗
             </a>
 
           </div>
 
-        `;
+        </article>
 
-
-        toolsGrid.appendChild(card);
-
-      });
-
-
-      emptyState.style.display =
-        filteredTools.length === 0
-          ? "block"
-          : "none";
+      `;
 
     }
 
 
-    /* ==========================================
+    /* =========================
+       FEATURED CARD
+    ========================= */
+
+    function createFeaturedCard(tool) {
+
+      return `
+
+        <article class="featured-card">
+
+          <span class="featured-badge">
+            ✨ Featured
+          </span>
+
+
+          <div class="tool-logo">
+
+            <img
+              src="${tool.logo}"
+              alt="${escapeHTML(tool.name)} logo"
+              loading="lazy"
+              onerror="this.src='https://via.placeholder.com/100?text=AI'"
+            >
+
+          </div>
+
+
+          <h3>
+            ${escapeHTML(tool.name)}
+          </h3>
+
+
+          <span class="category-badge">
+            ${escapeHTML(tool.category)}
+          </span>
+
+
+          <p>
+            ${escapeHTML(tool.description)}
+          </p>
+
+
+          <div class="tool-meta">
+
+            <span>
+              ⭐ ${escapeHTML(tool.rating)}
+            </span>
+
+            <span class="pricing">
+              ${escapeHTML(tool.pricing)}
+            </span>
+
+          </div>
+
+
+          <div class="card-actions">
+
+            <a
+              href="tool.html?tool=${encodeURIComponent(tool.id)}"
+              class="details-btn"
+            >
+              View Details
+            </a>
+
+            <a
+              href="${tool.url}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="visit-btn"
+            >
+              Visit ↗
+            </a>
+
+          </div>
+
+        </article>
+
+      `;
+
+    }
+
+
+    /* =========================
+       RENDER TOOLS
+    ========================= */
+
+    function renderTools() {
+
+      const searchText =
+        searchInput.value
+          .toLowerCase()
+          .trim();
+
+
+      const filteredTools =
+        tools.filter(function (tool) {
+
+          const matchesCategory =
+            selectedCategory === "All" ||
+            tool.category === selectedCategory;
+
+
+          const searchableText =
+            (
+              tool.name +
+              " " +
+              tool.category +
+              " " +
+              tool.description +
+              " " +
+              tool.pricing
+            ).toLowerCase();
+
+
+          const matchesSearch =
+            searchableText.includes(searchText);
+
+
+          return (
+            matchesCategory &&
+            matchesSearch
+          );
+
+        });
+
+
+      toolsGrid.innerHTML =
+        filteredTools
+          .map(createToolCard)
+          .join("");
+
+
+      if (filteredTools.length === 0) {
+
+        noResults.style.display = "block";
+
+      } else {
+
+        noResults.style.display = "none";
+
+      }
+
+
+      addFavoriteListeners();
+
+    }
+
+
+    /* =========================
+       RENDER FEATURED
+    ========================= */
+
+    function renderFeatured() {
+
+      const featuredTools =
+        tools.filter(function (tool) {
+
+          return tool.featured === true;
+
+        });
+
+
+      featuredGrid.innerHTML =
+        featuredTools
+          .map(createFeaturedCard)
+          .join("");
+
+    }
+
+
+    /* =========================
+       FAVORITE BUTTONS
+    ========================= */
+
+    function addFavoriteListeners() {
+
+      document
+        .querySelectorAll("[data-favorite]")
+        .forEach(function (button) {
+
+          button.addEventListener(
+            "click",
+            function () {
+
+              const toolId =
+                this.dataset.favorite;
+
+
+              if (favorites.includes(toolId)) {
+
+                favorites =
+                  favorites.filter(
+                    id => id !== toolId
+                  );
+
+                showToast(
+                  "Removed from favorites"
+                );
+
+              } else {
+
+                favorites.push(toolId);
+
+                showToast(
+                  "❤️ Added to favorites"
+                );
+
+              }
+
+
+              localStorage.setItem(
+                "aiToolsFavorites",
+                JSON.stringify(favorites)
+              );
+
+
+              renderTools();
+
+            }
+          );
+
+        });
+
+    }
+
+
+    /* =========================
+       CATEGORY FILTER
+    ========================= */
+
+    categoryButtons.forEach(function (button) {
+
+      button.addEventListener(
+        "click",
+        function () {
+
+          categoryButtons.forEach(function (btn) {
+
+            btn.classList.remove("active");
+
+          });
+
+
+          this.classList.add("active");
+
+
+          selectedCategory =
+            this.dataset.category;
+
+
+          renderTools();
+
+        }
+      );
+
+    });
+
+
+    /* =========================
        SEARCH
-       ========================================== */
+    ========================= */
 
     searchInput.addEventListener(
       "input",
-      function() {
-
-        currentSearch =
-          this.value.trim();
+      function () {
 
         renderTools();
 
@@ -1386,30 +1971,120 @@
     );
 
 
-    /* ==========================================
-       CATEGORY FILTER
-       ========================================== */
+    /* =========================
+       STATS
+    ========================= */
 
-    document
-      .querySelectorAll(".category-btn")
-      .forEach(button => {
+    function updateStats() {
 
-        button.addEventListener(
+      toolCount.textContent =
+        tools.length;
+
+
+      const categories =
+        new Set(
+          tools.map(tool => tool.category)
+        );
+
+
+      categoryCount.textContent =
+        categories.size;
+
+    }
+
+
+    /* =========================
+       DARK MODE
+    ========================= */
+
+    const themeBtn =
+      document.getElementById("themeBtn");
+
+
+    function updateThemeIcon() {
+
+      if (
+        document.body.classList.contains("dark")
+      ) {
+
+        themeBtn.textContent = "☀️";
+
+      } else {
+
+        themeBtn.textContent = "🌙";
+
+      }
+
+    }
+
+
+    const savedTheme =
+      localStorage.getItem("aiToolsTheme");
+
+
+    if (savedTheme === "dark") {
+
+      document.body.classList.add("dark");
+
+    }
+
+
+    updateThemeIcon();
+
+
+    themeBtn.addEventListener(
+      "click",
+      function () {
+
+        document.body.classList.toggle("dark");
+
+
+        const isDark =
+          document.body.classList.contains("dark");
+
+
+        localStorage.setItem(
+          "aiToolsTheme",
+          isDark ? "dark" : "light"
+        );
+
+
+        updateThemeIcon();
+
+      }
+    );
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    const menuBtn =
+      document.getElementById("menuBtn");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    menuBtn.addEventListener(
+      "click",
+      function () {
+
+        navLinks.classList.toggle("show");
+
+      }
+    );
+
+
+    navLinks
+      .querySelectorAll("a")
+      .forEach(function (link) {
+
+        link.addEventListener(
           "click",
-          function() {
+          function () {
 
-            document
-              .querySelectorAll(".category-btn")
-              .forEach(btn =>
-                btn.classList.remove("active")
-              );
-
-            this.classList.add("active");
-
-            currentCategory =
-              this.dataset.category;
-
-            renderTools();
+            navLinks.classList.remove("show");
 
           }
         );
@@ -1417,142 +2092,46 @@
       });
 
 
-    /* ==========================================
-       TOOL COUNT
-       ========================================== */
-
-    toolCount.textContent =
-      tools.length + "+";
-
-
-    /* ==========================================
-       DARK MODE
-       ========================================== */
-
-    function updateThemeButton() {
-
-      const button =
-        document.getElementById("themeBtn");
-
-      if (
-        document.body.classList.contains("dark")
-      ) {
-        button.textContent = "☀️";
-      } else {
-        button.textContent = "🌙";
-      }
-
-    }
-
-
-    function toggleTheme() {
-
-      document.body.classList.toggle("dark");
-
-      localStorage.setItem(
-        "aiToolsTheme",
-        document.body.classList.contains("dark")
-          ? "dark"
-          : "light"
-      );
-
-      updateThemeButton();
-
-    }
-
-
-    if (
-      localStorage.getItem("aiToolsTheme")
-      === "dark"
-    ) {
-
-      document.body.classList.add("dark");
-
-    }
-
-
-    updateThemeButton();
-
-
-    /* ==========================================
-       MOBILE MENU
-       ========================================== */
-
-    function toggleMobileMenu() {
-
-      const nav =
-        document.querySelector(".nav-links");
-
-      if (nav.style.display === "flex") {
-
-        nav.style.display = "";
-
-      } else {
-
-        nav.style.display = "flex";
-        nav.style.position = "absolute";
-        nav.style.top = "64px";
-        nav.style.left = "0";
-        nav.style.right = "0";
-        nav.style.padding = "18px 20px";
-        nav.style.background = "var(--card)";
-        nav.style.borderBottom =
-          "1px solid var(--border)";
-        nav.style.flexDirection = "column";
-        nav.style.alignItems = "flex-start";
-
-      }
-
-    }
-
-
-    /* ==========================================
-       SUBMIT FORM
-       ========================================== */
-
-    document
-      .getElementById("submitForm")
-      .addEventListener(
-        "submit",
-        function(event) {
-
-          event.preventDefault();
-
-          showToast(
-            "Thank you! Your AI tool submission has been received."
-          );
-
-          this.reset();
-
-        }
-      );
-
-
-    /* ==========================================
+    /* =========================
        TOAST
-       ========================================== */
+    ========================= */
+
+    let toastTimer;
+
 
     function showToast(message) {
 
       const toast =
         document.getElementById("toast");
 
-      toast.textContent = message;
+
+      toast.textContent =
+        message;
+
 
       toast.classList.add("show");
 
-      setTimeout(() => {
 
-        toast.classList.remove("show");
+      clearTimeout(toastTimer);
 
-      }, 3000);
+
+      toastTimer =
+        setTimeout(function () {
+
+          toast.classList.remove("show");
+
+        }, 2200);
 
     }
 
 
-    /* ==========================================
-       INITIAL LOAD
-       ========================================== */
+    /* =========================
+       INITIALIZE
+    ========================= */
+
+    updateStats();
+
+    renderFeatured();
 
     renderTools();
 
