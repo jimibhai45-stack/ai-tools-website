@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Terms & Conditions | AI Tools Hub</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f8fafc;--card:#fff;--text:#0f172a;--muted:#64748b;--border:#e2e8f0;--primary:#4f46e5;--header:rgba(255,255,255,.94)}
+body.dark{--bg:#020617;--card:#0f172a;--text:#f8fafc;--muted:#94a3b8;--border:#1e293b;--header:rgba(2,6,23,.94)}
+body{font-family:Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;background:var(--header);backdrop-filter:blur(15px);border-bottom:1px solid var(--border)}
+.nav{max-width:1200px;margin:auto;min-height:72px;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:900}.logo span{color:var(--primary)}
+.nav-links{display:flex;gap:22px;font-weight:bold;color:var(--muted)}
+.nav-links a:hover{color:var(--primary)}
+.theme{border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:10px;padding:10px;cursor:pointer}
+.container{max-width:900px;margin:auto;padding:65px 20px}
+h1{font-size:50px;margin-bottom:10px}h1 span{color:var(--primary)}
+.updated{color:var(--muted);margin-bottom:35px}
+section{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:25px;margin-bottom:18px}
+section h2{margin-bottom:8px}
+section p{color:var(--muted)}
+footer{text-align:center;border-top:1px solid var(--border);padding:35px;color:var(--muted)}
+@media(max-width:700px){.nav-links{display:none}h1{font-size:40px}}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+<a href="index.html" class="logo">AI <span>Tools</span> Hub</a>
+
+<nav class="nav-links">
+<a href="index.html">Home</a>
+<a href="index.html#tools">Explore Tools</a>
+<a href="favorites.html">Favorites</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<button class="theme" onclick="toggleTheme()" id="themeBtn">🌙</button>
+</div>
+</header>
+
+<main class="container">
+
+<h1>Terms & <span>Conditions</span></h1>
+<p class="updated">Last updated: September 2026</p>
+
+<section>
+<h2>1. Acceptance of Terms</h2>
+<p>
+By using AI Tools Hub, you agree to these Terms and Conditions.
+If you do not agree with these terms, please do not use the website.
+</p>
+</section>
+
+<section>
+<h2>2. Website Purpose</h2>
+<p>
+AI Tools Hub provides an informational directory of artificial intelligence
+tools. Tool descriptions, ratings and other information are provided for
+general informational purposes.
+</p>
+</section>
+
+<section>
+<h2>3. Third-Party Links</h2>
+<p>
+The website may contain links to external websites. AI Tools Hub does not
+control third-party websites and is not responsible for their content,
+availability, policies or services.
+</p>
+</section>
+
+<section>
+<h2>4. Accuracy of Information</h2>
+<p>
+We aim to keep information useful and up to date, but tool features,
+pricing and availability may change. Users should verify important details
+directly with the official tool provider.
+</p>
+</section>
+
+<section>
+<h2>5. User Submissions</h2>
+<p>
+If you submit an AI tool or other information, you should provide accurate
+information and ensure that you have the right to submit it.
+</p>
+</section>
+
+<section>
+<h2>6. Changes</h2>
+<p>
+AI Tools Hub may update these Terms and Conditions as the website and its
+features evolve.
+</p>
+</section>
+
+<section>
+<h2>7. Contact</h2>
+<p>
+For questions regarding these Terms, please visit the Contact page.
+</p>
+</section>
+
+</main>
+
+<footer>
+<strong>AI Tools Hub</strong>
+<p>Discover smarter tools for a smarter future.</p>
+<p>© 2026 AI Tools Hub. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleTheme(){
+document.body.classList.toggle("dark");
+localStorage.setItem("aiToolsTheme",
+document.body.classList.contains("dark")?"dark":"light");
+updateTheme();
+}
+function updateTheme(){
+document.getElementById("themeBtn").textContent=
+document.body.classList.contains("dark")?"☀️":"🌙";
+}
+if(localStorage.getItem("aiToolsTheme")==="dark")document.body.classList.add("dark");
+updateTheme();
+</script>
+
+</body>
+</html>
