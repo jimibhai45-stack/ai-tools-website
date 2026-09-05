@@ -1,33 +1,894 @@
-<title>AI Tools Hub — Discover the Best AI Tools</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-      content="Discover the best AI tools for productivity, writing, coding, research, design, image generation, voice and more. Explore AI tools with detailed information, features and pricing.">
+  <title>AI Tools Hub — Discover the Best AI Tools</title>
 
-<meta name="keywords"
-      content="AI tools, best AI tools, artificial intelligence tools, ChatGPT, Claude, Gemini, Midjourney, Canva AI, coding AI, writing AI">
+  <meta name="description"
+        content="Discover the best AI tools for productivity, writing, coding, research, design, image generation, voice and more. Explore AI tools with detailed information, features and pricing.">
 
-<meta name="author" content="AI Tools Hub">
+  <meta name="keywords"
+        content="AI tools, best AI tools, artificial intelligence tools, ChatGPT, Claude, Gemini, Midjourney, Canva AI, coding AI, writing AI">
 
-<meta name="robots" content="index, follow">
+  <meta name="author" content="AI Tools Hub">
+  <meta name="robots" content="index, follow">
 
-<link rel="canonical"
-      href="https://jimibhai45-stack.github.io/ai-tools-website/">
+  <link rel="canonical"
+        href="https://jimibhai45-stack.github.io/ai-tools-website/">
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="AI Tools Hub — Discover the Best AI Tools">
-<meta property="og:description"
-      content="Explore the best AI tools for writing, coding, research, design, productivity and more.">
-<meta property="og:url"
-      content="https://jimibhai45-stack.github.io/ai-tools-website/">
-<meta property="og:site_name" content="AI Tools Hub">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Tools Hub — Discover the Best AI Tools">
+  <meta property="og:description"
+        content="Explore the best AI tools for writing, coding, research, design, productivity and more.">
+  <meta property="og:url"
+        content="https://jimibhai45-stack.github.io/ai-tools-website/">
+  <meta property="og:site_name" content="AI Tools Hub">
 
-<!-- Twitter / X -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AI Tools Hub — Discover the Best AI Tools">
-<meta name="twitter:description"
-      content="Discover and explore the best AI tools in one place.">
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI Tools Hub — Discover the Best AI Tools">
+  <meta name="twitter:description"
+        content="Discover and explore the best AI tools in one place.">
 
-<!-- Favicon -->
-<link rel="icon"
-      href="https://www.google.com/s2/favicons?domain=chatgpt.com&sz=64">
+  <!-- Favicon -->
+  <link rel="icon"
+        href="https://www.google.com/s2/favicons?domain=chatgpt.com&sz=64">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f8fc;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: #60a5fa;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      font-size: 15px;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #111827, #1e3a8a);
+      color: white;
+      padding: 75px 20px 80px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .hero h1 span {
+      color: #60a5fa;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: auto;
+      color: #dbeafe;
+      font-size: 18px;
+    }
+
+    .search-area {
+      max-width: 760px;
+      margin: 32px auto 0;
+      position: relative;
+    }
+
+    .search-area input {
+      width: 100%;
+      padding: 18px 22px;
+      border: none;
+      border-radius: 14px;
+      font-size: 16px;
+      outline: none;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #667085;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 35px;
+    }
+
+    .category-btn {
+      border: 1px solid #d7dce5;
+      background: white;
+      padding: 10px 17px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .category-btn:hover,
+    .category-btn.active {
+      background: #2563eb;
+      color: white;
+      border-color: #2563eb;
+    }
+
+    .tools-count {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #667085;
+      font-weight: 600;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .tool-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(15,23,42,0.06);
+      transition: 0.25s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(15,23,42,0.12);
+    }
+
+    .tool-image {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .tool-content {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .tool-name {
+      font-size: 23px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .tool-category {
+      display: inline-block;
+      width: fit-content;
+      font-size: 12px;
+      font-weight: 700;
+      background: #eff6ff;
+      color: #2563eb;
+      padding: 5px 10px;
+      border-radius: 20px;
+      margin-bottom: 13px;
+    }
+
+    .tool-description {
+      color: #667085;
+      font-size: 14px;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    .tool-button {
+      display: block;
+      text-align: center;
+      background: #2563eb;
+      color: white;
+      padding: 12px 15px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .tool-button:hover {
+      background: #1d4ed8;
+    }
+
+    .no-results {
+      display: none;
+      text-align: center;
+      padding: 50px 20px;
+      background: white;
+      border-radius: 15px;
+      color: #667085;
+    }
+
+    .about {
+      background: white;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .about-box {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-box h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .about-box p {
+      color: #667085;
+      margin-bottom: 12px;
+    }
+
+    .submit-box {
+      margin-top: 45px;
+      background: linear-gradient(135deg, #eff6ff, #eef2ff);
+      padding: 35px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .submit-box h2 {
+      margin-bottom: 10px;
+    }
+
+    .submit-box p {
+      color: #667085;
+      margin-bottom: 20px;
+    }
+
+    .submit-btn {
+      display: inline-block;
+      background: #111827;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    footer {
+      background: #111827;
+      color: #cbd5e1;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media (max-width: 900px) {
+      .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav {
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 55px 18px 60px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 40px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+      <a href="index.html" class="logo">AI Tools <span>Hub</span></a>
+
+      <nav>
+        <a href="#tools">AI Tools</a>
+        <a href="#about">About</a>
+        <a href="#submit">Submit Tool</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Discover the Best <span>AI Tools</span></h1>
+
+    <p>
+      Explore powerful AI tools for writing, coding, research, design,
+      productivity, image generation, voice and much more.
+    </p>
+
+    <div class="search-area">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search AI tools... e.g. ChatGPT, coding, design"
+      >
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <main id="tools" class="container">
+
+    <div class="section-title">
+      <h2>Explore AI Tools</h2>
+      <p>Find the right artificial intelligence tool for your needs.</p>
+    </div>
+
+    <div class="categories">
+      <button class="category-btn active" onclick="filterCategory('All', this)">
+        All
+      </button>
+
+      <button class="category-btn" onclick="filterCategory('Writing', this)">
+        Writing
+      </button>
+
+      <button class="category-btn" onclick="filterCategory('Coding', this)">
+        Coding
+      </button>
+
+      <button class="category-btn" onclick="filterCategory('Research', this)">
+        Research
+      </button>
+
+      <button class="category-btn" onclick="filterCategory('Design', this)">
+        Design
+      </button>
+
+      <button class="category-btn" onclick="filterCategory('Productivity', this)">
+        Productivity
+      </button>
+
+      <button class="category-btn" onclick="filterCategory('Voice', this)">
+        Voice
+      </button>
+
+      <button class="category-btn" onclick="filterCategory('Image Generation', this)">
+        Image Generation
+      </button>
+    </div>
+
+    <div class="tools-count" id="toolsCount">
+      12 AI Tools
+    </div>
+
+    <div class="tools-grid" id="toolsGrid">
+
+      <!-- ChatGPT -->
+      <article class="tool-card" data-name="chatgpt" data-category="Writing">
+        <img
+          class="tool-image"
+          src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80"
+          alt="ChatGPT AI tool"
+        >
+
+        <div class="tool-content">
+          <h3 class="tool-name">ChatGPT</h3>
+
+          <span class="tool-category">Writing</span>
+
+          <p class="tool-description">
+            ChatGPT is a versatile AI assistant for writing, brainstorming,
+            learning, coding, summarizing information, answering questions
+            and everyday productivity. It can help students, professionals,
+            developers and creators work faster and generate useful ideas.
+          </p>
+
+          <a class="tool-button" href="tool.html?tool=chatgpt">
+            View Details
+          </a>
+        </div>
+      </article>
+
+      <!-- Claude -->
+      <article class="tool-card" data-name="claude" data-category="Writing">
+        <img
+          class="tool-image"
+          src="https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&w=900&q=80"
+          alt="Claude AI tool"
+        >
+
+        <div class="tool-content">
+          <h3 class="tool-name">Claude</h3>
+
+          <span class="tool-category">Writing</span>
+
+          <p class="tool-description">
+            Claude is an advanced AI assistant designed for writing,
+            analysis, research, reasoning and working with long documents.
+            It is useful for professionals who need clear explanations,
+            content creation, document analysis and thoughtful AI assistance.
+          </p>
+
+          <a class="tool-button" href="tool.html?tool=claude">
+            View Details
+          </a>
+        </div>
+      </article>
+
+      <!-- Gemini -->
+      <article class="tool-card" data-name="gemini" data-category="Research">
+        <img
+          class="tool-image"
+          src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=900&q=80"
+          alt="Google Gemini AI tool"
+        >
+
+        <div class="tool-content">
+          <h3 class="tool-name">Gemini</h3>
+
+          <span class="tool-category">Research</span>
+
+          <p class="tool-description">
+            Gemini is Google's AI assistant for answering questions,
+            understanding information, generating content and helping with
+            research and productivity. It can assist users with ideas,
+            summaries, planning and many everyday tasks.
+          </p>
+
+          <a class="tool-button" href="tool.html?tool=gemini">
+            View Details
+          </a>
+        </div>
+      </article>
+
+      <!-- Perplexity -->
+      <article class="tool-card" data-name="perplexity" data-category="Research">
+        <img
+          class="tool-image"
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80"
+          alt="Perplexity AI research tool"
+        >
+
+        <div class="tool-content">
+          <h3 class="tool-name">Perplexity</h3>
+
+          <span class="tool-category">Research</span>
+
+          <p class="tool-description">
+            Perplexity is an AI-powered search and research assistant that
+            helps users find information, explore topics and create answers
+            from online sources. It is particularly useful for research,
+            learning, fact-finding and discovering information quickly.
+          </p>
+
+          <a class="tool-button" href="tool.html?tool=perplexity">
+            View Details
+          </a>
+        </div>
+      </article>
+
+      <!-- Midjourney -->
+      <article class="tool-card" data-name="midjourney" data-category="Image Generation">
+        <img
+          class="tool-image"
+          src="https://images.unsplash.com/photo-1686191128892-3b6c0c5f9e2d?auto=format&fit=crop&w=900&q=80"
+          alt="Midjourney AI image generation"
+        >
+
+        <div class="tool-content">
+          <h3 class="tool-name">Midjourney</h3>
+
+          <span class="tool-category">Image Generation</span>
+
+          <p class="tool-description">
+            Midjourney is a popular generative AI platform for creating
+            artistic and highly detailed images from text prompts. Designers,
+            artists, marketers and creators can use it to explore concepts,
+            visual styles, illustrations and creative ideas.
+          </p>
+
+          <a class="tool-button" href="tool.html?tool=midjourney">
+            View Details
+          </a>
+        </div>
+      </article>
+
+      <!-- Canva -->
+      <article class="tool-card" data-name="canva" data-category="Design">
+        <img
+          class="tool-image"
+          src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&q=80"
+          alt="Canva AI design tool"
+        >
+
+        <div class="tool-content">
+          <h3 class="tool-name">Canva</h3>
+
+          <span class="tool-category">Design</span>
+
+          <p class="tool-description">
+            Canva is an easy-to-use design platform with powerful AI
+            features for creating presentations, social media graphics,
+            marketing materials, images and other visual content without
+            requiring advanced design skills.
+          </p>
+
+          <a class="tool-button" href="tool.html?tool=canva">
+            View Details
+          </a>
+        </div>
+      </article>
+
+      <!-- Cursor -->
+      <article class="tool-card" data-name="cursor" data-category="Coding">
+        <img
+          class="tool-image"
+          src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80"
+          alt="Cursor AI coding tool"
+        >
+
+        <div class="tool-content">
+          <h3 class="tool-name">Cursor</h3>
+
+          <span class="tool-category">Coding</span>
+
+          <p class="tool-description">
+            Cursor is an AI-powered code editor built to help developers
+            write, understand, refactor and debug software. Its AI features
+            can accelerate development by helping programmers work directly
+            with their codebase.
+          </p>
+
+          <a class="tool-button" href="tool.html?tool=cursor">
+            View Details
+          </a>
+        </div>
+      </article>
+
+      <!-- GitHub Copilot -->
+      <article class="tool-card" data-name="copilot github github copilot" data-category="Coding">
+        <img
+          class="tool-image"
+          src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80"
+          alt="GitHub Copilot AI coding tool"
+        >
+
+        <div class="tool-content">
+          <h3 class="tool-name">GitHub Copilot</h3>
+
+          <span class="tool-category">Coding</span>
+
+          <p class="tool-description">
+            GitHub Copilot is an AI coding assistant that helps developers
+            write code, understand programming concepts, generate functions,
+            complete code and improve development workflows. It is designed
+            to work alongside programmers inside supported development tools.
+          </p>
+
+          <a class="tool-button" href="tool.html?tool=copilot">
+            View Details
+          </a>
+        </div>
+      </article>
+
+      <!-- Jasper -->
+      <article class="tool-card" data-name="jasper" data-category="Writing">
+        <img
+          class="tool-image"
+          src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=900&q=80"
+          alt="Jasper AI writing tool"
+        >
+
+        <div class="tool-content">
+          <h3 class="tool-name">Jasper</h3>
+
+          <span class="tool-category">Writing</span>
+
+          <p class="tool-description">
+            Jasper is an AI content platform focused on marketing and
+            business content. It can help teams create marketing copy,
+            campaigns, blog content, social media posts and other brand
+            communications more efficiently.
+          </p>
+
+          <a class="tool-button" href="tool.html?tool=jasper">
+            View Details
+          </a>
+        </div>
+      </article>
+
+      <!-- Notion AI -->
+      <article class="tool-card" data-name="notion notion ai" data-category="Productivity">
+        <img
+          class="tool-image"
+          src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80"
+          alt="Notion AI productivity tool"
+        >
+
+        <div class="tool-content">
+          <h3 class="tool-name">Notion AI</h3>
+
+          <span class="tool-category">Productivity</span>
+
+          <p class="tool-description">
+            Notion AI brings artificial intelligence into a workspace for
+            notes, documents, project management and knowledge organization.
+            It can help summarize content, generate ideas, improve writing
+            and make information easier to manage.
+          </p>
+
+          <a class="tool-button" href="tool.html?tool=notion">
+            View Details
+          </a>
+        </div>
+      </article>
+
+      <!-- Grammarly -->
+      <article class="tool-card" data-name="grammarly" data-category="Writing">
+        <img
+          class="tool-image"
+          src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80"
+          alt="Grammarly AI writing assistant"
+        >
+
+        <div class="tool-content">
+          <h3 class="tool-name">Grammarly</h3>
+
+          <span class="tool-category">Writing</span>
+
+          <p class="tool-description">
+            Grammarly is an AI-powered writing assistant that helps improve
+            grammar, spelling, clarity, tone and overall communication.
+            Students, professionals, businesses and creators can use it to
+            produce clearer and more polished writing.
+          </p>
+
+          <a class="tool-button" href="tool.html?tool=grammarly">
+            View Details
+          </a>
+        </div>
+      </article>
+
+      <!-- ElevenLabs -->
+      <article class="tool-card" data-name="elevenlabs eleven labs" data-category="Voice">
+        <img
+          class="tool-image"
+          src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=900&q=80"
+          alt="ElevenLabs AI voice tool"
+        >
+
+        <div class="tool-content">
+          <h3 class="tool-name">ElevenLabs</h3>
+
+          <span class="tool-category">Voice</span>
+
+          <p class="tool-description">
+            ElevenLabs is an AI voice technology platform for generating
+            natural-sounding speech and working with synthetic voices.
+            Creators can use AI voice technology for videos, narration,
+            storytelling, accessibility and other audio projects.
+          </p>
+
+          <a class="tool-button" href="tool.html?tool=elevenlabs">
+            View Details
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="no-results" id="noResults">
+      <h3>No AI tools found</h3>
+      <p>Try another search term or choose a different category.</p>
+    </div>
+
+  </main>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container">
+
+      <div class="about-box">
+        <h2>About AI Tools Hub</h2>
+
+        <p>
+          AI Tools Hub is a directory created to help people discover useful
+          artificial intelligence tools in one convenient place.
+        </p>
+
+        <p>
+          Whether you need help with writing, coding, research, design,
+          productivity, image generation or voice creation, our goal is to
+          make finding the right AI tool simple and easy.
+        </p>
+
+        <p>
+          Explore the tools above to learn more about their features,
+          capabilities and potential use cases.
+        </p>
+      </div>
+
+      <!-- SUBMIT -->
+      <div id="submit" class="submit-box">
+        <h2>Have an AI Tool?</h2>
+
+        <p>
+          Know an AI tool that should be listed on AI Tools Hub?
+          We would love to hear about it.
+        </p>
+
+        <a class="submit-btn"
+           href="mailto:contact@example.com?subject=Submit AI Tool">
+          Submit a Tool
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 <strong>AI Tools Hub</strong>. All rights reserved.
+    </p>
+
+    <p>
+      Discover. Explore. Create with AI.
+    </p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const toolCards = document.querySelectorAll(".tool-card");
+    const toolsCount = document.getElementById("toolsCount");
+    const noResults = document.getElementById("noResults");
+
+    let selectedCategory = "All";
+
+    function updateTools() {
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      let visibleCount = 0;
+
+      toolCards.forEach(card => {
+        const name = card.dataset.name.toLowerCase();
+        const category = card.dataset.category.toLowerCase();
+        const text = card.innerText.toLowerCase();
+
+        const matchesSearch =
+          name.includes(searchTerm) ||
+          category.includes(searchTerm) ||
+          text.includes(searchTerm);
+
+        const matchesCategory =
+          selectedCategory === "All" ||
+          card.dataset.category === selectedCategory;
+
+        if (matchesSearch && matchesCategory) {
+          card.style.display = "flex";
+          visibleCount++;
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      toolsCount.textContent =
+        visibleCount + (visibleCount === 1 ? " AI Tool" : " AI Tools");
+
+      if (visibleCount === 0) {
+        noResults.style.display = "block";
+      } else {
+        noResults.style.display = "none";
+      }
+    }
+
+    function filterCategory(category, button) {
+      selectedCategory = category;
+
+      document.querySelectorAll(".category-btn").forEach(btn => {
+        btn.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+      updateTools();
+    }
+
+    searchInput.addEventListener("input", updateTools);
+
+    updateTools();
+  </script>
+
+</body>
+</html>
