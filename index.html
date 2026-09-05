@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Tools Hub</title>
+
+  <title>AI Tools Hub - Best AI Tools</title>
+
+  <meta
+    name="description"
+    content="Discover the best AI tools for writing, images, video, coding, productivity and business."
+  >
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
@@ -18,6 +24,8 @@
       color: #111827;
     }
 
+    /* HEADER */
+
     header {
       background: #111827;
       color: white;
@@ -25,6 +33,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     header h1 {
@@ -34,12 +45,19 @@
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 20px;
+      margin-left: 25px;
+      font-size: 15px;
     }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    /* HERO */
 
     .hero {
       text-align: center;
-      padding: 80px 20px;
+      padding: 90px 20px;
       background: white;
     }
 
@@ -51,126 +69,487 @@
     .hero p {
       font-size: 18px;
       color: #6b7280;
+      max-width: 650px;
+      margin: auto;
       margin-bottom: 30px;
+      line-height: 1.6;
     }
 
     .search {
       width: 90%;
-      max-width: 600px;
-      padding: 16px;
+      max-width: 650px;
+      padding: 17px 20px;
       border: 1px solid #d1d5db;
-      border-radius: 10px;
+      border-radius: 12px;
       font-size: 16px;
+      outline: none;
     }
 
+    .search:focus {
+      border-color: #2563eb;
+    }
+
+    /* CATEGORIES */
+
+    .categories {
+      padding: 40px 7%;
+      text-align: center;
+    }
+
+    .categories h2 {
+      margin-bottom: 25px;
+    }
+
+    .category-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .category {
+      border: none;
+      background: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 14px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .category:hover {
+      background: #111827;
+      color: white;
+    }
+
+    /* TOOLS */
+
     .tools {
-      padding: 50px 7%;
+      padding: 40px 7% 70px;
     }
 
     .tools h2 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
+      font-size: 32px;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 22px;
     }
 
     .card {
       background: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 38px;
+      margin-bottom: 15px;
     }
 
     .card h3 {
+      font-size: 21px;
       margin-bottom: 10px;
     }
 
     .card p {
       color: #6b7280;
-      line-height: 1.5;
+      line-height: 1.6;
       margin-bottom: 20px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      background: #eef2ff;
+      padding: 6px 10px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      color: #4338ca;
     }
 
     .button {
       display: inline-block;
       background: #111827;
       color: white;
-      padding: 10px 18px;
+      padding: 11px 18px;
       border-radius: 8px;
       text-decoration: none;
+      font-size: 14px;
     }
+
+    .button:hover {
+      background: #2563eb;
+    }
+
+    /* FOOTER */
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 35px 20px;
       background: #111827;
       color: white;
-      margin-top: 40px;
+    }
+
+    footer p {
+      color: #d1d5db;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero {
+        padding: 60px 20px;
+      }
+
+      .hero h2 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .tools h2 {
+        font-size: 27px;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- HEADER -->
+
   <header>
+
     <h1>🤖 AI Tools Hub</h1>
 
     <nav>
       <a href="#">Home</a>
+      <a href="#categories">Categories</a>
       <a href="#tools">AI Tools</a>
     </nav>
+
   </header>
 
+
+  <!-- HERO -->
+
   <section class="hero">
+
     <h2>Discover the Best AI Tools</h2>
-    <p>Find powerful AI tools for work, study, design and business.</p>
+
+    <p>
+      Find powerful AI tools for writing, images, videos,
+      coding, productivity, business and more.
+    </p>
 
     <input
+      id="searchInput"
       class="search"
       type="text"
-      placeholder="Search AI tools..."
+      placeholder="🔎 Search AI tools..."
     >
+
   </section>
 
+
+  <!-- CATEGORIES -->
+
+  <section class="categories" id="categories">
+
+    <h2>Explore Categories</h2>
+
+    <div class="category-buttons">
+
+      <button class="category" onclick="filterCategory('all')">
+        All
+      </button>
+
+      <button class="category" onclick="filterCategory('writing')">
+        ✍️ Writing
+      </button>
+
+      <button class="category" onclick="filterCategory('image')">
+        🎨 Image
+      </button>
+
+      <button class="category" onclick="filterCategory('video')">
+        🎬 Video
+      </button>
+
+      <button class="category" onclick="filterCategory('coding')">
+        💻 Coding
+      </button>
+
+      <button class="category" onclick="filterCategory('business')">
+        💼 Business
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- AI TOOLS -->
+
   <section class="tools" id="tools">
+
     <h2>Popular AI Tools</h2>
 
     <div class="grid">
 
-      <div class="card">
+
+      <!-- TOOL 1 -->
+
+      <div class="card" data-category="writing">
+
+        <div class="icon">🤖</div>
+
         <h3>ChatGPT</h3>
-        <p>AI assistant for writing, learning, coding and more.</p>
-        <a class="button" href="#">Visit Tool</a>
+
+        <span class="tag">Writing</span>
+
+        <p>
+          AI assistant for writing, learning, brainstorming,
+          coding and everyday tasks.
+        </p>
+
+        <a
+          class="button"
+          href="https://chatgpt.com/"
+          target="_blank"
+        >
+          Visit Tool →
+        </a>
+
       </div>
 
-      <div class="card">
+
+      <!-- TOOL 2 -->
+
+      <div class="card" data-category="image">
+
+        <div class="icon">🎨</div>
+
         <h3>AI Image Generator</h3>
-        <p>Create amazing images using artificial intelligence.</p>
-        <a class="button" href="#">Visit Tool</a>
+
+        <span class="tag">Image</span>
+
+        <p>
+          Create beautiful images and creative artwork
+          using artificial intelligence.
+        </p>
+
+        <a class="button" href="#" target="_blank">
+          Visit Tool →
+        </a>
+
       </div>
 
-      <div class="card">
-        <h3>AI Writing Tool</h3>
-        <p>Write articles, emails and content faster with AI.</p>
-        <a class="button" href="#">Visit Tool</a>
+
+      <!-- TOOL 3 -->
+
+      <div class="card" data-category="writing">
+
+        <div class="icon">✍️</div>
+
+        <h3>AI Writer</h3>
+
+        <span class="tag">Writing</span>
+
+        <p>
+          Create articles, blog posts, emails and other
+          content faster with AI.
+        </p>
+
+        <a class="button" href="#" target="_blank">
+          Visit Tool →
+        </a>
+
       </div>
 
-      <div class="card">
-        <h3>AI Video Tool</h3>
-        <p>Create and edit videos using powerful AI technology.</p>
-        <a class="button" href="#">Visit Tool</a>
+
+      <!-- TOOL 4 -->
+
+      <div class="card" data-category="video">
+
+        <div class="icon">🎬</div>
+
+        <h3>AI Video Maker</h3>
+
+        <span class="tag">Video</span>
+
+        <p>
+          Create engaging videos using AI-powered
+          video generation and editing tools.
+        </p>
+
+        <a class="button" href="#" target="_blank">
+          Visit Tool →
+        </a>
+
       </div>
+
+
+      <!-- TOOL 5 -->
+
+      <div class="card" data-category="coding">
+
+        <div class="icon">💻</div>
+
+        <h3>AI Coding Assistant</h3>
+
+        <span class="tag">Coding</span>
+
+        <p>
+          Get help with programming, debugging and
+          writing code using artificial intelligence.
+        </p>
+
+        <a class="button" href="#" target="_blank">
+          Visit Tool →
+        </a>
+
+      </div>
+
+
+      <!-- TOOL 6 -->
+
+      <div class="card" data-category="business">
+
+        <div class="icon">💼</div>
+
+        <h3>AI Business Assistant</h3>
+
+        <span class="tag">Business</span>
+
+        <p>
+          Use AI to improve productivity, marketing,
+          business research and daily workflows.
+        </p>
+
+        <a class="button" href="#" target="_blank">
+          Visit Tool →
+        </a>
+
+      </div>
+
 
     </div>
+
   </section>
 
+
+  <!-- FOOTER -->
+
   <footer>
-    <p>© 2026 AI Tools Hub. All rights reserved.</p>
+
+    <h3>🤖 AI Tools Hub</h3>
+
+    <p>
+      Discover useful AI tools in one place.
+    </p>
+
+    <p>
+      © 2026 AI Tools Hub. All rights reserved.
+    </p>
+
   </footer>
+
+
+  <!-- SEARCH + CATEGORY JAVASCRIPT -->
+
+  <script>
+
+    const searchInput = document.getElementById("searchInput");
+
+    const cards = document.querySelectorAll(".card");
+
+
+    /* SEARCH */
+
+    searchInput.addEventListener("input", function () {
+
+      const searchText = this.value.toLowerCase();
+
+      cards.forEach(function (card) {
+
+        const name =
+          card.querySelector("h3").textContent.toLowerCase();
+
+        const description =
+          card.querySelector("p").textContent.toLowerCase();
+
+        const category =
+          card.dataset.category.toLowerCase();
+
+        if (
+          name.includes(searchText) ||
+          description.includes(searchText) ||
+          category.includes(searchText)
+        ) {
+
+          card.style.display = "block";
+
+        } else {
+
+          card.style.display = "none";
+
+        }
+
+      });
+
+    });
+
+
+    /* CATEGORY FILTER */
+
+    function filterCategory(category) {
+
+      cards.forEach(function (card) {
+
+        if (
+          category === "all" ||
+          card.dataset.category === category
+        ) {
+
+          card.style.display = "block";
+
+        } else {
+
+          card.style.display = "none";
+
+        }
+
+      });
+
+    }
+
+  </script>
 
 </body>
 </html>
