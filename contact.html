@@ -1,99 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Contact | AI Tools Hub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#f8fafc;--card:#fff;--text:#0f172a;--muted:#64748b;--border:#e2e8f0;--primary:#4f46e5;--header:rgba(255,255,255,.94)}
-body.dark{--bg:#020617;--card:#0f172a;--text:#f8fafc;--muted:#94a3b8;--border:#1e293b;--header:rgba(2,6,23,.94)}
-body{font-family:Arial, sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{text-decoration:none;color:inherit}
-header{position:sticky;top:0;background:var(--header);backdrop-filter:blur(15px);border-bottom:1px solid var(--border);z-index:10}
-.nav{max-width:1200px;margin:auto;min-height:72px;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:24px;font-weight:900}.logo span{color:var(--primary)}
-.nav-links{display:flex;gap:22px;font-weight:700;color:var(--muted)}
-.nav-links a:hover{color:var(--primary)}
-.theme{border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:10px;padding:10px;cursor:pointer}
-.container{max-width:850px;margin:auto;padding:70px 20px}
-.badge{display:inline-block;background:#eef2ff;color:var(--primary);padding:7px 14px;border-radius:99px;font-weight:bold;margin-bottom:18px}
-h1{font-size:55px;margin-bottom:12px}h1 span{color:var(--primary)}
-.subtitle{color:var(--muted);font-size:18px;margin-bottom:30px}
-.form{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:30px}
-input,textarea{width:100%;padding:14px;margin-bottom:14px;border:1px solid var(--border);border-radius:11px;background:var(--bg);color:var(--text);font-size:15px}
-textarea{min-height:150px;resize:vertical}
-button.send{width:100%;border:0;background:var(--primary);color:white;padding:14px;border-radius:11px;font-weight:bold;font-size:16px;cursor:pointer}
-button.send:hover{background:#3730a3}
-footer{margin-top:30px;border-top:1px solid var(--border);text-align:center;padding:35px;color:var(--muted)}
-@media(max-width:700px){.nav-links{display:none}h1{font-size:42px}}
-</style>
+  <title>Contact AI Tools Hub — Submit an AI Tool</title>
+
+  <meta
+    name="description"
+    content="Contact AI Tools Hub to suggest an AI tool, report an issue or send feedback about the AI tools directory."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://jimibhai45-stack.github.io/ai-tools-website/contact.html"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #172033;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 5%;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+    }
+
+    .logo span {
+      color: #60a5fa;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #dbeafe;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 65px 20px;
+    }
+
+    .back {
+      color: #2563eb;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 25px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e5eaf0;
+      border-radius: 18px;
+      padding: 35px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 25px;
+      margin: 28px 0 10px;
+    }
+
+    p {
+      color: #5f6b7a;
+      margin-bottom: 14px;
+    }
+
+    .contact-box {
+      background: #f8fafc;
+      border: 1px solid #e5eaf0;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 22px;
+    }
+
+    .email-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: #2563eb;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 9px;
+      font-weight: 700;
+    }
+
+    .email-btn:hover {
+      background: #1d4ed8;
+    }
+
+    footer {
+      background: #0b1120;
+      color: #94a3b8;
+      text-align: center;
+      padding: 25px 20px;
+    }
+
+    @media (max-width: 650px) {
+      .nav {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .card {
+        padding: 25px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-<div class="nav">
-<a href="index.html" class="logo">AI <span>Tools</span> Hub</a>
-<nav class="nav-links">
-<a href="index.html">Home</a>
-<a href="index.html#tools">Explore Tools</a>
-<a href="favorites.html">Favorites</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
-<button class="theme" onclick="toggleTheme()" id="themeBtn">🌙</button>
-</div>
+  <div class="nav">
+
+    <a href="index.html" class="logo">
+      AI Tools <span>Hub</span>
+    </a>
+
+    <nav>
+      <a href="index.html">Tools</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
 </header>
 
-<main class="container">
+<main>
 
-<div class="badge">📩 Get In Touch</div>
+  <a href="index.html" class="back">← Back to AI Tools</a>
 
-<h1>Contact <span>AI Tools Hub</span></h1>
+  <section class="card">
 
-<p class="subtitle">
-Have a suggestion, found an issue, or want to recommend an AI tool?
-Send us a message.
-</p>
+    <h1>Contact AI Tools Hub</h1>
 
-<form class="form" onsubmit="sendMessage(event)">
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<input type="text" placeholder="Subject" required>
-<textarea placeholder="Write your message..." required></textarea>
-<button class="send" type="submit">Send Message →</button>
-</form>
+    <p>
+      Have a suggestion, feedback or an AI tool that you think should be
+      listed on our directory? We'd love to hear from you.
+    </p>
+
+    <h2>Submit an AI Tool</h2>
+
+    <p>
+      Please include the tool name, official website and a short description
+      when contacting us.
+    </p>
+
+    <h2>Feedback & Corrections</h2>
+
+    <p>
+      If you notice incorrect information, a broken link or anything that
+      needs to be updated, please let us know.
+    </p>
+
+    <div class="contact-box">
+
+      <strong>Email Us</strong>
+
+      <p>
+        Send your message using the button below.
+      </p>
+
+      <!-- Replace this email with your real email address -->
+      <a
+        class="email-btn"
+        href="mailto:jimibhai45@gmail.com?subject=AI%20Tools%20Hub%20Contact"
+      >
+        Contact Us →
+      </a>
+
+    </div>
+
+  </section>
 
 </main>
 
 <footer>
-<strong>AI Tools Hub</strong>
-<p>Discover smarter tools for a smarter future.</p>
-<p>© 2026 AI Tools Hub. All rights reserved.</p>
+  © 2026 AI Tools Hub. All rights reserved.
 </footer>
-
-<script>
-function sendMessage(e){
- e.preventDefault();
- alert("Thank you! Your message has been received.");
- e.target.reset();
-}
-
-function toggleTheme(){
- document.body.classList.toggle("dark");
- localStorage.setItem("aiToolsTheme",
- document.body.classList.contains("dark")?"dark":"light");
- updateTheme();
-}
-function updateTheme(){
- document.getElementById("themeBtn").textContent=
- document.body.classList.contains("dark")?"☀️":"🌙";
-}
-if(localStorage.getItem("aiToolsTheme")==="dark")document.body.classList.add("dark");
-updateTheme();
-</script>
 
 </body>
 </html>
