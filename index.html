@@ -2,40 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>AI Tools Hub — Discover the Best AI Tools</title>
 
-  <meta name="description"
-        content="Discover the best AI tools for chatbots, writing, image generation, coding, research, voice, design and productivity. Explore useful AI tools in one place.">
+  <meta name="description" content="Discover the best AI tools for writing, coding, research, image generation, design, productivity, voice and chatbots.">
+  <meta name="keywords" content="AI tools, best AI tools, ChatGPT, Claude, Gemini, AI writing tools, AI coding tools, AI image generators, AI research tools">
 
-  <meta name="keywords"
-        content="AI tools, best AI tools, AI chatbot, AI writing tools, AI image tools, AI coding tools, AI research tools, AI voice tools, AI design tools, AI productivity tools">
-
-  <meta name="author" content="AI Tools Hub">
   <meta name="robots" content="index, follow">
 
-  <link rel="canonical"
-        href="https://jimibhai45-stack.github.io/ai-tools-website/">
+  <link rel="canonical" href="https://jimibhai45-stack.github.io/ai-tools-website/">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
   <meta property="og:title" content="AI Tools Hub — Discover the Best AI Tools">
-  <meta property="og:description"
-        content="Explore the best AI tools for chatbots, writing, image generation, coding, research, voice, design and productivity.">
-  <meta property="og:url"
-        content="https://jimibhai45-stack.github.io/ai-tools-website/">
-  <meta property="og:site_name" content="AI Tools Hub">
+  <meta property="og:description" content="Find the best AI tools for writing, coding, research, design, productivity and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jimibhai45-stack.github.io/ai-tools-website/">
 
-  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="AI Tools Hub — Discover the Best AI Tools">
-  <meta name="twitter:description"
-        content="Discover and explore the best AI tools in one place.">
-
-  <!-- Favicon -->
-  <link rel="icon"
-        href="https://www.google.com/s2/favicons?domain=chatgpt.com&sz=64">
+  <meta name="twitter:title" content="AI Tools Hub">
+  <meta name="twitter:description" content="Discover the best AI tools in one place.">
 
   <style>
     * {
@@ -50,7 +36,7 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f6f8fc;
+      background: #f7f9fc;
       color: #172033;
       line-height: 1.6;
     }
@@ -60,21 +46,19 @@
       color: inherit;
     }
 
-    /* HEADER */
-
     header {
       background: #111827;
       color: white;
+      padding: 18px 5%;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
     }
 
     .nav {
       max-width: 1200px;
       margin: auto;
-      padding: 18px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -82,9 +66,8 @@
     }
 
     .logo {
-      font-size: 25px;
+      font-size: 23px;
       font-weight: 800;
-      white-space: nowrap;
     }
 
     .logo span {
@@ -94,11 +77,11 @@
     nav {
       display: flex;
       gap: 22px;
-      align-items: center;
+      flex-wrap: wrap;
     }
 
     nav a {
-      color: #e5e7eb;
+      color: #dbeafe;
       font-size: 15px;
       transition: 0.2s;
     }
@@ -107,59 +90,51 @@
       color: #60a5fa;
     }
 
-    /* HERO */
-
     .hero {
-      background: linear-gradient(135deg, #111827, #1e3a8a);
-      color: white;
-      padding: 75px 20px 80px;
       text-align: center;
+      padding: 75px 20px 55px;
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
     }
 
     .hero h1 {
-      font-size: clamp(38px, 6vw, 64px);
-      line-height: 1.1;
-      margin-bottom: 20px;
-      font-weight: 800;
-    }
-
-    .hero h1 span {
-      color: #60a5fa;
+      font-size: clamp(34px, 6vw, 58px);
+      margin-bottom: 16px;
+      color: #111827;
     }
 
     .hero p {
-      max-width: 760px;
+      max-width: 720px;
       margin: auto;
-      color: #dbeafe;
+      color: #5b6475;
       font-size: 18px;
     }
 
     .search-area {
       max-width: 760px;
-      margin: 32px auto 0;
+      margin: 30px auto 0;
+      display: flex;
+      gap: 10px;
     }
 
-    .search-area input {
+    #searchInput {
       width: 100%;
-      padding: 18px 22px;
-      border: none;
-      border-radius: 14px;
+      padding: 16px 20px;
+      border: 1px solid #d6dce5;
+      border-radius: 12px;
       font-size: 16px;
       outline: none;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+      background: white;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.06);
     }
 
-    .search-area input:focus {
-      box-shadow: 0 0 0 3px rgba(96,165,250,0.35),
-                  0 8px 30px rgba(0,0,0,0.18);
+    #searchInput:focus {
+      border-color: #3b82f6;
     }
-
-    /* MAIN */
 
     .container {
       max-width: 1200px;
       margin: auto;
-      padding: 55px 20px;
+      padding: 50px 20px;
     }
 
     .section-title {
@@ -168,41 +143,36 @@
     }
 
     .section-title h2 {
-      font-size: 34px;
+      font-size: 32px;
       margin-bottom: 8px;
     }
 
     .section-title p {
-      color: #667085;
+      color: #687386;
     }
-
-    /* CATEGORIES */
 
     .categories {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 28px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
     }
 
     .category-btn {
-      border: 1px solid #d7dce5;
+      border: 1px solid #d7dee8;
       background: white;
-      color: #172033;
-      padding: 10px 16px;
-      border-radius: 30px;
+      color: #374151;
+      padding: 10px 15px;
+      border-radius: 999px;
       cursor: pointer;
       font-size: 14px;
-      font-weight: 600;
-      transition: all 0.2s ease;
+      transition: 0.2s;
     }
 
     .category-btn:hover {
-      background: #eff6ff;
+      border-color: #3b82f6;
       color: #2563eb;
-      border-color: #93c5fd;
-      transform: translateY(-1px);
     }
 
     .category-btn.active {
@@ -211,195 +181,205 @@
       border-color: #2563eb;
     }
 
-    .category-count {
-      display: inline-block;
-      margin-left: 5px;
-      font-size: 12px;
+    .count {
       opacity: 0.75;
+      margin-left: 4px;
     }
 
-    .category-btn.active .category-count {
-      opacity: 1;
+    .tools-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin: 20px 0 30px;
+      flex-wrap: wrap;
     }
 
-    /* TOOLS COUNT */
-
-    .tools-count {
-      text-align: center;
-      margin-bottom: 25px;
+    #resultsCount {
       color: #667085;
-      font-weight: 600;
+      font-size: 15px;
     }
 
-    /* TOOL GRID */
+    #sortSelect {
+      padding: 11px 14px;
+      border: 1px solid #d7dee8;
+      border-radius: 9px;
+      background: white;
+      color: #374151;
+      font-size: 14px;
+      cursor: pointer;
+    }
 
     .tools-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 22px;
     }
 
     .tool-card {
       background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 8px 25px rgba(15,23,42,0.06);
+      border: 1px solid #e5eaf0;
+      border-radius: 16px;
+      padding: 22px;
       transition: 0.25s;
       display: flex;
       flex-direction: column;
+      min-height: 270px;
     }
 
     .tool-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 35px rgba(15,23,42,0.12);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.09);
+      border-color: #cbd5e1;
     }
 
-    .tool-image {
-      width: 100%;
-      height: 190px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .tool-content {
-      padding: 22px;
+    .tool-top {
       display: flex;
-      flex-direction: column;
-      flex: 1;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
     }
 
-    .tool-name {
-      font-size: 23px;
-      font-weight: 800;
+    .tool-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 13px;
+      object-fit: cover;
+      background: #eef2ff;
+    }
+
+    .badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+    }
+
+    .badge.free {
+      background: #ecfdf3;
+      color: #027a48;
+    }
+
+    .badge.paid {
+      background: #fff7ed;
+      color: #c2410c;
+    }
+
+    .badge.popular {
+      background: #fff7ed;
+      color: #b45309;
+    }
+
+    .tool-card h3 {
+      font-size: 21px;
       margin-bottom: 7px;
     }
 
-    .tool-category {
-      display: inline-block;
-      width: fit-content;
-      font-size: 12px;
-      font-weight: 700;
-      background: #eff6ff;
+    .category-label {
       color: #2563eb;
-      padding: 5px 10px;
-      border-radius: 20px;
-      margin-bottom: 13px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 10px;
     }
 
-    .tool-description {
+    .tool-card p {
       color: #667085;
       font-size: 14px;
       margin-bottom: 18px;
-      flex: 1;
     }
 
-    .tool-button {
-      display: block;
-      text-align: center;
+    .tool-footer {
+      margin-top: auto;
+    }
+
+    .visit-btn {
+      display: inline-block;
       background: #2563eb;
       color: white;
-      padding: 12px 15px;
-      border-radius: 10px;
+      padding: 10px 15px;
+      border-radius: 9px;
+      font-size: 14px;
       font-weight: 700;
       transition: 0.2s;
     }
 
-    .tool-button:hover {
+    .visit-btn:hover {
       background: #1d4ed8;
     }
-
-    /* NO RESULTS */
 
     .no-results {
       display: none;
       text-align: center;
-      padding: 50px 20px;
-      background: white;
-      border-radius: 15px;
+      padding: 60px 20px;
       color: #667085;
-      border: 1px solid #e5e7eb;
     }
 
     .no-results h3 {
-      color: #172033;
+      font-size: 24px;
+      color: #374151;
       margin-bottom: 8px;
     }
 
-    /* ABOUT */
-
-    .about {
-      background: white;
-      border-top: 1px solid #e5e7eb;
-    }
-
-    .about-box {
+    .info-section {
       max-width: 900px;
-      margin: auto;
+      margin: 20px auto 60px;
+      padding: 40px 25px;
       text-align: center;
     }
 
-    .about-box h2 {
-      font-size: 32px;
+    .info-section h2 {
+      font-size: 30px;
       margin-bottom: 15px;
     }
 
-    .about-box p {
+    .info-section p {
       color: #667085;
-      margin-bottom: 12px;
+      margin-bottom: 18px;
     }
 
-    /* SUBMIT */
-
     .submit-box {
-      margin-top: 45px;
-      background: linear-gradient(135deg, #eff6ff, #eef2ff);
-      padding: 35px;
-      border-radius: 20px;
+      background: #111827;
+      color: white;
+      border-radius: 18px;
+      padding: 40px 25px;
       text-align: center;
     }
 
     .submit-box h2 {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .submit-box p {
-      color: #667085;
-      margin-bottom: 20px;
+      color: #cbd5e1;
     }
 
     .submit-btn {
       display: inline-block;
-      background: #111827;
+      margin-top: 18px;
+      background: #3b82f6;
       color: white;
-      padding: 12px 22px;
-      border-radius: 10px;
+      padding: 12px 20px;
+      border-radius: 9px;
       font-weight: 700;
-      transition: 0.2s;
     }
-
-    .submit-btn:hover {
-      background: #2563eb;
-    }
-
-    /* FOOTER */
 
     footer {
-      background: #111827;
-      color: #cbd5e1;
-      padding: 30px 20px;
+      background: #0b1120;
+      color: #94a3b8;
       text-align: center;
+      padding: 25px 20px;
+      font-size: 14px;
     }
-
-    footer strong {
-      color: white;
-    }
-
-    footer p + p {
-      margin-top: 5px;
-    }
-
-    /* TABLET */
 
     @media (max-width: 900px) {
       .tools-grid {
@@ -407,55 +387,42 @@
       }
     }
 
-    /* MOBILE */
-
     @media (max-width: 650px) {
+      header {
+        padding: 15px 20px;
+      }
+
       .nav {
         flex-direction: column;
-        padding: 15px;
       }
 
       nav {
-        gap: 14px;
-        flex-wrap: wrap;
         justify-content: center;
       }
 
       .hero {
-        padding: 55px 18px 60px;
+        padding-top: 55px;
       }
 
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      .hero p {
-        font-size: 16px;
+      .search-area {
+        flex-direction: column;
       }
 
       .tools-grid {
         grid-template-columns: 1fr;
       }
 
-      .container {
-        padding: 40px 15px;
+      .tools-controls {
+        align-items: stretch;
+        flex-direction: column;
       }
 
-      .section-title h2 {
-        font-size: 29px;
+      #sortSelect {
+        width: 100%;
       }
 
-      .categories {
-        gap: 8px;
-      }
-
-      .category-btn {
-        padding: 9px 13px;
-        font-size: 13px;
-      }
-
-      .submit-box {
-        padding: 28px 20px;
+      .tool-top {
+        align-items: center;
       }
     }
   </style>
@@ -463,907 +430,873 @@
 
 <body>
 
-  <!-- HEADER -->
+<header>
+  <div class="nav">
+    <a href="#" class="logo">AI Tools <span>Hub</span></a>
 
-  <header>
-    <div class="nav">
+    <nav>
+      <a href="#tools">Tools</a>
+      <a href="#about">About</a>
+      <a href="#submit">Submit Tool</a>
+    </nav>
+  </div>
+</header>
 
-      <a href="index.html" class="logo">
-        AI Tools <span>Hub</span>
-      </a>
+<section class="hero">
 
-      <nav>
-        <a href="#tools">AI Tools</a>
-        <a href="#about">About</a>
-        <a href="#submit">Submit Tool</a>
-      </nav>
+  <h1>Discover the Best AI Tools</h1>
 
-    </div>
-  </header>
+  <p>
+    Explore powerful AI tools for writing, coding, research, image generation,
+    design, productivity, voice and chatbots.
+  </p>
 
+  <div class="search-area">
+    <input
+      type="search"
+      id="searchInput"
+      placeholder="Search AI tools..."
+      aria-label="Search AI tools"
+    >
+  </div>
 
-  <!-- HERO -->
+</section>
 
-  <section class="hero">
+<main class="container" id="tools">
 
-    <h1>
-      Discover the Best <span>AI Tools</span>
-    </h1>
+  <div class="section-title">
+    <h2>AI Tools Directory</h2>
+    <p>Find the right AI tool for your needs.</p>
+  </div>
 
-    <p>
-      Explore powerful AI tools for chatbots, writing, image generation,
-      coding, research, voice, design, productivity and much more.
-    </p>
+  <div class="categories">
 
-    <div class="search-area">
+    <button class="category-btn active" onclick="filterCategory('All', this)">
+      All Tools <span class="count" data-count="All"></span>
+    </button>
 
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="Search AI tools... e.g. ChatGPT, coding, design"
-        aria-label="Search AI tools"
-      >
+    <button class="category-btn" onclick="filterCategory('Chatbots', this)">
+      Chatbots <span class="count" data-count="Chatbots"></span>
+    </button>
 
-    </div>
+    <button class="category-btn" onclick="filterCategory('Writing', this)">
+      Writing <span class="count" data-count="Writing"></span>
+    </button>
 
-  </section>
+    <button class="category-btn" onclick="filterCategory('Image', this)">
+      Image <span class="count" data-count="Image"></span>
+    </button>
 
+    <button class="category-btn" onclick="filterCategory('Coding', this)">
+      Coding <span class="count" data-count="Coding"></span>
+    </button>
 
-  <!-- TOOLS -->
+    <button class="category-btn" onclick="filterCategory('Research', this)">
+      Research <span class="count" data-count="Research"></span>
+    </button>
 
-  <main id="tools" class="container">
+    <button class="category-btn" onclick="filterCategory('Voice', this)">
+      Voice <span class="count" data-count="Voice"></span>
+    </button>
 
-    <div class="section-title">
+    <button class="category-btn" onclick="filterCategory('Design', this)">
+      Design <span class="count" data-count="Design"></span>
+    </button>
 
-      <h2>Explore AI Tools</h2>
+    <button class="category-btn" onclick="filterCategory('Productivity', this)">
+      Productivity <span class="count" data-count="Productivity"></span>
+    </button>
 
-      <p>
-        Find the right artificial intelligence tool for your needs.
-      </p>
+  </div>
 
-    </div>
+  <div class="tools-controls">
 
-
-    <!-- CATEGORY FILTERS -->
-
-    <div class="categories">
-
-      <button
-        class="category-btn active"
-        data-category="All"
-        onclick="filterCategory('All', this)"
-      >
-        All
-        <span class="category-count"></span>
-      </button>
-
-      <button
-        class="category-btn"
-        data-category="Chatbots"
-        onclick="filterCategory('Chatbots', this)"
-      >
-        Chatbots
-        <span class="category-count"></span>
-      </button>
-
-      <button
-        class="category-btn"
-        data-category="Writing"
-        onclick="filterCategory('Writing', this)"
-      >
-        Writing
-        <span class="category-count"></span>
-      </button>
-
-      <button
-        class="category-btn"
-        data-category="Image"
-        onclick="filterCategory('Image', this)"
-      >
-        Image
-        <span class="category-count"></span>
-      </button>
-
-      <button
-        class="category-btn"
-        data-category="Coding"
-        onclick="filterCategory('Coding', this)"
-      >
-        Coding
-        <span class="category-count"></span>
-      </button>
-
-      <button
-        class="category-btn"
-        data-category="Research"
-        onclick="filterCategory('Research', this)"
-      >
-        Research
-        <span class="category-count"></span>
-      </button>
-
-      <button
-        class="category-btn"
-        data-category="Voice"
-        onclick="filterCategory('Voice', this)"
-      >
-        Voice
-        <span class="category-count"></span>
-      </button>
-
-      <button
-        class="category-btn"
-        data-category="Design"
-        onclick="filterCategory('Design', this)"
-      >
-        Design
-        <span class="category-count"></span>
-      </button>
-
-      <button
-        class="category-btn"
-        data-category="Productivity"
-        onclick="filterCategory('Productivity', this)"
-      >
-        Productivity
-        <span class="category-count"></span>
-      </button>
-
+    <div id="resultsCount">
+      Showing 12 tools
     </div>
 
+    <select id="sortSelect" aria-label="Sort AI tools">
+      <option value="default">Sort: Default</option>
+      <option value="az">Name: A–Z</option>
+      <option value="za">Name: Z–A</option>
+      <option value="popular">Most Popular</option>
+      <option value="free">Free First</option>
+    </select>
 
-    <div class="tools-count" id="toolsCount">
-      12 AI Tools
-    </div>
+  </div>
 
+  <div class="tools-grid" id="toolsGrid">
 
-    <!-- TOOL GRID -->
+    <!-- Chatbots -->
 
-    <div class="tools-grid" id="toolsGrid">
-
-
-      <!-- CHATGPT -->
-
-      <article
-        class="tool-card"
-        data-name="chatgpt chat gpt"
-        data-category="Chatbots"
-      >
-
+    <article
+      class="tool-card"
+      data-name="ChatGPT"
+      data-category="Chatbots"
+      data-pricing="Free"
+      data-popular="10"
+    >
+      <div class="tool-top">
         <img
-          class="tool-image"
-          src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80"
-          alt="ChatGPT AI chatbot tool"
+          class="tool-icon"
+          src="https://www.google.com/s2/favicons?domain=chatgpt.com&sz=128"
+          alt="ChatGPT"
           loading="lazy"
         >
 
-        <div class="tool-content">
-
-          <h3 class="tool-name">ChatGPT</h3>
-
-          <span class="tool-category">Chatbots</span>
-
-          <p class="tool-description">
-            ChatGPT is a versatile AI assistant for answering questions,
-            brainstorming, learning, writing, coding, summarizing information
-            and everyday productivity.
-          </p>
-
-          <a
-            class="tool-button"
-            href="tool.html?tool=chatgpt"
-          >
-            View Details
-          </a>
-
+        <div class="badges">
+          <span class="badge free">Free</span>
+          <span class="badge popular">Popular</span>
         </div>
-
-      </article>
-
-
-      <!-- CLAUDE -->
-
-      <article
-        class="tool-card"
-        data-name="claude anthropic"
-        data-category="Chatbots"
-      >
-
-        <img
-          class="tool-image"
-          src="https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&w=900&q=80"
-          alt="Claude AI chatbot tool"
-          loading="lazy"
-        >
-
-        <div class="tool-content">
-
-          <h3 class="tool-name">Claude</h3>
-
-          <span class="tool-category">Chatbots</span>
-
-          <p class="tool-description">
-            Claude is an advanced AI assistant designed for conversation,
-            writing, analysis, reasoning, research and working with long
-            documents.
-          </p>
-
-          <a
-            class="tool-button"
-            href="tool.html?tool=claude"
-          >
-            View Details
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- GEMINI -->
-
-      <article
-        class="tool-card"
-        data-name="gemini google gemini"
-        data-category="Chatbots"
-      >
-
-        <img
-          class="tool-image"
-          src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=900&q=80"
-          alt="Google Gemini AI chatbot tool"
-          loading="lazy"
-        >
-
-        <div class="tool-content">
-
-          <h3 class="tool-name">Gemini</h3>
-
-          <span class="tool-category">Chatbots</span>
-
-          <p class="tool-description">
-            Gemini is Google's AI assistant for answering questions,
-            understanding information, generating content, planning and
-            helping users with everyday tasks.
-          </p>
-
-          <a
-            class="tool-button"
-            href="tool.html?tool=gemini"
-          >
-            View Details
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- PERPLEXITY -->
-
-      <article
-        class="tool-card"
-        data-name="perplexity ai search research"
-        data-category="Research"
-      >
-
-        <img
-          class="tool-image"
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80"
-          alt="Perplexity AI research tool"
-          loading="lazy"
-        >
-
-        <div class="tool-content">
-
-          <h3 class="tool-name">Perplexity</h3>
-
-          <span class="tool-category">Research</span>
-
-          <p class="tool-description">
-            Perplexity is an AI-powered search and research assistant that
-            helps users explore topics, find information and create answers
-            from online sources.
-          </p>
-
-          <a
-            class="tool-button"
-            href="tool.html?tool=perplexity"
-          >
-            View Details
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- MIDJOURNEY -->
-
-      <article
-        class="tool-card"
-        data-name="midjourney ai image generator"
-        data-category="Image"
-      >
-
-        <img
-          class="tool-image"
-          src="https://images.unsplash.com/photo-1686191128892-3b6c0c5f9e2d?auto=format&fit=crop&w=900&q=80"
-          alt="Midjourney AI image generation tool"
-          loading="lazy"
-        >
-
-        <div class="tool-content">
-
-          <h3 class="tool-name">Midjourney</h3>
-
-          <span class="tool-category">Image</span>
-
-          <p class="tool-description">
-            Midjourney is a generative AI platform for creating artistic and
-            detailed images from text prompts. It is useful for artists,
-            designers, marketers and creators.
-          </p>
-
-          <a
-            class="tool-button"
-            href="tool.html?tool=midjourney"
-          >
-            View Details
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- CANVA -->
-
-      <article
-        class="tool-card"
-        data-name="canva canva ai design"
-        data-category="Design"
-      >
-
-        <img
-          class="tool-image"
-          src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&q=80"
-          alt="Canva AI design tool"
-          loading="lazy"
-        >
-
-        <div class="tool-content">
-
-          <h3 class="tool-name">Canva</h3>
-
-          <span class="tool-category">Design</span>
-
-          <p class="tool-description">
-            Canva is an easy-to-use design platform with AI features for
-            presentations, social media graphics, marketing materials,
-            images and other visual content.
-          </p>
-
-          <a
-            class="tool-button"
-            href="tool.html?tool=canva"
-          >
-            View Details
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- CURSOR -->
-
-      <article
-        class="tool-card"
-        data-name="cursor cursor ai code editor"
-        data-category="Coding"
-      >
-
-        <img
-          class="tool-image"
-          src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80"
-          alt="Cursor AI coding tool"
-          loading="lazy"
-        >
-
-        <div class="tool-content">
-
-          <h3 class="tool-name">Cursor</h3>
-
-          <span class="tool-category">Coding</span>
-
-          <p class="tool-description">
-            Cursor is an AI-powered code editor designed to help developers
-            write, understand, refactor and debug software more efficiently.
-          </p>
-
-          <a
-            class="tool-button"
-            href="tool.html?tool=cursor"
-          >
-            View Details
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- GITHUB COPILOT -->
-
-      <article
-        class="tool-card"
-        data-name="github copilot copilot coding"
-        data-category="Coding"
-      >
-
-        <img
-          class="tool-image"
-          src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80"
-          alt="GitHub Copilot AI coding tool"
-          loading="lazy"
-        >
-
-        <div class="tool-content">
-
-          <h3 class="tool-name">GitHub Copilot</h3>
-
-          <span class="tool-category">Coding</span>
-
-          <p class="tool-description">
-            GitHub Copilot is an AI coding assistant that helps developers
-            write code, understand programming concepts, generate functions
-            and improve development workflows.
-          </p>
-
-          <a
-            class="tool-button"
-            href="tool.html?tool=copilot"
-          >
-            View Details
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- JASPER -->
-
-      <article
-        class="tool-card"
-        data-name="jasper ai marketing writing content"
-        data-category="Writing"
-      >
-
-        <img
-          class="tool-image"
-          src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=900&q=80"
-          alt="Jasper AI writing tool"
-          loading="lazy"
-        >
-
-        <div class="tool-content">
-
-          <h3 class="tool-name">Jasper</h3>
-
-          <span class="tool-category">Writing</span>
-
-          <p class="tool-description">
-            Jasper is an AI content platform focused on marketing and
-            business content. It can help create blog posts, campaigns,
-            social media content and brand communications.
-          </p>
-
-          <a
-            class="tool-button"
-            href="tool.html?tool=jasper"
-          >
-            View Details
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- NOTION AI -->
-
-      <article
-        class="tool-card"
-        data-name="notion notion ai workspace productivity"
-        data-category="Productivity"
-      >
-
-        <img
-          class="tool-image"
-          src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80"
-          alt="Notion AI productivity tool"
-          loading="lazy"
-        >
-
-        <div class="tool-content">
-
-          <h3 class="tool-name">Notion AI</h3>
-
-          <span class="tool-category">Productivity</span>
-
-          <p class="tool-description">
-            Notion AI brings artificial intelligence into a workspace for
-            notes, documents, project management and knowledge organization.
-          </p>
-
-          <a
-            class="tool-button"
-            href="tool.html?tool=notion"
-          >
-            View Details
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- GRAMMARLY -->
-
-      <article
-        class="tool-card"
-        data-name="grammarly grammar writing ai"
-        data-category="Writing"
-      >
-
-        <img
-          class="tool-image"
-          src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80"
-          alt="Grammarly AI writing assistant"
-          loading="lazy"
-        >
-
-        <div class="tool-content">
-
-          <h3 class="tool-name">Grammarly</h3>
-
-          <span class="tool-category">Writing</span>
-
-          <p class="tool-description">
-            Grammarly is an AI-powered writing assistant that helps improve
-            grammar, spelling, clarity, tone and overall communication.
-          </p>
-
-          <a
-            class="tool-button"
-            href="tool.html?tool=grammarly"
-          >
-            View Details
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- ELEVENLABS -->
-
-      <article
-        class="tool-card"
-        data-name="elevenlabs eleven labs voice audio text to speech"
-        data-category="Voice"
-      >
-
-        <img
-          class="tool-image"
-          src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=900&q=80"
-          alt="ElevenLabs AI voice tool"
-          loading="lazy"
-        >
-
-        <div class="tool-content">
-
-          <h3 class="tool-name">ElevenLabs</h3>
-
-          <span class="tool-category">Voice</span>
-
-          <p class="tool-description">
-            ElevenLabs is an AI voice technology platform for generating
-            natural-sounding speech and working with synthetic voices for
-            narration, videos, storytelling and audio projects.
-          </p>
-
-          <a
-            class="tool-button"
-            href="tool.html?tool=elevenlabs"
-          >
-            View Details
-          </a>
-
-        </div>
-
-      </article>
-
-    </div>
-
-
-    <!-- NO RESULTS -->
-
-    <div class="no-results" id="noResults">
-
-      <h3>No AI tools found</h3>
-
-      <p>
-        Try another search term or choose a different category.
-      </p>
-
-    </div>
-
-  </main>
-
-
-  <!-- ABOUT -->
-
-  <section id="about" class="about">
-
-    <div class="container">
-
-      <div class="about-box">
-
-        <h2>About AI Tools Hub</h2>
-
-        <p>
-          AI Tools Hub is a directory created to help people discover useful
-          artificial intelligence tools in one convenient place.
-        </p>
-
-        <p>
-          Whether you need help with chatbots, writing, coding, research,
-          design, productivity, image generation or voice creation, our goal
-          is to make finding the right AI tool simple and easy.
-        </p>
-
-        <p>
-          Explore the tools above to learn more about their features,
-          capabilities and potential use cases.
-        </p>
-
       </div>
 
+      <h3>ChatGPT</h3>
 
-      <!-- SUBMIT TOOL -->
+      <div class="category-label">Chatbots</div>
 
-      <div id="submit" class="submit-box">
+      <p>
+        Powerful AI assistant for conversations, writing, brainstorming,
+        coding and everyday tasks.
+      </p>
 
-        <h2>Have an AI Tool?</h2>
-
-        <p>
-          Know an AI tool that should be listed on AI Tools Hub?
-          We would love to hear about it.
-        </p>
-
+      <div class="tool-footer">
         <a
-          class="submit-btn"
-          href="mailto:contact@example.com?subject=Submit AI Tool"
+          class="visit-btn"
+          href="https://chatgpt.com/"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Submit a Tool
+          Visit Tool →
         </a>
+      </div>
+    </article>
 
+
+    <article
+      class="tool-card"
+      data-name="Claude"
+      data-category="Chatbots"
+      data-pricing="Free"
+      data-popular="9"
+    >
+      <div class="tool-top">
+        <img
+          class="tool-icon"
+          src="https://www.google.com/s2/favicons?domain=claude.ai&sz=128"
+          alt="Claude"
+          loading="lazy"
+        >
+
+        <div class="badges">
+          <span class="badge free">Free</span>
+          <span class="badge popular">Popular</span>
+        </div>
       </div>
 
-    </div>
+      <h3>Claude</h3>
 
-  </section>
+      <div class="category-label">Chatbots</div>
+
+      <p>
+        Advanced AI assistant designed for writing, analysis,
+        reasoning and complex conversations.
+      </p>
+
+      <div class="tool-footer">
+        <a
+          class="visit-btn"
+          href="https://claude.ai/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Tool →
+        </a>
+      </div>
+    </article>
 
 
-  <!-- FOOTER -->
+    <article
+      class="tool-card"
+      data-name="Gemini"
+      data-category="Chatbots"
+      data-pricing="Free"
+      data-popular="9"
+    >
+      <div class="tool-top">
+        <img
+          class="tool-icon"
+          src="https://www.google.com/s2/favicons?domain=gemini.google.com&sz=128"
+          alt="Gemini"
+          loading="lazy"
+        >
 
-  <footer>
+        <div class="badges">
+          <span class="badge free">Free</span>
+          <span class="badge popular">Popular</span>
+        </div>
+      </div>
+
+      <h3>Gemini</h3>
+
+      <div class="category-label">Chatbots</div>
+
+      <p>
+        Google's AI assistant for conversations, research,
+        writing, reasoning and productivity.
+      </p>
+
+      <div class="tool-footer">
+        <a
+          class="visit-btn"
+          href="https://gemini.google.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Tool →
+        </a>
+      </div>
+    </article>
+
+
+    <!-- Research -->
+
+    <article
+      class="tool-card"
+      data-name="Perplexity"
+      data-category="Research"
+      data-pricing="Free"
+      data-popular="8"
+    >
+      <div class="tool-top">
+        <img
+          class="tool-icon"
+          src="https://www.google.com/s2/favicons?domain=perplexity.ai&sz=128"
+          alt="Perplexity"
+          loading="lazy"
+        >
+
+        <div class="badges">
+          <span class="badge free">Free</span>
+          <span class="badge popular">Popular</span>
+        </div>
+      </div>
+
+      <h3>Perplexity</h3>
+
+      <div class="category-label">Research</div>
+
+      <p>
+        AI-powered search and research assistant that provides
+        answers with useful sources.
+      </p>
+
+      <div class="tool-footer">
+        <a
+          class="visit-btn"
+          href="https://www.perplexity.ai/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Tool →
+        </a>
+      </div>
+    </article>
+
+
+    <!-- Image -->
+
+    <article
+      class="tool-card"
+      data-name="Midjourney"
+      data-category="Image"
+      data-pricing="Paid"
+      data-popular="8"
+    >
+      <div class="tool-top">
+        <img
+          class="tool-icon"
+          src="https://www.google.com/s2/favicons?domain=midjourney.com&sz=128"
+          alt="Midjourney"
+          loading="lazy"
+        >
+
+        <div class="badges">
+          <span class="badge paid">Paid</span>
+          <span class="badge popular">Popular</span>
+        </div>
+      </div>
+
+      <h3>Midjourney</h3>
+
+      <div class="category-label">Image</div>
+
+      <p>
+        AI image generation platform for creating detailed,
+        artistic and imaginative visuals.
+      </p>
+
+      <div class="tool-footer">
+        <a
+          class="visit-btn"
+          href="https://www.midjourney.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Tool →
+        </a>
+      </div>
+    </article>
+
+
+    <!-- Design -->
+
+    <article
+      class="tool-card"
+      data-name="Canva"
+      data-category="Design"
+      data-pricing="Free"
+      data-popular="9"
+    >
+      <div class="tool-top">
+        <img
+          class="tool-icon"
+          src="https://www.google.com/s2/favicons?domain=canva.com&sz=128"
+          alt="Canva"
+          loading="lazy"
+        >
+
+        <div class="badges">
+          <span class="badge free">Free</span>
+          <span class="badge popular">Popular</span>
+        </div>
+      </div>
+
+      <h3>Canva</h3>
+
+      <div class="category-label">Design</div>
+
+      <p>
+        Easy-to-use design platform with powerful AI tools for
+        graphics, presentations and visual content.
+      </p>
+
+      <div class="tool-footer">
+        <a
+          class="visit-btn"
+          href="https://www.canva.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Tool →
+        </a>
+      </div>
+    </article>
+
+
+    <!-- Coding -->
+
+    <article
+      class="tool-card"
+      data-name="Cursor"
+      data-category="Coding"
+      data-pricing="Free"
+      data-popular="8"
+    >
+      <div class="tool-top">
+        <img
+          class="tool-icon"
+          src="https://www.google.com/s2/favicons?domain=cursor.com&sz=128"
+          alt="Cursor"
+          loading="lazy"
+        >
+
+        <div class="badges">
+          <span class="badge free">Free</span>
+          <span class="badge popular">Popular</span>
+        </div>
+      </div>
+
+      <h3>Cursor</h3>
+
+      <div class="category-label">Coding</div>
+
+      <p>
+        AI-powered code editor designed to help developers
+        write, understand and modify code faster.
+      </p>
+
+      <div class="tool-footer">
+        <a
+          class="visit-btn"
+          href="https://cursor.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Tool →
+        </a>
+      </div>
+    </article>
+
+
+    <article
+      class="tool-card"
+      data-name="GitHub Copilot"
+      data-category="Coding"
+      data-pricing="Paid"
+      data-popular="9"
+    >
+      <div class="tool-top">
+        <img
+          class="tool-icon"
+          src="https://www.google.com/s2/favicons?domain=github.com&sz=128"
+          alt="GitHub Copilot"
+          loading="lazy"
+        >
+
+        <div class="badges">
+          <span class="badge paid">Paid</span>
+          <span class="badge popular">Popular</span>
+        </div>
+      </div>
+
+      <h3>GitHub Copilot</h3>
+
+      <div class="category-label">Coding</div>
+
+      <p>
+        AI coding assistant that helps developers write code,
+        complete functions and work more efficiently.
+      </p>
+
+      <div class="tool-footer">
+        <a
+          class="visit-btn"
+          href="https://github.com/features/copilot"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Tool →
+        </a>
+      </div>
+    </article>
+
+
+    <!-- Writing -->
+
+    <article
+      class="tool-card"
+      data-name="Jasper"
+      data-category="Writing"
+      data-pricing="Paid"
+      data-popular="7"
+    >
+      <div class="tool-top">
+        <img
+          class="tool-icon"
+          src="https://www.google.com/s2/favicons?domain=jasper.ai&sz=128"
+          alt="Jasper"
+          loading="lazy"
+        >
+
+        <div class="badges">
+          <span class="badge paid">Paid</span>
+        </div>
+      </div>
+
+      <h3>Jasper</h3>
+
+      <div class="category-label">Writing</div>
+
+      <p>
+        AI writing platform designed for marketing content,
+        copywriting and business content creation.
+      </p>
+
+      <div class="tool-footer">
+        <a
+          class="visit-btn"
+          href="https://www.jasper.ai/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Tool →
+        </a>
+      </div>
+    </article>
+
+
+    <!-- Productivity -->
+
+    <article
+      class="tool-card"
+      data-name="Notion AI"
+      data-category="Productivity"
+      data-pricing="Paid"
+      data-popular="8"
+    >
+      <div class="tool-top">
+        <img
+          class="tool-icon"
+          src="https://www.google.com/s2/favicons?domain=notion.so&sz=128"
+          alt="Notion AI"
+          loading="lazy"
+        >
+
+        <div class="badges">
+          <span class="badge paid">Paid</span>
+          <span class="badge popular">Popular</span>
+        </div>
+      </div>
+
+      <h3>Notion AI</h3>
+
+      <div class="category-label">Productivity</div>
+
+      <p>
+        AI features inside Notion for writing, summarizing,
+        organizing information and productivity.
+      </p>
+
+      <div class="tool-footer">
+        <a
+          class="visit-btn"
+          href="https://www.notion.com/product/ai"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Tool →
+        </a>
+      </div>
+    </article>
+
+
+    <!-- Writing -->
+
+    <article
+      class="tool-card"
+      data-name="Grammarly"
+      data-category="Writing"
+      data-pricing="Free"
+      data-popular="8"
+    >
+      <div class="tool-top">
+        <img
+          class="tool-icon"
+          src="https://www.google.com/s2/favicons?domain=grammarly.com&sz=128"
+          alt="Grammarly"
+          loading="lazy"
+        >
+
+        <div class="badges">
+          <span class="badge free">Free</span>
+          <span class="badge popular">Popular</span>
+        </div>
+      </div>
+
+      <h3>Grammarly</h3>
+
+      <div class="category-label">Writing</div>
+
+      <p>
+        AI-powered writing assistant for grammar, spelling,
+        clarity and professional communication.
+      </p>
+
+      <div class="tool-footer">
+        <a
+          class="visit-btn"
+          href="https://www.grammarly.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Tool →
+        </a>
+      </div>
+    </article>
+
+
+    <!-- Voice -->
+
+    <article
+      class="tool-card"
+      data-name="ElevenLabs"
+      data-category="Voice"
+      data-pricing="Free"
+      data-popular="8"
+    >
+      <div class="tool-top">
+        <img
+          class="tool-icon"
+          src="https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=128"
+          alt="ElevenLabs"
+          loading="lazy"
+        >
+
+        <div class="badges">
+          <span class="badge free">Free</span>
+          <span class="badge popular">Popular</span>
+        </div>
+      </div>
+
+      <h3>ElevenLabs</h3>
+
+      <div class="category-label">Voice</div>
+
+      <p>
+        AI voice platform for realistic text-to-speech,
+        voice generation and audio creation.
+      </p>
+
+      <div class="tool-footer">
+        <a
+          class="visit-btn"
+          href="https://elevenlabs.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Tool →
+        </a>
+      </div>
+    </article>
+
+  </div>
+
+
+  <div class="no-results" id="noResults">
+    <h3>No AI tools found</h3>
+    <p>Try another search term or select a different category.</p>
+  </div>
+
+</main>
+
+
+<section class="info-section" id="about">
+
+  <h2>About AI Tools Hub</h2>
+
+  <p>
+    AI Tools Hub is a growing directory of useful artificial intelligence
+    tools for creators, developers, researchers, students and businesses.
+  </p>
+
+  <p>
+    Our goal is to make it easier to discover the right AI tool for every task.
+  </p>
+
+</section>
+
+
+<section class="container" id="submit">
+
+  <div class="submit-box">
+
+    <h2>Have an AI Tool?</h2>
 
     <p>
-      © 2026 <strong>AI Tools Hub</strong>. All rights reserved.
+      Know an AI tool that should be listed on AI Tools Hub?
+      Submit it for consideration.
     </p>
 
-    <p>
-      Discover. Explore. Create with AI.
-    </p>
+    <a
+      class="submit-btn"
+      href="mailto:contact@example.com?subject=Submit AI Tool"
+    >
+      Submit AI Tool →
+    </a>
 
-  </footer>
+  </div>
 
-
-  <!-- JAVASCRIPT -->
-
-  <script>
-
-    const searchInput =
-      document.getElementById("searchInput");
-
-    const toolCards =
-      document.querySelectorAll(".tool-card");
-
-    const toolsCount =
-      document.getElementById("toolsCount");
-
-    const noResults =
-      document.getElementById("noResults");
-
-    const categoryButtons =
-      document.querySelectorAll(".category-btn");
-
-    let selectedCategory = "All";
+</section>
 
 
-    /*
-      UPDATE CATEGORY COUNTS
-    */
-
-    function updateCategoryCounts() {
-
-      const counts = {};
-
-      toolCards.forEach(card => {
-
-        const category =
-          card.dataset.category;
-
-        counts[category] =
-          (counts[category] || 0) + 1;
-
-      });
+<footer>
+  © 2026 AI Tools Hub. All rights reserved.
+</footer>
 
 
-      categoryButtons.forEach(button => {
+<script>
 
-        const category =
-          button.dataset.category;
+  let selectedCategory = "All";
 
-        const countElement =
-          button.querySelector(".category-count");
+  const searchInput = document.getElementById("searchInput");
+  const sortSelect = document.getElementById("sortSelect");
+  const toolsGrid = document.getElementById("toolsGrid");
+  const noResults = document.getElementById("noResults");
+  const resultsCount = document.getElementById("resultsCount");
 
-        if (category === "All") {
+  function getTools() {
+    return Array.from(document.querySelectorAll(".tool-card"));
+  }
 
-          countElement.textContent =
-            ` (${toolCards.length})`;
 
-        } else {
+  function updateCategoryCounts() {
 
-          countElement.textContent =
-            ` (${counts[category] || 0})`;
+    const tools = getTools();
 
-        }
+    const counts = {};
 
-      });
+    tools.forEach(tool => {
 
+      const category = tool.dataset.category;
+
+      counts[category] = (counts[category] || 0) + 1;
+
+    });
+
+    const allCount = document.querySelector('[data-count="All"]');
+
+    if (allCount) {
+      allCount.textContent = `(${tools.length})`;
     }
 
+    document.querySelectorAll("[data-count]").forEach(element => {
 
-    /*
-      UPDATE TOOLS
-    */
+      const category = element.dataset.count;
 
-    function updateTools() {
-
-      const searchTerm =
-        searchInput.value.toLowerCase().trim();
-
-      let visibleCount = 0;
-
-
-      toolCards.forEach(card => {
-
-        const name =
-          card.dataset.name.toLowerCase();
-
-        const category =
-          card.dataset.category.toLowerCase();
-
-        const text =
-          card.innerText.toLowerCase();
-
-
-        const matchesSearch =
-          name.includes(searchTerm) ||
-          category.includes(searchTerm) ||
-          text.includes(searchTerm);
-
-
-        const matchesCategory =
-          selectedCategory === "All" ||
-          card.dataset.category === selectedCategory;
-
-
-        if (matchesSearch && matchesCategory) {
-
-          card.style.display = "flex";
-
-          visibleCount++;
-
-        } else {
-
-          card.style.display = "none";
-
-        }
-
-      });
-
-
-      toolsCount.textContent =
-        visibleCount +
-        (visibleCount === 1
-          ? " AI Tool"
-          : " AI Tools");
-
-
-      if (visibleCount === 0) {
-
-        noResults.style.display = "block";
-
-      } else {
-
-        noResults.style.display = "none";
-
+      if (category !== "All") {
+        element.textContent = `(${counts[category] || 0})`;
       }
 
+    });
+
+  }
+
+
+  function updateTools() {
+
+    const searchTerm = searchInput.value
+      .toLowerCase()
+      .trim();
+
+    let tools = getTools();
+
+    tools.forEach(tool => {
+
+      const name = tool.dataset.name.toLowerCase();
+      const category = tool.dataset.category.toLowerCase();
+      const description = tool
+        .querySelector("p")
+        .textContent
+        .toLowerCase();
+
+      const matchesCategory =
+        selectedCategory === "All" ||
+        category === selectedCategory.toLowerCase();
+
+      const matchesSearch =
+        !searchTerm ||
+        name.includes(searchTerm) ||
+        category.includes(searchTerm) ||
+        description.includes(searchTerm);
+
+      if (matchesCategory && matchesSearch) {
+        tool.style.display = "flex";
+      } else {
+        tool.style.display = "none";
+      }
+
+    });
+
+
+    let visibleTools = tools.filter(tool => {
+
+      return tool.style.display !== "none";
+
+    });
+
+
+    const sortValue = sortSelect.value;
+
+
+    if (sortValue === "az") {
+
+      visibleTools.sort((a, b) =>
+        a.dataset.name.localeCompare(b.dataset.name)
+      );
+
     }
 
 
-    /*
-      CATEGORY FILTER
-    */
+    if (sortValue === "za") {
 
-    function filterCategory(category, button) {
+      visibleTools.sort((a, b) =>
+        b.dataset.name.localeCompare(a.dataset.name)
+      );
 
-      selectedCategory = category;
+    }
 
 
-      categoryButtons.forEach(btn => {
+    if (sortValue === "popular") {
 
-        btn.classList.remove("active");
+      visibleTools.sort((a, b) =>
+        Number(b.dataset.popular) - Number(a.dataset.popular)
+      );
+
+    }
+
+
+    if (sortValue === "free") {
+
+      visibleTools.sort((a, b) => {
+
+        if (a.dataset.pricing === b.dataset.pricing) {
+          return a.dataset.name.localeCompare(b.dataset.name);
+        }
+
+        return a.dataset.pricing === "Free" ? -1 : 1;
 
       });
 
-
-      button.classList.add("active");
-
-
-      updateTools();
-
-
-      /*
-        Scroll to tools on mobile/when
-        category is selected
-      */
-
-      document.getElementById("tools")
-        .scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-
     }
 
 
-    /*
-      SEARCH
-    */
-
-    searchInput.addEventListener(
-      "input",
-      updateTools
-    );
+    visibleTools.forEach(tool => {
+      toolsGrid.appendChild(tool);
+    });
 
 
-    /*
-      INITIALIZE
-    */
+    resultsCount.textContent =
+      `Showing ${visibleTools.length} ${visibleTools.length === 1 ? "tool" : "tools"}`;
 
-    updateCategoryCounts();
+
+    if (visibleTools.length === 0) {
+      noResults.style.display = "block";
+    } else {
+      noResults.style.display = "none";
+    }
+
+  }
+
+
+  function filterCategory(category, button) {
+
+    selectedCategory = category;
+
+    document
+      .querySelectorAll(".category-btn")
+      .forEach(btn => btn.classList.remove("active"));
+
+    button.classList.add("active");
 
     updateTools();
 
-  </script>
+    document.getElementById("tools").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+  }
+
+
+  searchInput.addEventListener("input", updateTools);
+
+  sortSelect.addEventListener("change", updateTools);
+
+
+  updateCategoryCounts();
+  updateTools();
+
+</script>
 
 </body>
 </html>
