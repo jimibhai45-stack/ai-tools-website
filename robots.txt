@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jimibhai45-stack.github.io/ai-tools-website/sitemap.xml
