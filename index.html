@@ -7,10 +7,10 @@
   <title>AI Tools Hub — Discover the Best AI Tools</title>
 
   <meta name="description"
-        content="Discover the best AI tools for productivity, writing, coding, research, design, image generation, voice and more. Explore AI tools with detailed information, features and pricing.">
+        content="Discover the best AI tools for chatbots, writing, image generation, coding, research, voice, design and productivity. Explore useful AI tools in one place.">
 
   <meta name="keywords"
-        content="AI tools, best AI tools, artificial intelligence tools, ChatGPT, Claude, Gemini, Midjourney, Canva AI, coding AI, writing AI">
+        content="AI tools, best AI tools, AI chatbot, AI writing tools, AI image tools, AI coding tools, AI research tools, AI voice tools, AI design tools, AI productivity tools">
 
   <meta name="author" content="AI Tools Hub">
   <meta name="robots" content="index, follow">
@@ -22,7 +22,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="AI Tools Hub — Discover the Best AI Tools">
   <meta property="og:description"
-        content="Explore the best AI tools for writing, coding, research, design, productivity and more.">
+        content="Explore the best AI tools for chatbots, writing, image generation, coding, research, voice, design and productivity.">
   <meta property="og:url"
         content="https://jimibhai45-stack.github.io/ai-tools-website/">
   <meta property="og:site_name" content="AI Tools Hub">
@@ -44,6 +44,10 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #f6f8fc;
@@ -55,6 +59,8 @@
       text-decoration: none;
       color: inherit;
     }
+
+    /* HEADER */
 
     header {
       background: #111827;
@@ -101,6 +107,8 @@
       color: #60a5fa;
     }
 
+    /* HERO */
+
     .hero {
       background: linear-gradient(135deg, #111827, #1e3a8a);
       color: white;
@@ -129,7 +137,6 @@
     .search-area {
       max-width: 760px;
       margin: 32px auto 0;
-      position: relative;
     }
 
     .search-area input {
@@ -142,6 +149,13 @@
       box-shadow: 0 8px 30px rgba(0,0,0,0.18);
     }
 
+    .search-area input:focus {
+      box-shadow: 0 0 0 3px rgba(96,165,250,0.35),
+                  0 8px 30px rgba(0,0,0,0.18);
+    }
+
+    /* MAIN */
+
     .container {
       max-width: 1200px;
       margin: auto;
@@ -150,7 +164,7 @@
 
     .section-title {
       text-align: center;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
 
     .section-title h2 {
@@ -162,30 +176,53 @@
       color: #667085;
     }
 
+    /* CATEGORIES */
+
     .categories {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 35px;
+      margin-bottom: 28px;
     }
 
     .category-btn {
       border: 1px solid #d7dce5;
       background: white;
-      padding: 10px 17px;
+      color: #172033;
+      padding: 10px 16px;
       border-radius: 30px;
       cursor: pointer;
       font-size: 14px;
-      transition: 0.2s;
+      font-weight: 600;
+      transition: all 0.2s ease;
     }
 
-    .category-btn:hover,
+    .category-btn:hover {
+      background: #eff6ff;
+      color: #2563eb;
+      border-color: #93c5fd;
+      transform: translateY(-1px);
+    }
+
     .category-btn.active {
       background: #2563eb;
       color: white;
       border-color: #2563eb;
     }
+
+    .category-count {
+      display: inline-block;
+      margin-left: 5px;
+      font-size: 12px;
+      opacity: 0.75;
+    }
+
+    .category-btn.active .category-count {
+      opacity: 1;
+    }
+
+    /* TOOLS COUNT */
 
     .tools-count {
       text-align: center;
@@ -193,6 +230,8 @@
       color: #667085;
       font-weight: 600;
     }
+
+    /* TOOL GRID */
 
     .tools-grid {
       display: grid;
@@ -270,6 +309,8 @@
       background: #1d4ed8;
     }
 
+    /* NO RESULTS */
+
     .no-results {
       display: none;
       text-align: center;
@@ -277,7 +318,15 @@
       background: white;
       border-radius: 15px;
       color: #667085;
+      border: 1px solid #e5e7eb;
     }
+
+    .no-results h3 {
+      color: #172033;
+      margin-bottom: 8px;
+    }
+
+    /* ABOUT */
 
     .about {
       background: white;
@@ -299,6 +348,8 @@
       color: #667085;
       margin-bottom: 12px;
     }
+
+    /* SUBMIT */
 
     .submit-box {
       margin-top: 45px;
@@ -324,7 +375,14 @@
       padding: 12px 22px;
       border-radius: 10px;
       font-weight: 700;
+      transition: 0.2s;
     }
+
+    .submit-btn:hover {
+      background: #2563eb;
+    }
+
+    /* FOOTER */
 
     footer {
       background: #111827;
@@ -337,15 +395,24 @@
       color: white;
     }
 
+    footer p + p {
+      margin-top: 5px;
+    }
+
+    /* TABLET */
+
     @media (max-width: 900px) {
       .tools-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
+    /* MOBILE */
+
     @media (max-width: 650px) {
       .nav {
         flex-direction: column;
+        padding: 15px;
       }
 
       nav {
@@ -356,6 +423,10 @@
 
       .hero {
         padding: 55px 18px 60px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
       }
 
       .hero p {
@@ -369,6 +440,23 @@
       .container {
         padding: 40px 15px;
       }
+
+      .section-title h2 {
+        font-size: 29px;
+      }
+
+      .categories {
+        gap: 8px;
+      }
+
+      .category-btn {
+        padding: 9px 13px;
+        font-size: 13px;
+      }
+
+      .submit-box {
+        padding: 28px 20px;
+      }
     }
   </style>
 </head>
@@ -376,327 +464,531 @@
 <body>
 
   <!-- HEADER -->
+
   <header>
     <div class="nav">
-      <a href="index.html" class="logo">AI Tools <span>Hub</span></a>
+
+      <a href="index.html" class="logo">
+        AI Tools <span>Hub</span>
+      </a>
 
       <nav>
         <a href="#tools">AI Tools</a>
         <a href="#about">About</a>
         <a href="#submit">Submit Tool</a>
       </nav>
+
     </div>
   </header>
 
+
   <!-- HERO -->
+
   <section class="hero">
-    <h1>Discover the Best <span>AI Tools</span></h1>
+
+    <h1>
+      Discover the Best <span>AI Tools</span>
+    </h1>
 
     <p>
-      Explore powerful AI tools for writing, coding, research, design,
-      productivity, image generation, voice and much more.
+      Explore powerful AI tools for chatbots, writing, image generation,
+      coding, research, voice, design, productivity and much more.
     </p>
 
     <div class="search-area">
+
       <input
         type="text"
         id="searchInput"
         placeholder="Search AI tools... e.g. ChatGPT, coding, design"
+        aria-label="Search AI tools"
       >
+
     </div>
+
   </section>
 
+
   <!-- TOOLS -->
+
   <main id="tools" class="container">
 
     <div class="section-title">
+
       <h2>Explore AI Tools</h2>
-      <p>Find the right artificial intelligence tool for your needs.</p>
+
+      <p>
+        Find the right artificial intelligence tool for your needs.
+      </p>
+
     </div>
+
+
+    <!-- CATEGORY FILTERS -->
 
     <div class="categories">
-      <button class="category-btn active" onclick="filterCategory('All', this)">
+
+      <button
+        class="category-btn active"
+        data-category="All"
+        onclick="filterCategory('All', this)"
+      >
         All
+        <span class="category-count"></span>
       </button>
 
-      <button class="category-btn" onclick="filterCategory('Writing', this)">
+      <button
+        class="category-btn"
+        data-category="Chatbots"
+        onclick="filterCategory('Chatbots', this)"
+      >
+        Chatbots
+        <span class="category-count"></span>
+      </button>
+
+      <button
+        class="category-btn"
+        data-category="Writing"
+        onclick="filterCategory('Writing', this)"
+      >
         Writing
+        <span class="category-count"></span>
       </button>
 
-      <button class="category-btn" onclick="filterCategory('Coding', this)">
+      <button
+        class="category-btn"
+        data-category="Image"
+        onclick="filterCategory('Image', this)"
+      >
+        Image
+        <span class="category-count"></span>
+      </button>
+
+      <button
+        class="category-btn"
+        data-category="Coding"
+        onclick="filterCategory('Coding', this)"
+      >
         Coding
+        <span class="category-count"></span>
       </button>
 
-      <button class="category-btn" onclick="filterCategory('Research', this)">
+      <button
+        class="category-btn"
+        data-category="Research"
+        onclick="filterCategory('Research', this)"
+      >
         Research
+        <span class="category-count"></span>
       </button>
 
-      <button class="category-btn" onclick="filterCategory('Design', this)">
-        Design
-      </button>
-
-      <button class="category-btn" onclick="filterCategory('Productivity', this)">
-        Productivity
-      </button>
-
-      <button class="category-btn" onclick="filterCategory('Voice', this)">
+      <button
+        class="category-btn"
+        data-category="Voice"
+        onclick="filterCategory('Voice', this)"
+      >
         Voice
+        <span class="category-count"></span>
       </button>
 
-      <button class="category-btn" onclick="filterCategory('Image Generation', this)">
-        Image Generation
+      <button
+        class="category-btn"
+        data-category="Design"
+        onclick="filterCategory('Design', this)"
+      >
+        Design
+        <span class="category-count"></span>
       </button>
+
+      <button
+        class="category-btn"
+        data-category="Productivity"
+        onclick="filterCategory('Productivity', this)"
+      >
+        Productivity
+        <span class="category-count"></span>
+      </button>
+
     </div>
+
 
     <div class="tools-count" id="toolsCount">
       12 AI Tools
     </div>
 
+
+    <!-- TOOL GRID -->
+
     <div class="tools-grid" id="toolsGrid">
 
-      <!-- ChatGPT -->
-      <article class="tool-card" data-name="chatgpt" data-category="Writing">
+
+      <!-- CHATGPT -->
+
+      <article
+        class="tool-card"
+        data-name="chatgpt chat gpt"
+        data-category="Chatbots"
+      >
+
         <img
           class="tool-image"
           src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80"
-          alt="ChatGPT AI tool"
+          alt="ChatGPT AI chatbot tool"
+          loading="lazy"
         >
 
         <div class="tool-content">
+
           <h3 class="tool-name">ChatGPT</h3>
 
-          <span class="tool-category">Writing</span>
+          <span class="tool-category">Chatbots</span>
 
           <p class="tool-description">
-            ChatGPT is a versatile AI assistant for writing, brainstorming,
-            learning, coding, summarizing information, answering questions
-            and everyday productivity. It can help students, professionals,
-            developers and creators work faster and generate useful ideas.
+            ChatGPT is a versatile AI assistant for answering questions,
+            brainstorming, learning, writing, coding, summarizing information
+            and everyday productivity.
           </p>
 
-          <a class="tool-button" href="tool.html?tool=chatgpt">
+          <a
+            class="tool-button"
+            href="tool.html?tool=chatgpt"
+          >
             View Details
           </a>
+
         </div>
+
       </article>
 
-      <!-- Claude -->
-      <article class="tool-card" data-name="claude" data-category="Writing">
+
+      <!-- CLAUDE -->
+
+      <article
+        class="tool-card"
+        data-name="claude anthropic"
+        data-category="Chatbots"
+      >
+
         <img
           class="tool-image"
           src="https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&w=900&q=80"
-          alt="Claude AI tool"
+          alt="Claude AI chatbot tool"
+          loading="lazy"
         >
 
         <div class="tool-content">
+
           <h3 class="tool-name">Claude</h3>
 
-          <span class="tool-category">Writing</span>
+          <span class="tool-category">Chatbots</span>
 
           <p class="tool-description">
-            Claude is an advanced AI assistant designed for writing,
-            analysis, research, reasoning and working with long documents.
-            It is useful for professionals who need clear explanations,
-            content creation, document analysis and thoughtful AI assistance.
+            Claude is an advanced AI assistant designed for conversation,
+            writing, analysis, reasoning, research and working with long
+            documents.
           </p>
 
-          <a class="tool-button" href="tool.html?tool=claude">
+          <a
+            class="tool-button"
+            href="tool.html?tool=claude"
+          >
             View Details
           </a>
+
         </div>
+
       </article>
 
-      <!-- Gemini -->
-      <article class="tool-card" data-name="gemini" data-category="Research">
+
+      <!-- GEMINI -->
+
+      <article
+        class="tool-card"
+        data-name="gemini google gemini"
+        data-category="Chatbots"
+      >
+
         <img
           class="tool-image"
           src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=900&q=80"
-          alt="Google Gemini AI tool"
+          alt="Google Gemini AI chatbot tool"
+          loading="lazy"
         >
 
         <div class="tool-content">
+
           <h3 class="tool-name">Gemini</h3>
 
-          <span class="tool-category">Research</span>
+          <span class="tool-category">Chatbots</span>
 
           <p class="tool-description">
             Gemini is Google's AI assistant for answering questions,
-            understanding information, generating content and helping with
-            research and productivity. It can assist users with ideas,
-            summaries, planning and many everyday tasks.
+            understanding information, generating content, planning and
+            helping users with everyday tasks.
           </p>
 
-          <a class="tool-button" href="tool.html?tool=gemini">
+          <a
+            class="tool-button"
+            href="tool.html?tool=gemini"
+          >
             View Details
           </a>
+
         </div>
+
       </article>
 
-      <!-- Perplexity -->
-      <article class="tool-card" data-name="perplexity" data-category="Research">
+
+      <!-- PERPLEXITY -->
+
+      <article
+        class="tool-card"
+        data-name="perplexity ai search research"
+        data-category="Research"
+      >
+
         <img
           class="tool-image"
           src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80"
           alt="Perplexity AI research tool"
+          loading="lazy"
         >
 
         <div class="tool-content">
+
           <h3 class="tool-name">Perplexity</h3>
 
           <span class="tool-category">Research</span>
 
           <p class="tool-description">
             Perplexity is an AI-powered search and research assistant that
-            helps users find information, explore topics and create answers
-            from online sources. It is particularly useful for research,
-            learning, fact-finding and discovering information quickly.
+            helps users explore topics, find information and create answers
+            from online sources.
           </p>
 
-          <a class="tool-button" href="tool.html?tool=perplexity">
+          <a
+            class="tool-button"
+            href="tool.html?tool=perplexity"
+          >
             View Details
           </a>
+
         </div>
+
       </article>
 
-      <!-- Midjourney -->
-      <article class="tool-card" data-name="midjourney" data-category="Image Generation">
+
+      <!-- MIDJOURNEY -->
+
+      <article
+        class="tool-card"
+        data-name="midjourney ai image generator"
+        data-category="Image"
+      >
+
         <img
           class="tool-image"
           src="https://images.unsplash.com/photo-1686191128892-3b6c0c5f9e2d?auto=format&fit=crop&w=900&q=80"
-          alt="Midjourney AI image generation"
+          alt="Midjourney AI image generation tool"
+          loading="lazy"
         >
 
         <div class="tool-content">
+
           <h3 class="tool-name">Midjourney</h3>
 
-          <span class="tool-category">Image Generation</span>
+          <span class="tool-category">Image</span>
 
           <p class="tool-description">
-            Midjourney is a popular generative AI platform for creating
-            artistic and highly detailed images from text prompts. Designers,
-            artists, marketers and creators can use it to explore concepts,
-            visual styles, illustrations and creative ideas.
+            Midjourney is a generative AI platform for creating artistic and
+            detailed images from text prompts. It is useful for artists,
+            designers, marketers and creators.
           </p>
 
-          <a class="tool-button" href="tool.html?tool=midjourney">
+          <a
+            class="tool-button"
+            href="tool.html?tool=midjourney"
+          >
             View Details
           </a>
+
         </div>
+
       </article>
 
-      <!-- Canva -->
-      <article class="tool-card" data-name="canva" data-category="Design">
+
+      <!-- CANVA -->
+
+      <article
+        class="tool-card"
+        data-name="canva canva ai design"
+        data-category="Design"
+      >
+
         <img
           class="tool-image"
           src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&q=80"
           alt="Canva AI design tool"
+          loading="lazy"
         >
 
         <div class="tool-content">
+
           <h3 class="tool-name">Canva</h3>
 
           <span class="tool-category">Design</span>
 
           <p class="tool-description">
-            Canva is an easy-to-use design platform with powerful AI
-            features for creating presentations, social media graphics,
-            marketing materials, images and other visual content without
-            requiring advanced design skills.
+            Canva is an easy-to-use design platform with AI features for
+            presentations, social media graphics, marketing materials,
+            images and other visual content.
           </p>
 
-          <a class="tool-button" href="tool.html?tool=canva">
+          <a
+            class="tool-button"
+            href="tool.html?tool=canva"
+          >
             View Details
           </a>
+
         </div>
+
       </article>
 
-      <!-- Cursor -->
-      <article class="tool-card" data-name="cursor" data-category="Coding">
+
+      <!-- CURSOR -->
+
+      <article
+        class="tool-card"
+        data-name="cursor cursor ai code editor"
+        data-category="Coding"
+      >
+
         <img
           class="tool-image"
           src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80"
           alt="Cursor AI coding tool"
+          loading="lazy"
         >
 
         <div class="tool-content">
+
           <h3 class="tool-name">Cursor</h3>
 
           <span class="tool-category">Coding</span>
 
           <p class="tool-description">
-            Cursor is an AI-powered code editor built to help developers
-            write, understand, refactor and debug software. Its AI features
-            can accelerate development by helping programmers work directly
-            with their codebase.
+            Cursor is an AI-powered code editor designed to help developers
+            write, understand, refactor and debug software more efficiently.
           </p>
 
-          <a class="tool-button" href="tool.html?tool=cursor">
+          <a
+            class="tool-button"
+            href="tool.html?tool=cursor"
+          >
             View Details
           </a>
+
         </div>
+
       </article>
 
-      <!-- GitHub Copilot -->
-      <article class="tool-card" data-name="copilot github github copilot" data-category="Coding">
+
+      <!-- GITHUB COPILOT -->
+
+      <article
+        class="tool-card"
+        data-name="github copilot copilot coding"
+        data-category="Coding"
+      >
+
         <img
           class="tool-image"
           src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80"
           alt="GitHub Copilot AI coding tool"
+          loading="lazy"
         >
 
         <div class="tool-content">
+
           <h3 class="tool-name">GitHub Copilot</h3>
 
           <span class="tool-category">Coding</span>
 
           <p class="tool-description">
             GitHub Copilot is an AI coding assistant that helps developers
-            write code, understand programming concepts, generate functions,
-            complete code and improve development workflows. It is designed
-            to work alongside programmers inside supported development tools.
+            write code, understand programming concepts, generate functions
+            and improve development workflows.
           </p>
 
-          <a class="tool-button" href="tool.html?tool=copilot">
+          <a
+            class="tool-button"
+            href="tool.html?tool=copilot"
+          >
             View Details
           </a>
+
         </div>
+
       </article>
 
-      <!-- Jasper -->
-      <article class="tool-card" data-name="jasper" data-category="Writing">
+
+      <!-- JASPER -->
+
+      <article
+        class="tool-card"
+        data-name="jasper ai marketing writing content"
+        data-category="Writing"
+      >
+
         <img
           class="tool-image"
           src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=900&q=80"
           alt="Jasper AI writing tool"
+          loading="lazy"
         >
 
         <div class="tool-content">
+
           <h3 class="tool-name">Jasper</h3>
 
           <span class="tool-category">Writing</span>
 
           <p class="tool-description">
             Jasper is an AI content platform focused on marketing and
-            business content. It can help teams create marketing copy,
-            campaigns, blog content, social media posts and other brand
-            communications more efficiently.
+            business content. It can help create blog posts, campaigns,
+            social media content and brand communications.
           </p>
 
-          <a class="tool-button" href="tool.html?tool=jasper">
+          <a
+            class="tool-button"
+            href="tool.html?tool=jasper"
+          >
             View Details
           </a>
+
         </div>
+
       </article>
 
-      <!-- Notion AI -->
-      <article class="tool-card" data-name="notion notion ai" data-category="Productivity">
+
+      <!-- NOTION AI -->
+
+      <article
+        class="tool-card"
+        data-name="notion notion ai workspace productivity"
+        data-category="Productivity"
+      >
+
         <img
           class="tool-image"
           src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80"
           alt="Notion AI productivity tool"
+          loading="lazy"
         >
 
         <div class="tool-content">
+
           <h3 class="tool-name">Notion AI</h3>
 
           <span class="tool-category">Productivity</span>
@@ -704,25 +996,37 @@
           <p class="tool-description">
             Notion AI brings artificial intelligence into a workspace for
             notes, documents, project management and knowledge organization.
-            It can help summarize content, generate ideas, improve writing
-            and make information easier to manage.
           </p>
 
-          <a class="tool-button" href="tool.html?tool=notion">
+          <a
+            class="tool-button"
+            href="tool.html?tool=notion"
+          >
             View Details
           </a>
+
         </div>
+
       </article>
 
-      <!-- Grammarly -->
-      <article class="tool-card" data-name="grammarly" data-category="Writing">
+
+      <!-- GRAMMARLY -->
+
+      <article
+        class="tool-card"
+        data-name="grammarly grammar writing ai"
+        data-category="Writing"
+      >
+
         <img
           class="tool-image"
           src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80"
           alt="Grammarly AI writing assistant"
+          loading="lazy"
         >
 
         <div class="tool-content">
+
           <h3 class="tool-name">Grammarly</h3>
 
           <span class="tool-category">Writing</span>
@@ -730,56 +1034,84 @@
           <p class="tool-description">
             Grammarly is an AI-powered writing assistant that helps improve
             grammar, spelling, clarity, tone and overall communication.
-            Students, professionals, businesses and creators can use it to
-            produce clearer and more polished writing.
           </p>
 
-          <a class="tool-button" href="tool.html?tool=grammarly">
+          <a
+            class="tool-button"
+            href="tool.html?tool=grammarly"
+          >
             View Details
           </a>
+
         </div>
+
       </article>
 
-      <!-- ElevenLabs -->
-      <article class="tool-card" data-name="elevenlabs eleven labs" data-category="Voice">
+
+      <!-- ELEVENLABS -->
+
+      <article
+        class="tool-card"
+        data-name="elevenlabs eleven labs voice audio text to speech"
+        data-category="Voice"
+      >
+
         <img
           class="tool-image"
           src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=900&q=80"
           alt="ElevenLabs AI voice tool"
+          loading="lazy"
         >
 
         <div class="tool-content">
+
           <h3 class="tool-name">ElevenLabs</h3>
 
           <span class="tool-category">Voice</span>
 
           <p class="tool-description">
             ElevenLabs is an AI voice technology platform for generating
-            natural-sounding speech and working with synthetic voices.
-            Creators can use AI voice technology for videos, narration,
-            storytelling, accessibility and other audio projects.
+            natural-sounding speech and working with synthetic voices for
+            narration, videos, storytelling and audio projects.
           </p>
 
-          <a class="tool-button" href="tool.html?tool=elevenlabs">
+          <a
+            class="tool-button"
+            href="tool.html?tool=elevenlabs"
+          >
             View Details
           </a>
+
         </div>
+
       </article>
 
     </div>
 
+
+    <!-- NO RESULTS -->
+
     <div class="no-results" id="noResults">
+
       <h3>No AI tools found</h3>
-      <p>Try another search term or choose a different category.</p>
+
+      <p>
+        Try another search term or choose a different category.
+      </p>
+
     </div>
 
   </main>
 
+
   <!-- ABOUT -->
+
   <section id="about" class="about">
+
     <div class="container">
 
       <div class="about-box">
+
         <h2>About AI Tools Hub</h2>
 
         <p>
@@ -788,19 +1120,23 @@
         </p>
 
         <p>
-          Whether you need help with writing, coding, research, design,
-          productivity, image generation or voice creation, our goal is to
-          make finding the right AI tool simple and easy.
+          Whether you need help with chatbots, writing, coding, research,
+          design, productivity, image generation or voice creation, our goal
+          is to make finding the right AI tool simple and easy.
         </p>
 
         <p>
           Explore the tools above to learn more about their features,
           capabilities and potential use cases.
         </p>
+
       </div>
 
-      <!-- SUBMIT -->
+
+      <!-- SUBMIT TOOL -->
+
       <div id="submit" class="submit-box">
+
         <h2>Have an AI Tool?</h2>
 
         <p>
@@ -808,17 +1144,24 @@
           We would love to hear about it.
         </p>
 
-        <a class="submit-btn"
-           href="mailto:contact@example.com?subject=Submit AI Tool">
+        <a
+          class="submit-btn"
+          href="mailto:contact@example.com?subject=Submit AI Tool"
+        >
           Submit a Tool
         </a>
+
       </div>
 
     </div>
+
   </section>
 
+
   <!-- FOOTER -->
+
   <footer>
+
     <p>
       © 2026 <strong>AI Tools Hub</strong>. All rights reserved.
     </p>
@@ -826,68 +1169,200 @@
     <p>
       Discover. Explore. Create with AI.
     </p>
+
   </footer>
 
+
   <!-- JAVASCRIPT -->
+
   <script>
-    const searchInput = document.getElementById("searchInput");
-    const toolCards = document.querySelectorAll(".tool-card");
-    const toolsCount = document.getElementById("toolsCount");
-    const noResults = document.getElementById("noResults");
+
+    const searchInput =
+      document.getElementById("searchInput");
+
+    const toolCards =
+      document.querySelectorAll(".tool-card");
+
+    const toolsCount =
+      document.getElementById("toolsCount");
+
+    const noResults =
+      document.getElementById("noResults");
+
+    const categoryButtons =
+      document.querySelectorAll(".category-btn");
 
     let selectedCategory = "All";
 
-    function updateTools() {
-      const searchTerm = searchInput.value.toLowerCase().trim();
-      let visibleCount = 0;
+
+    /*
+      UPDATE CATEGORY COUNTS
+    */
+
+    function updateCategoryCounts() {
+
+      const counts = {};
 
       toolCards.forEach(card => {
-        const name = card.dataset.name.toLowerCase();
-        const category = card.dataset.category.toLowerCase();
-        const text = card.innerText.toLowerCase();
+
+        const category =
+          card.dataset.category;
+
+        counts[category] =
+          (counts[category] || 0) + 1;
+
+      });
+
+
+      categoryButtons.forEach(button => {
+
+        const category =
+          button.dataset.category;
+
+        const countElement =
+          button.querySelector(".category-count");
+
+        if (category === "All") {
+
+          countElement.textContent =
+            ` (${toolCards.length})`;
+
+        } else {
+
+          countElement.textContent =
+            ` (${counts[category] || 0})`;
+
+        }
+
+      });
+
+    }
+
+
+    /*
+      UPDATE TOOLS
+    */
+
+    function updateTools() {
+
+      const searchTerm =
+        searchInput.value.toLowerCase().trim();
+
+      let visibleCount = 0;
+
+
+      toolCards.forEach(card => {
+
+        const name =
+          card.dataset.name.toLowerCase();
+
+        const category =
+          card.dataset.category.toLowerCase();
+
+        const text =
+          card.innerText.toLowerCase();
+
 
         const matchesSearch =
           name.includes(searchTerm) ||
           category.includes(searchTerm) ||
           text.includes(searchTerm);
 
+
         const matchesCategory =
           selectedCategory === "All" ||
           card.dataset.category === selectedCategory;
 
+
         if (matchesSearch && matchesCategory) {
+
           card.style.display = "flex";
+
           visibleCount++;
+
         } else {
+
           card.style.display = "none";
+
         }
+
       });
+
 
       toolsCount.textContent =
-        visibleCount + (visibleCount === 1 ? " AI Tool" : " AI Tools");
+        visibleCount +
+        (visibleCount === 1
+          ? " AI Tool"
+          : " AI Tools");
+
 
       if (visibleCount === 0) {
+
         noResults.style.display = "block";
+
       } else {
+
         noResults.style.display = "none";
+
       }
+
     }
 
+
+    /*
+      CATEGORY FILTER
+    */
+
     function filterCategory(category, button) {
+
       selectedCategory = category;
 
-      document.querySelectorAll(".category-btn").forEach(btn => {
+
+      categoryButtons.forEach(btn => {
+
         btn.classList.remove("active");
+
       });
+
 
       button.classList.add("active");
 
+
       updateTools();
+
+
+      /*
+        Scroll to tools on mobile/when
+        category is selected
+      */
+
+      document.getElementById("tools")
+        .scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
     }
 
-    searchInput.addEventListener("input", updateTools);
+
+    /*
+      SEARCH
+    */
+
+    searchInput.addEventListener(
+      "input",
+      updateTools
+    );
+
+
+    /*
+      INITIALIZE
+    */
+
+    updateCategoryCounts();
 
     updateTools();
+
   </script>
 
 </body>
